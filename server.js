@@ -42,15 +42,21 @@ app.use(cors());
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-// Utility Functions
 async function getUsersSortedByTotalPoints() {
   try {
+    // Fetch all users from the database
     const users = await User.find();
+
+    // Map users to add the totalPoints field
     const usersWithTotalPoints = users.map(user => {
       const totalPoints = user.pointsNo;
-      return { ...user._doc, totalPoints };
+      return { ...user._doc, totalPoints }; // user._doc contains the raw user data
     });
+
+    // Sort users by totalPoints in descending order
     usersWithTotalPoints.sort((a, b) => b.totalPoints - a.totalPoints);
+
+    // Return sorted users
     return usersWithTotalPoints;
   } catch (error) {
     console.error('Error fetching users:', error);
@@ -58,21 +64,22 @@ async function getUsersSortedByTotalPoints() {
   }
 }
 
-// Routes
 app.post('/leaderboard-data', async (req, res) => {
   try {
-    const leaderboardOrder = await getUsersSortedByTotalPoints();
-    res.status(200).send({ message: 'Leaderboard retrieved successfully', leaderboardData: leaderboardOrder });
+    const leaderboardOrder = await getUsersSortedByTotalPoints()
+    return res.status(200).send({ message: 'Leaderboard retrieved successfully', leaderboardData: leaderboardOrder });
   } catch (error) {
     console.error('Error getting leaderboard data:', error);
-    res.status(500).send({ message: 'Internal Server Error' });
+    res.status(500).send({ message: 'Internal Server Error' }); 
   }
-});
+  
+})
 
 app.post('/get-user-data', async (req, res) => {
   const { user } = req.body;
 
   try {
+    // Find the user by id and username
     let existingUser = await User.findOne({
       'user.id': user.id,
       'user.username': user.username
@@ -95,33 +102,37 @@ app.post('/get-user-data', async (req, res) => {
       });
     }
   } catch (error) {
-    console.error('Error retrieving user data:', error);
+    console.error('Error updating points:', error);
     res.status(500).send({ message: 'Internal Server Error' });
   }
-});
+})
 
 app.post('/update-early-adopter', async (req, res) => {
   const { pointsNo, user } = req.body;
 
   try {
+    // Find the user by id and username
     let existingUser = await User.findOne({
       'user.id': user.id,
       'user.username': user.username
     });
 
     if (existingUser) {
+      // If user exists, update points
       existingUser.pointsNo += pointsNo;
-      existingUser.earlyAdopterBonusClaimed = true;
+      existingUser.earlyAdopterBonusClaimed = true
       await existingUser.save();
 
       if (existingUser.referrerCode.length > 0) {
         const userReferrer = await User.findOne({ referralCode: existingUser.referrerCode });
+        console.log(userReferrer)
         if (userReferrer) {
           userReferrer.pointsNo += (pointsNo / 10);
           await userReferrer.save();
         }
       }
     } else {
+      // If user doesn't exist, create a new user
       existingUser = new User({
         pointsNo: pointsNo,
         user: user
@@ -134,9 +145,135 @@ app.post('/update-early-adopter', async (req, res) => {
     console.error('Error updating points:', error);
     res.status(500).send({ message: 'Internal Server Error', success: false });
   }
+})
+
+app.post('/update-task-points', async (req, res) => {
+  const { pointsNo, user } = req.body;
+
+  try {
+    // Find the user by id and username
+    let existingUser = await User.findOne({
+      'user.id': user.id,
+      'user.username': user.username
+    });
+
+    if (existingUser) {
+      // If user exists, update points
+      existingUser.pointsNo += pointsNo;
+      await existingUser.save();
+
+      if (existingUser.referrerCode.length > 0) {
+        const userReferrer = await User.findOne({ referralCode: existingUser.referrerCode });
+        if (userReferrer) {
+          userReferrer.pointsNo += (pointsNo / 10);
+          await userReferrer.save();
+        }
+      }
+    } else {
+      // If user doesn't exist, create a new user
+      existingUser = new User({
+        pointsNo: pointsNo,
+        user: user
+      });
+      await existingUser.save();
+    }
+
+    res.status(200).send({ message: 'Points updated successfully', userData: existingUser, success: true });
+  } catch (error) {
+    console.error('Error updating points:', error);
+    res.status(500).send({ message: 'Internal Server Error', success: false });
+  }
+})
+
+app.post('/update-social-reward', async (req, res) => {
+  const { user, claimTreshold } = req.body;
+  const userId = user.id
+
+  if (!userId || !claimTreshold) {
+      return res.status(400).send('userId and claimTreshold are required');
+  }
+
+  try {
+      // Use findOneAndUpdate to directly update the rewardClaimed field
+      const updateResult = await User.findOneAndUpdate(
+          { 'user.id': userId, "socialRewardDeets.claimTreshold": claimTreshold },
+          { $set: { "socialRewardDeets.$.rewardClaimed": true } },
+          { new: true }
+      );
+
+      if (!updateResult) {
+          return res.status(404).send('User or claimTreshold not found');
+      }
+
+      // Return the updated user document
+      const updatedUser = await User.findOne({ 'user.id': user.id });
+      res.status(200).send({ message: 'Points updated successfully', userData: updatedUser, success: true });
+  } catch (error) {
+    console.error('Error updating social reward:', error);
+    res.status(500).send({ message: 'Internal Server Error', success: false });
+  }
 });
 
+app.post('/get-user-referrals', async (req, res) => {
+  const { referralCode } = req.body;
+
+  try {
+    // Find the user by id and username
+    let allUsers = await User.find({
+      referrerCode: referralCode
+    });
+
+    return res.status(200).send({ message: 'Users retrieved successfully', userData: allUsers, success: true });
+  } catch (error) {
+    console.error('Error updating points:', error);
+    res.status(500).send({ message: 'Internal Server Error' });
+  }
+})
+
 // Additional routes as per your requirement...
+
+
+async function generateUniqueReferralCode(userId) {
+  try {
+      // Find the user by their ID
+      const user = await User.findOne({ 'user.id': userId });
+
+      if (!user) {
+          console.log('User not found');
+          return;
+      }
+
+      // Check if referralCode is missing or null
+      if (!user.referralCode) {
+          // Generate a unique referral code
+          let uniqueReferralCode;
+          let isUnique = false;
+
+          while (!isUnique) {
+              // Generate a random referral code
+              uniqueReferralCode = crypto.randomBytes(4).toString('hex');
+
+              // Check if the generated code is unique
+              const existingUser = await User.findOne({ referralCode: uniqueReferralCode });
+              if (!existingUser) {
+                  isUnique = true;
+              }
+          }
+
+          // Assign the unique referral code to the user
+          user.referralCode = uniqueReferralCode;
+
+          // Save the updated user back to the database
+          await user.save();
+
+          console.log('Referral code generated and saved:', uniqueReferralCode);
+      } else {
+          console.log('User already has a referral code:', user.referralCode);
+      }
+  } catch (error) {
+      console.error('Error generating referral code:', error);
+  }
+}
 
 const addReferralPoints = async (referralCode) => {
   const user = await User.findOne({ referralCode });
