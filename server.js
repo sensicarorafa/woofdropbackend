@@ -138,6 +138,16 @@ app.post('/update-early-adopter', async (req, res) => {
 
 // Additional routes as per your requirement...
 
+const addReferralPoints = async (referralCode) => {
+  const user = await User.findOne({ referralCode });
+  if (user) {
+    user.referralPoints += 1;
+    //user.pointsNo += 250000;
+    await user.save();
+    const userAgain = await User.findOne({ referralCode });
+  }
+};
+
 // Telegram Bot Setup
 bot.start(async (ctx) => {
   try {
