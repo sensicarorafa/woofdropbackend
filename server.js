@@ -403,11 +403,12 @@ bot.start(async (ctx) => {
 
     try {
       await ctx.replyWithPhoto('https://i.ibb.co/BcmccLN/Whats-App-Image-2024-08-26-at-2-12-54-PM.jpg', { 
-        caption: `<b>Hey, @${ctx.from.username}</b> \nWelcome to AiDogs\n\nAIDOGS portal is open for Dog lovers to have fun and earn. Invite family and friends to earn more`,
+        caption: `<b>Hey, @${ctx.from.username}</b> \nWelcome to AiDogs\n\nAIDOGS portal is open for Dog lovers to have fun and earn\n\nInvite family and friends to earn  10% of all their $AIDOGS reward`,
         parse_mode: 'HTML',
         reply_markup: {
           inline_keyboard: [
-            [{ text: "Open Portal",  web_app: { url: 'https://aidawgs.xyz' }}]
+            [{ text: "Open Portal",  web_app: { url: 'https://aidawgs.xyz' }}],
+            [{ text: 'Telegram Channel', url: 'https://t.me/aidogs_community' }]
           ],
         }
       }); 
