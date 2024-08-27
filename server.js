@@ -48,7 +48,7 @@ async function getUsersSortedByTotalPoints() {
     const users = await User.find();
 
     // Map users to add the totalPoints field
-    const usersWithTotalPoints = users.slice(0, 100).map(user => {
+    const usersWithTotalPoints = users.slice(0, 50).map(user => {
       const totalPoints = user.pointsNo;
       return { ...user._doc, totalPoints }; // user._doc contains the raw user data
     });
