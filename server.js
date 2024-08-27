@@ -64,9 +64,22 @@ async function getUsersSortedByTotalPoints() {
   }
 }
 
+async function getTop100Users() {
+  try {
+      const topUsers = await User.find({})
+          .sort({ pointsNo: -1 }) // Sort by pointsNo in descending order
+          .limit(100); // Limit the results to the first 100 users
+
+      return topUsers;
+  } catch (err) {
+      console.error('Error fetching top users:', err);
+      throw err; // Optionally, you can handle the error or throw it further
+  }
+}
+
 app.post('/leaderboard-data', async (req, res) => {
   try {
-    const leaderboardOrder = await getUsersSortedByTotalPoints()
+    const leaderboardOrder = await getTop100Users()
     return res.status(200).send({ message: 'Leaderboard retrieved successfully', leaderboardData: leaderboardOrder });
   } catch (error) {
     console.error('Error getting leaderboard data:', error);
