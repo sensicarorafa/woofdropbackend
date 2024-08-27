@@ -113,7 +113,8 @@ async function getUserRankByUserId(userId) {
 app.post('/leaderboard-data', async (req, res) => {
   const { user } = req.body;
   
-  const userRank = await getUserRankByUserId(user.id)
+  let userRank = 0;
+  if (user && user.id) userRank = await getUserRankByUserId(user.id)
 
   try {
     const leaderboardOrder = await getTop100Users()
