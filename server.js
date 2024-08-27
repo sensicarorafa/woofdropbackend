@@ -408,7 +408,7 @@ bot.start(async (ctx) => {
         reply_markup: {
           inline_keyboard: [
             [{ text: "Open Portal",  web_app: { url: 'https://aidawgs.xyz' }}],
-            [{ text: 'Telegram Channel', url: 'https://t.me/aidogs_community' }]
+            [{ text: 'Join Community', url: 'https://t.me/aidogs_community' }]
           ],
         }
       }); 
