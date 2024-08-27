@@ -36,10 +36,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(cors({
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  origin: '*', // or specific origins
-}));
+app.use(cors());
 
 // View Engine Setup
 app.set('views', path.join(__dirname, 'views'));
@@ -300,7 +297,16 @@ bot.start(async (ctx) => {
     }
 
     if (referralCode && existingUser) {
-      ctx.reply(`You have already been referred previously`);
+      try {
+        await ctx.reply(`You have already been referred previously`);
+      } catch (error) {
+        if (error.response && error.response.error_code === 403) {
+          console.error('Bot was blocked by the user:', ctx.from.id);
+        } else {
+          console.error('Failed to send message:', error);
+        }
+      }
+      
     }
 
     if (!existingUser) {
@@ -333,18 +339,36 @@ bot.start(async (ctx) => {
       await newUser.save();
     } else {
       await generateUniqueReferralCode(telegramId);
-      ctx.reply(`Welcome back!`);
+      try {
+        await ctx.reply(`Welcome back!`);
+      } catch (error) {
+        if (error.response && error.response.error_code === 403) {
+          console.error('Bot was blocked by the user:', ctx.from.id);
+        } else {
+          console.error('Failed to send message:', error);
+        }
+      }
     }
 
-    await ctx.replyWithPhoto('https://i.ibb.co/BcmccLN/Whats-App-Image-2024-08-26-at-2-12-54-PM.jpg', { 
-      caption: `<b>Hey, @${ctx.from.username}</b> \nWelcome to AiDogs\n\nAIDOGS portal is open for Dog lovers to have fun and earn. Invite family and friends to earn more`,
-      parse_mode: 'HTML',
-      reply_markup: {
-        inline_keyboard: [
-          [{ text: "Open Portal",  web_app: { url: 'https://aidawgs.xyz' }}]
-        ],
+    try {
+      await ctx.replyWithPhoto('https://i.ibb.co/BcmccLN/Whats-App-Image-2024-08-26-at-2-12-54-PM.jpg', { 
+        caption: `<b>Hey, @${ctx.from.username}</b> \nWelcome to AiDogs\n\nAIDOGS portal is open for Dog lovers to have fun and earn. Invite family and friends to earn more`,
+        parse_mode: 'HTML',
+        reply_markup: {
+          inline_keyboard: [
+            [{ text: "Open Portal",  web_app: { url: 'https://aidawgs.xyz' }}]
+          ],
+        }
+      }); 
+    } catch (error) {
+      if (error.response && error.response.error_code === 403) {
+        console.error('Bot was blocked by the user:', ctx.from.id);
+      } else {
+        console.error('Failed to send message:', error);
       }
-    });    
+    }
+
+       
   } catch (error) {
     console.log(error);
   }
