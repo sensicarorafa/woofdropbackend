@@ -234,7 +234,7 @@ app.post('/get-user-referrals', async (req, res) => {
     // Find the user by id and username
     let allUsers = await User.find({
       referrerCode: referralCode
-    });
+    }).limit(50);
 
     return res.status(200).send({ message: 'Users retrieved successfully', userData: allUsers, success: true });
   } catch (error) {
