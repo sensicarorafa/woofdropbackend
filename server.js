@@ -77,10 +77,50 @@ async function getTop100Users() {
   }
 }
 
+const mongoose = require('mongoose');
+const User = require('./path/to/userModel'); // Replace with the actual path to your user model
+
+async function getUserRankByUserId(userId) {
+    try {
+        const rankPipeline = [
+            {
+                $sort: { pointsNo: -1 } // Sort by pointsNo in descending order
+            },
+            {
+                $group: {
+                    _id: null,
+                    users: { $push: "$user.id" }, // Push user.id into an array
+                    rank: { $push: "$pointsNo" } // Push pointsNo into a corresponding array
+                }
+            },
+            {
+                $project: {
+                    userIndex: { $indexOfArray: ["$users", userId] } // Find index of the specific user.id
+                }
+            }
+        ];
+
+        const result = await User.aggregate(rankPipeline).exec();
+
+        if (result.length > 0 && result[0].userIndex !== -1) {
+            return result[0].userIndex + 1; // +1 to get rank instead of 0-based index
+        } else {
+            return null; // User not found
+        }
+    } catch (err) {
+        console.error('Error fetching user rank:', err);
+        throw err;
+    }
+}
+
 app.post('/leaderboard-data', async (req, res) => {
+  const { user } = req.body;
+
+  const userRank = getUserRankByUserId(user.id)
+
   try {
     const leaderboardOrder = await getTop100Users()
-    return res.status(200).send({ message: 'Leaderboard retrieved successfully', leaderboardData: leaderboardOrder });
+    return res.status(200).send({ message: 'Leaderboard retrieved successfully', leaderboardData: leaderboardOrder, userRank });
   } catch (error) {
     console.error('Error getting leaderboard data:', error);
     res.status(500).send({ message: 'Internal Server Error' }); 
