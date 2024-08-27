@@ -77,9 +77,6 @@ async function getTop100Users() {
   }
 }
 
-const mongoose = require('mongoose');
-const User = require('./path/to/userModel'); // Replace with the actual path to your user model
-
 async function getUserRankByUserId(userId) {
     try {
         const rankPipeline = [
@@ -103,7 +100,7 @@ async function getUserRankByUserId(userId) {
         const result = await User.aggregate(rankPipeline).exec();
 
         if (result.length > 0 && result[0].userIndex !== -1) {
-            return result[0].userIndex + 1; // +1 to get rank instead of 0-based index
+            return result[0].userIndex; // +1 to get rank instead of 0-based index
         } else {
             return null; // User not found
         }
@@ -115,8 +112,8 @@ async function getUserRankByUserId(userId) {
 
 app.post('/leaderboard-data', async (req, res) => {
   const { user } = req.body;
-
-  const userRank = getUserRankByUserId(user.id)
+  
+  const userRank = await getUserRankByUserId(user.id)
 
   try {
     const leaderboardOrder = await getTop100Users()
