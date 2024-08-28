@@ -66,18 +66,6 @@ async function getUsersSortedByTotalPoints() {
   }
 }
 
-async function getTop100Users() {
-  try {
-      const topUsers = await User.find({})
-          .sort({ pointsNo: -1 }) // Sort by pointsNo in descending order
-          .limit(50); // Limit the results to the first 100 users
-
-      return topUsers;
-  } catch (err) {
-      console.error('Error fetching top users:', err);
-      throw err; // Optionally, you can handle the error or throw it further
-  }
-}
 
 async function getUserRankByUserId(userId) {
     try {
@@ -112,6 +100,19 @@ async function getUserRankByUserId(userId) {
     }
 }
 
+/*async function getTop100Users() {
+  try {
+      const topUsers = await User.find({})
+          .sort({ pointsNo: -1 }) // Sort by pointsNo in descending order
+          .limit(50); // Limit the results to the first 100 users
+
+      return topUsers;
+  } catch (err) {
+      console.error('Error fetching top users:', err);
+      throw err; // Optionally, you can handle the error or throw it further
+  }
+}
+
 app.post('/leaderboard-data', async (req, res) => {
   const { user } = req.body;
   
@@ -126,7 +127,62 @@ app.post('/leaderboard-data', async (req, res) => {
     res.status(500).send({ message: 'Internal Server Error' }); 
   }
   
-})
+})*/
+
+const cache = new Map(); // Simple in-memory cache (for demonstration purposes)
+
+// Function to get top 100 users with caching
+async function getTop100Users() {
+  const cacheKey = 'top100Users';
+  
+  // Check if the data is in cache
+  if (cache.has(cacheKey)) {
+      return cache.get(cacheKey);
+  }
+
+  try {
+      const topUsers = await User.find({}, { _id: 1, user: 1, pointsNo: 1 })
+          .sort({ pointsNo: -1 })
+          .limit(100); // Limit to top 100 users
+
+      // Cache the result
+      cache.set(cacheKey, topUsers);
+      return topUsers;
+  } catch (err) {
+      console.error('Error fetching top users:', err);
+      throw err; // Handle or throw the error further
+  }
+}
+
+// Endpoint to get leaderboard data
+app.post('/leaderboard-data', async (req, res) => {
+  const { user } = req.body;
+
+  try {
+    let userRank = 0;
+
+    // Uncomment and optimize the following if you implement user rank fetching
+    // if (user && user.id) userRank = await getUserRankByUserId(user.id)
+
+    const leaderboardData = await getTop100Users();
+
+    return res.status(200).send({ 
+      message: 'Leaderboard retrieved successfully', 
+      leaderboardData, 
+      userRank 
+    });
+
+  } catch (error) {
+    console.error('Error getting leaderboard data:', error);
+    return res.status(500).send({ message: 'Internal Server Error' });
+  }
+});
+
+// Clear cache periodically (Optional)
+setInterval(() => {
+  cache.clear();
+}, 5 * 60 * 1000); // Clear cache every 5 minutes
+
 
 app.post('/get-user-data', async (req, res) => {
   const { user } = req.body;
