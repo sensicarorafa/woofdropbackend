@@ -488,6 +488,17 @@ const addReferralPoints = async (referralCode) => {
 
 bot.launch();*/
 
+process.on('uncaughtException', (err) => {
+  console.error('Uncaught Exception:', err);
+  process.exit(1); // Exit the process to trigger a PM2 restart
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('Unhandled Rejection at:', promise, 'reason:', reason);
+  process.exit(1); // Exit the process to trigger a PM2 restart
+});
+
+
 // Error Handling
 app.use((req, res, next) => {
   res.status(404).send('Not Found');
