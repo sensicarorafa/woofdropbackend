@@ -70,7 +70,7 @@ async function getTop100Users() {
   try {
       const topUsers = await User.find({})
           .sort({ pointsNo: -1 }) // Sort by pointsNo in descending order
-          .limit(100); // Limit the results to the first 100 users
+          .limit(50); // Limit the results to the first 100 users
 
       return topUsers;
   } catch (err) {
