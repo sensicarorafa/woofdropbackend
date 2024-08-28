@@ -25,6 +25,8 @@ mongoose.connect(mongooseUrl, {
   useUnifiedTopology: true,
   connectTimeoutMS: 60000, // Increase this value
   socketTimeoutMS: 60000, 
+  maxPoolSize: 50,
+  minPoolSize: 30
 });
 const db = mongoose.connection;
 db.on("error", (error) => console.error("MongoDB connection error:", error));
