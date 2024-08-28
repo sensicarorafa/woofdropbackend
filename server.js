@@ -22,7 +22,9 @@ const bot = new Telegraf(botToken);
 const mongooseUrl = process.env.MONGOOSE_URL;
 mongoose.connect(mongooseUrl, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  connectTimeoutMS: 60000, // Increase this value
+  socketTimeoutMS: 60000, 
 });
 const db = mongoose.connection;
 db.on("error", (error) => console.error("MongoDB connection error:", error));

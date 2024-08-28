@@ -17,10 +17,26 @@ db.once("open", function () {
   console.log("Connected successfully");
 });
 
-/*const getUsers = async () => {
-    const users = await User.find();
+async function getTop100Users() {
+    try {
+        const topUsers = await User.find({})
+            .sort({ pointsNo: -1 }) // Sort by pointsNo in descending order
+            .limit(100); // Limit the results to the first 100 users
+  
+        return topUsers;
+    } catch (err) {
+        console.error('Error fetching top users:', err);
+        throw err; // Optionally, you can handle the error or throw it further
+    }
+}
 
-    console.log(users.length)
+/*const getUsers = async () => {
+    const users = await User.findOne({
+        username: 'arisseees'
+    });
+
+    console.log(users)
+
 }*/
 
 /*async function updateReferrerPoints () {
@@ -64,7 +80,7 @@ db.once("open", function () {
 const countTotalUsers = async () => {
   try {
     // Define a limit for how many users to fetch at a time
-    const limit = 100;
+    const limit = 1000;
     let totalCount = 0;
     let hasMore = true;
     let skip = 0;
@@ -75,7 +91,7 @@ const countTotalUsers = async () => {
 
       // Add the number of users fetched to the total count
       totalCount += users.length;
-      console.log({currentTotalUsers: totalUsers});
+      console.log({currentTotalUsers: totalCount});
 
       // If the number of users fetched is less than the limit, it means we've reached the end
       if (users.length < limit) {
