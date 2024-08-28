@@ -116,7 +116,7 @@ app.post('/leaderboard-data', async (req, res) => {
   const { user } = req.body;
   
   let userRank = 0;
-  if (user && user.id) userRank = await getUserRankByUserId(user.id)
+  //if (user && user.id) userRank = await getUserRankByUserId(user.id)
 
   try {
     const leaderboardOrder = await getTop100Users()
@@ -178,7 +178,6 @@ app.post('/update-early-adopter', async (req, res) => {
 
       if (existingUser.referrerCode.length > 0) {
         const userReferrer = await User.findOne({ referralCode: existingUser.referrerCode });
-        console.log(userReferrer)
         if (userReferrer) {
           userReferrer.pointsNo += (pointsNo / 20);
           await userReferrer.save();
