@@ -130,6 +130,7 @@ app.post('/leaderboard-data', async (req, res) => {
 
 app.post('/get-user-data', async (req, res) => {
   const { user } = req.body;
+  console.log(user)
 
   try {
     // Find the user by id and username
