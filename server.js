@@ -178,7 +178,7 @@ app.post('/update-early-adopter', async (req, res) => {
         const userReferrer = await User.findOne({ referralCode: existingUser.referrerCode });
         console.log(userReferrer)
         if (userReferrer) {
-          userReferrer.pointsNo += (pointsNo / 10);
+          userReferrer.pointsNo += (pointsNo / 20);
           await userReferrer.save();
         }
       }
@@ -216,7 +216,7 @@ app.post('/update-task-points', async (req, res) => {
       if (existingUser.referrerCode.length > 0) {
         const userReferrer = await User.findOne({ referralCode: existingUser.referrerCode });
         if (userReferrer) {
-          userReferrer.pointsNo += (pointsNo / 10);
+          userReferrer.pointsNo += (pointsNo / 20);
           await userReferrer.save();
         }
       }
@@ -408,7 +408,8 @@ bot.start(async (ctx) => {
         reply_markup: {
           inline_keyboard: [
             [{ text: "Open Portal",  web_app: { url: 'https://aidawgs.xyz' }}],
-            [{ text: 'Join Community', url: 'https://t.me/aidogs_community' }]
+            [{ text: 'Join Community', url: 'https://t.me/aidogs_community' }],
+            [{ text: 'Twitter(X)', url: 'https://x.com/aidogscomm' }]
           ],
         }
       }); 

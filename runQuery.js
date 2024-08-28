@@ -17,18 +17,13 @@ db.once("open", function () {
   console.log("Connected successfully");
 });
 
-const getUsers = async () => {
-    const users = await User.findOne({
-        'user.username': ('ExoProKiKi')
-        //referralCode: '71605e28'
-    })
+/*const getUsers = async () => {
+    const users = await User.find();
 
-    users.pointsNo = 2650
-    await users.save()
-    console.log(users.referralPoints, users.pointsNo, users.socialRewardDeets)
-}
+    console.log(users.length)
+}*/
 
-async function updateReferrerPoints () {
+/*async function updateReferrerPoints () {
     const users = await User.find({
         referrerCode: '91c968db'
         //referralCode: '71605e28'
@@ -50,7 +45,7 @@ async function updateReferrerPoints () {
     referrer.pointsNo = totalPoints;
     await referrer.save();
     console.log('Total users:', {referrer: referrer.pointsNo})
-}
+}*/
 
 /*async function updateReferrerCode() {
     try {
@@ -66,6 +61,47 @@ async function updateReferrerPoints () {
     }
 }*/
 
+const countTotalUsers = async () => {
+  try {
+    // Define a limit for how many users to fetch at a time
+    const limit = 100;
+    let totalCount = 0;
+    let hasMore = true;
+    let skip = 0;
+
+    while (hasMore) {
+      // Fetch users in batches
+      const users = await User.find().skip(skip).limit(limit).lean();
+
+      // Add the number of users fetched to the total count
+      totalCount += users.length;
+      console.log({currentTotalUsers: totalUsers});
+
+      // If the number of users fetched is less than the limit, it means we've reached the end
+      if (users.length < limit) {
+        hasMore = false;
+      } else {
+        // Move the skip to the next batch
+        skip += limit;
+      }
+    }
+
+    return totalCount;
+  } catch (error) {
+    console.error('Error counting users:', error);
+    throw error;
+  }
+};
+
+// Example usage
+countTotalUsers()
+  .then(total => {
+    console.log('Total users in the database:', total);
+  })
+  .catch(error => {
+    console.error('Failed to count users:', error);
+  });
+
 //updateReferrerPoints()
-getUsers();
+//getUsers();
 //updateReferrerCode();
