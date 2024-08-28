@@ -339,7 +339,7 @@ const addReferralPoints = async (referralCode) => {
 };
 
 // Telegram Bot Setup
-bot.start(async (ctx) => {
+/*bot.start(async (ctx) => {
   try {
     const telegramId = ctx.from.id;
     const referralCode = ctx.payload;
@@ -429,7 +429,7 @@ bot.start(async (ctx) => {
   }
 });
 
-bot.launch();
+bot.launch();*/
 
 // Error Handling
 app.use((req, res, next) => {
