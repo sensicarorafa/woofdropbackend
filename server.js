@@ -156,6 +156,40 @@ async function getTop100Users() {
   }
 }
 
+async function updateSocialRewardDeets(userId) {
+  try {
+      // Define the new fields to add to the socialRewardDeets array
+      const newFields = [
+          { claimTreshold: 'youtube', rewardClaimed: false },
+          { claimTreshold: 'instagram', rewardClaimed: false }
+      ];
+
+      // Find the user by user.id and update the socialRewardDeets field
+      const user = await User.findOne({ 'user.id': userId });
+
+      if (user) {
+          const currentSocialRewardDeets = user.socialRewardDeets;
+
+          // Add the new fields only if they do not already exist in socialRewardDeets
+          newFields.forEach(field => {
+              if (!currentSocialRewardDeets.some(reward => reward.claimTreshold === field.claimTreshold)) {
+                  currentSocialRewardDeets.push(field);
+              }
+          });
+
+          // Save the updated user document
+          user.socialRewardDeets = currentSocialRewardDeets;
+          await user.save();
+
+          console.log(`Updated socialRewardDeets for user with id: ${userId}`);
+      } else {
+          console.log(`User with id: ${userId} not found`);
+      }
+  } catch (error) {
+      console.error('Error updating socialRewardDeets:', error);
+  }
+}
+
 // Endpoint to get leaderboard data
 app.post('/leaderboard-data', async (req, res) => {
   const { user } = req.body;
@@ -191,6 +225,7 @@ app.post('/get-user-data', async (req, res) => {
 
   try {
     // Find the user by id and username
+    await updateSocialRewardDeets(user.id);
     let existingUser = await User.findOne({
       'user.id': user.id,
       'user.username': user.username
