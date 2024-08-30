@@ -565,6 +565,11 @@ process.on('unhandledRejection', (reason, promise) => {
   process.exit(1); // Exit the process to trigger a PM2 restart
 });
 
+// This will run every day at midnight
+cron.schedule('0 0 * * *', async () => {
+  console.log('Running a job to reset spins for all users');
+  await User.updateMany({}, { pointsToday: 0 });
+});
 
 // Error Handling
 app.use((req, res, next) => {
