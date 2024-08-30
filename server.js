@@ -359,6 +359,38 @@ app.post('/update-social-reward', async (req, res) => {
   }
 });
 
+app.post('/update-daily-reward', async (req, res) => {
+  const { user, claimTreshold } = req.body;
+  const userId = user.id
+
+  if (!userId || !claimTreshold) {
+      return res.status(400).send('userId and claimTreshold are required');
+  }
+
+  try {
+      // Use findOneAndUpdate to directly update the rewardClaimed field
+      const updateResult = await User.findOneAndUpdate(
+          { 'user.id': userId, "referralRewardDeets.claimTreshold": claimTreshold },
+          { $set: { 
+            "referralRewardDeets.$.rewardClaimed": true,
+            pointsToday: 1 
+          } },
+          { new: true }
+      );
+
+      if (!updateResult) {
+          return res.status(404).send('User or claimTreshold not found');
+      }
+
+      // Return the updated user document
+      const updatedUser = await User.findOne({ 'user.id': user.id });
+      res.status(200).send({ message: 'Points updated successfully', userData: updatedUser, success: true });
+  } catch (error) {
+    console.error('Error updating social reward:', error);
+    res.status(500).send({ message: 'Internal Server Error', success: false });
+  }
+});
+
 app.post('/get-user-referrals', async (req, res) => {
   const { referralCode } = req.body;
 
@@ -431,7 +463,7 @@ const addReferralPoints = async (referralCode) => {
 };
 
 // Telegram Bot Setup
-/*bot.start(async (ctx) => {
+bot.start(async (ctx) => {
   try {
     const telegramId = ctx.from.id;
     const referralCode = ctx.payload;
@@ -521,7 +553,7 @@ const addReferralPoints = async (referralCode) => {
   }
 });
 
-bot.launch();*/
+bot.launch();
 
 process.on('uncaughtException', (err) => {
   console.error('Uncaught Exception:', err);
