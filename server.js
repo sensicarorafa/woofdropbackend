@@ -7,7 +7,8 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const { Telegraf } = require('telegraf');
 const crypto = require('crypto');
-const User = require('./models/User'); // Assuming you have a User model in the models folder
+const User = require('./models/User');
+const Leaderboard = require('./models/Leaderboard');
 const cron = require('node-cron');
 require('dotenv').config();
 
@@ -68,52 +69,44 @@ async function getUsersSortedByTotalPoints() {
   }
 }
 
+const cache = new Map(); 
 
-async function getUserRankByUserId(userId) {
+async function getTop100Users() {
+    const cacheKey = 'top100Users';
+  
+    // Check if the data is in cache
+    if (cache.has(cacheKey)) {
+        return cache.get(cacheKey);
+    }
+
     try {
-        const rankPipeline = [
-            {
-                $sort: { pointsNo: -1 } // Sort by pointsNo in descending order
-            },
-            {
-                $group: {
-                    _id: null,
-                    users: { $push: "$user.id" }, // Push user.id into an array
-                    rank: { $push: "$pointsNo" } // Push pointsNo into a corresponding array
-                }
-            },
-            {
-                $project: {
-                    userIndex: { $indexOfArray: ["$users", userId] } // Find index of the specific user.id
-                }
-            }
-        ];
+        const topUsers = await User.find({}, { _id: 1, user: 1, pointsNo: 1 })
+            .sort({ pointsNo: -1 })
+            .limit(100); // Limit to top 100 users
 
-        const result = await User.aggregate(rankPipeline).exec();
+        // Cache the result
+        cache.set(cacheKey, topUsers);
 
-        if (result.length > 0 && result[0].userIndex !== -1) {
-            return result[0].userIndex; // +1 to get rank instead of 0-based index
-        } else {
-            return null; // User not found
-        }
+        // Clear existing Leaderboard data
+        await Leaderboard.deleteMany({});
+
+        // Save new top users to Leaderboard
+        const leaderboardEntries = topUsers.map(user => ({
+            userId: user._id,
+            firstName: user.user.first_name,
+            lastName: user.user.last_name,
+            username: user.user.username,
+            pointsNo: user.pointsNo
+        }));
+
+        await Leaderboard.insertMany(leaderboardEntries);
+        return topUsers;
     } catch (err) {
-        console.error('Error fetching user rank:', err);
-        throw err;
+        console.error('Error fetching top users:', err);
+        throw err; // Handle or throw the error further
     }
 }
 
-/*async function getTop100Users() {
-  try {
-      const topUsers = await User.find({})
-          .sort({ pointsNo: -1 }) // Sort by pointsNo in descending order
-          .limit(50); // Limit the results to the first 100 users
-
-      return topUsers;
-  } catch (err) {
-      console.error('Error fetching top users:', err);
-      throw err; // Optionally, you can handle the error or throw it further
-  }
-}
 
 app.post('/leaderboard-data', async (req, res) => {
   const { user } = req.body;
@@ -122,46 +115,23 @@ app.post('/leaderboard-data', async (req, res) => {
   //if (user && user.id) userRank = await getUserRankByUserId(user.id)
 
   try {
-    const leaderboardOrder = await getTop100Users()
+    const leaderboardOrder = await Leaderboard.find();
     return res.status(200).send({ message: 'Leaderboard retrieved successfully', leaderboardData: leaderboardOrder, userRank });
   } catch (error) {
     console.error('Error getting leaderboard data:', error);
     res.status(500).send({ message: 'Internal Server Error' }); 
   }
   
-})*/
-
-const cache = new Map(); // Simple in-memory cache (for demonstration purposes)
-
-// Function to get top 100 users with caching
-async function getTop100Users() {
-  const cacheKey = 'top100Users';
-  
-  // Check if the data is in cache
-  if (cache.has(cacheKey)) {
-      return cache.get(cacheKey);
-  }
-
-  try {
-      const topUsers = await User.find({}, { _id: 1, user: 1, pointsNo: 1 })
-          .sort({ pointsNo: -1 })
-          .limit(100); // Limit to top 100 users
-
-      // Cache the result
-      cache.set(cacheKey, topUsers);
-      return topUsers;
-  } catch (err) {
-      console.error('Error fetching top users:', err);
-      throw err; // Handle or throw the error further
-  }
-}
+})
 
 async function updateSocialRewardDeets(userId) {
   try {
       // Define the new fields to add to the socialRewardDeets array
       const newFields = [
           { claimTreshold: 'youtube', rewardClaimed: false },
-          { claimTreshold: 'instagram', rewardClaimed: false }
+          { claimTreshold: 'instagram', rewardClaimed: false },
+          { claimTreshold: 'five-frens', rewardClaimed: false },
+          { claimTreshold: 'ten-frens', rewardClaimed: false }
       ];
 
       // Find the user by user.id and update the socialRewardDeets field
@@ -190,29 +160,6 @@ async function updateSocialRewardDeets(userId) {
   }
 }
 
-// Endpoint to get leaderboard data
-app.post('/leaderboard-data', async (req, res) => {
-  const { user } = req.body;
-
-  try {
-    let userRank = 0;
-
-    // Uncomment and optimize the following if you implement user rank fetching
-    // if (user && user.id) userRank = await getUserRankByUserId(user.id)
-
-    const leaderboardData = await getTop100Users();
-
-    return res.status(200).send({ 
-      message: 'Leaderboard retrieved successfully', 
-      leaderboardData, 
-      userRank 
-    });
-
-  } catch (error) {
-    console.error('Error getting leaderboard data:', error);
-    return res.status(500).send({ message: 'Internal Server Error' });
-  }
-});
 
 // Clear cache periodically (Optional)
 setInterval(() => {
@@ -569,6 +516,17 @@ process.on('unhandledRejection', (reason, promise) => {
 cron.schedule('0 0 * * *', async () => {
   console.log('Running a job to reset spins for all users');
   await User.updateMany({}, { pointsToday: 0 });
+});
+
+// Schedule the cron job to run every 6 hours
+cron.schedule('0 */6 * * *', async () => {
+  console.log('Running cron job to update leaderboard...');
+  try {
+      await getTop100Users();
+      console.log('Leaderboard updated successfully');
+  } catch (err) {
+      console.error('Failed to update leaderboard:', err);
+  }
 });
 
 // Error Handling

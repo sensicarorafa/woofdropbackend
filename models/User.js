@@ -122,6 +122,14 @@ const UserSchema = new mongoose.Schema({
             {
                 claimTreshold: 'instagram',
                 rewardClaimed: false
+            },
+            {
+                claimTreshold: 'five-frens',
+                rewardClaimed: false
+            },
+            {
+                claimTreshold: 'ten-frens',
+                rewardClaimed: false
             }
         ]
     }

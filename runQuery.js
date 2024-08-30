@@ -30,12 +30,12 @@ async function getTop100Users() {
     }
 }
 
-const getUsers = async () => {
+/*const getUsers = async () => {
     const users = await User.find({});
 
     console.log(users.length)
 
-}
+}*/
 
 /*async function updateReferrerPoints () {
     const users = await User.find({
@@ -74,11 +74,10 @@ const getUsers = async () => {
         console.error('Error updating referrer codes:', error);
     }
 }*/
-
-/*const countTotalUsers = async () => {
+const countTotalUsers = async () => {
   try {
     // Define a limit for how many users to fetch at a time
-    const limit = 100;
+    const limit = 5000;
     let totalCount = 0;
     let hasMore = true;
     let skip = 0;
@@ -89,7 +88,7 @@ const getUsers = async () => {
 
       // Add the number of users fetched to the total count
       totalCount += users.length;
-      console.log({currentTotalUsers: totalUsers});
+      console.log({currentTotalUsers: totalCount});
 
       // If the number of users fetched is less than the limit, it means we've reached the end
       if (users.length < limit) {
@@ -114,8 +113,8 @@ countTotalUsers()
   })
   .catch(error => {
     console.error('Failed to count users:', error);
-  });*/
+  });
 
 //updateReferrerPoints()
-getUsers();
+//getUsers();
 //updateReferrerCode();
