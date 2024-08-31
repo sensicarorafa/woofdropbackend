@@ -10,6 +10,7 @@ const crypto = require('crypto');
 const User = require('./models/User');
 const Leaderboard = require('./models/Leaderboard');
 const cron = require('node-cron');
+const ReferralLeaderboard = require('./models/ReferralLeaderboard');
 require('dotenv').config();
 
 // Express App Initialization
@@ -47,7 +48,7 @@ app.use(cors());
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-async function getUsersSortedByTotalPoints() {
+/*async function getUsersSortedByTotalPoints() {
   try {
     // Fetch all users from the database
     const users = await User.find();
@@ -68,8 +69,6 @@ async function getUsersSortedByTotalPoints() {
     throw error;
   }
 }
-
-const cache = new Map(); 
 
 async function getTop100Users() {
     const cacheKey = 'top100Users';
@@ -105,8 +104,106 @@ async function getTop100Users() {
         console.error('Error fetching top users:', err);
         throw err; // Handle or throw the error further
     }
+}*/
+
+const cache = new Map(); 
+
+async function getTop100Users() {
+  const cacheKey = 'top100Users';
+
+  // Check if the data is in cache
+  if (cache.has(cacheKey)) {
+      return cache.get(cacheKey);
+  }
+
+  try {
+      // Use aggregation to calculate the product of pointsNo and referralPoints, and sort by this product
+      const topUsers = await User.aggregate([
+          {
+              $addFields: {
+                  totalScore: { $multiply: ["$pointsNo", "$referralPoints"] }
+              }
+          },
+          {
+              $sort: { totalScore: -1 }
+          },
+          {
+              $limit: 100
+          },
+          {
+              $project: {
+                  _id: 1,
+                  user: 1,
+                  pointsNo: 1,
+                  referralPoints: 1,
+                  totalScore: 1
+              }
+          }
+      ]);
+
+      // Cache the result
+      cache.set(cacheKey, topUsers);
+
+      // Clear existing Leaderboard data
+      await Leaderboard.deleteMany({});
+
+      // Save new top users to Leaderboard
+      const leaderboardEntries = topUsers.map(user => ({
+          userId: user._id,
+          firstName: user.user.first_name,
+          lastName: user.user.last_name,
+          username: user.user.username,
+          pointsNo: user.pointsNo,
+          referralPoints: user.referralPoints,
+          totalScore: user.totalScore
+      }));
+
+      await Leaderboard.insertMany(leaderboardEntries);
+      console.log('Leaderboard updated successfully');
+      return topUsers;
+  } catch (err) {
+      console.error('Error fetching top users:', err);
+      throw err; // Handle or throw the error further
+  }
 }
 
+
+async function getTop100UsersByReferrals() {
+  const cacheKey = 'top100Users';
+
+  // Check if the data is in cache
+  if (cache.has(cacheKey)) {
+      return cache.get(cacheKey);
+  }
+
+  try {
+      const topUsers = await User.find({}, { _id: 1, user: 1, pointsNo: 1, referralPoints: 1 })
+          .sort({ referralPoints: -1 })
+          .limit(100); // Limit to top 100 users
+
+      // Cache the result
+      cache.set(cacheKey, topUsers);
+
+      // Clear existing Leaderboard data
+      await ReferralLeaderboard.deleteMany({});
+
+      // Save new top users to Leaderboard
+      const leaderboardEntries = topUsers.map(user => ({
+          userId: user._id,
+          firstName: user.user.first_name,
+          lastName: user.user.last_name,
+          username: user.user.username,
+          pointsNo: user.pointsNo,
+          referralPoints: user.referralPoints
+      }));
+
+      await ReferralLeaderboard.insertMany(leaderboardEntries);
+      return topUsers;
+  } catch (err) {
+      console.error('Error fetching top users:', err);
+      throw err; // Handle or throw the error further
+  }
+}
 
 app.post('/leaderboard-data', async (req, res) => {
   const { user } = req.body;
@@ -116,6 +213,22 @@ app.post('/leaderboard-data', async (req, res) => {
 
   try {
     const leaderboardOrder = await Leaderboard.find();
+    return res.status(200).send({ message: 'Leaderboard retrieved successfully', leaderboardData: leaderboardOrder, userRank });
+  } catch (error) {
+    console.error('Error getting leaderboard data:', error);
+    res.status(500).send({ message: 'Internal Server Error' }); 
+  }
+  
+})
+
+app.post('/referral-leaderboard-data', async (req, res) => {
+  const { user } = req.body;
+  
+  let userRank = 0;
+  //if (user && user.id) userRank = await getUserRankByUserId(user.id)
+
+  try {
+    const leaderboardOrder = await ReferralLeaderboard.find();
     return res.status(200).send({ message: 'Leaderboard retrieved successfully', leaderboardData: leaderboardOrder, userRank });
   } catch (error) {
     console.error('Error getting leaderboard data:', error);
@@ -516,6 +629,16 @@ process.on('unhandledRejection', (reason, promise) => {
 cron.schedule('0 0 * * *', async () => {
   console.log('Running a job to reset spins for all users');
   await User.updateMany({}, { pointsToday: 0 });
+});
+
+cron.schedule('0 */6 * * *', async () => {
+  console.log('Running cron job to update leaderboard...');
+  try {
+      await getTop100UsersByReferrals();
+      console.log('Leaderboard updated successfully');
+  } catch (err) {
+      console.error('Failed to update leaderboard:', err);
+  }
 });
 
 // Schedule the cron job to run every 6 hours

@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const User = require('./models/User');
+const Leaderboard = require('./models/Leaderboard');
 const crypto = require('crypto');
 require('dotenv').config()
 
@@ -17,16 +18,144 @@ db.once("open", function () {
   console.log("Connected successfully");
 });
 
-async function getTop100Users() {
-    try {
-        const topUsers = await User.find({})
-            .sort({ pointsNo: -1 }) // Sort by pointsNo in descending order
-            .limit(100); // Limit the results to the first 100 users
+const cache = new Map(); 
+
+async function getTop100UsersAndUpdate() {
+  const cacheKey = 'top100Users';
+
+  // Check if the data is in cache
+  if (cache.has(cacheKey)) {
+      return cache.get(cacheKey);
+  }
+
+  try {
+      // Use aggregation to calculate the product of pointsNo and referralPoints, and sort by this product
+      const topUsers = await User.aggregate([
+          {
+              $addFields: {
+                  totalScore: { $multiply: ["$pointsNo", "$referralPoints"] }
+              }
+          },
+          {
+              $sort: { totalScore: -1 }
+          },
+          {
+              $limit: 100
+          },
+          {
+              $project: {
+                  _id: 1,
+                  user: 1,
+                  pointsNo: 1,
+                  referralPoints: 1,
+                  totalScore: 1
+              }
+          }
+      ]);
+
+      // Cache the result
+      cache.set(cacheKey, topUsers);
+
+      // Clear existing Leaderboard data
+      await Leaderboard.deleteMany({});
+
+      // Save new top users to Leaderboard
+      const leaderboardEntries = topUsers.map(user => ({
+          userId: user._id,
+          firstName: user.user.first_name,
+          lastName: user.user.last_name,
+          username: user.user.username,
+          pointsNo: user.pointsNo,
+          referralPoints: user.referralPoints,
+          totalScore: user.totalScore
+      }));
+
+      await Leaderboard.insertMany(leaderboardEntries);
+      console.log('Leaderboard updated successfully');
+      return topUsers;
+  } catch (err) {
+      console.error('Error fetching top users:', err);
+      throw err; // Handle or throw the error further
+  }
+}
+
+
+/*async function getTop100UsersAndUpdate() {
+    const cacheKey = 'top100Users';
   
+    // Check if the data is in cache
+    if (cache.has(cacheKey)) {
+        return cache.get(cacheKey);
+    }
+
+    try {
+        const topUsers = await User.find({}, { _id: 1, user: 1, pointsNo: 1 })
+            .sort({ pointsNo: -1 })
+            .limit(100); // Limit to top 100 users
+
+        // Cache the result
+        cache.set(cacheKey, topUsers);
+
+        // Clear existing Leaderboard data
+        await Leaderboard.deleteMany({});
+
+        // Save new top users to Leaderboard
+        const leaderboardEntries = topUsers.map(user => ({
+            userId: user._id,
+            firstName: user.user.first_name,
+            lastName: user.user.last_name,
+            username: user.user.username,
+            pointsNo: user.pointsNo
+        }));
+
+        await Leaderboard.insertMany(leaderboardEntries);
+        console.log('all updated')
         return topUsers;
     } catch (err) {
         console.error('Error fetching top users:', err);
-        throw err; // Optionally, you can handle the error or throw it further
+        throw err; // Handle or throw the error further
+    }
+}*/
+
+async function getTop100Users() {
+    const cacheKey = 'top100Users';
+  
+    // Check if the data is in cache
+    if (cache.has(cacheKey)) {
+        return cache.get(cacheKey);
+    }
+
+    try {
+        const topUsers = await User.find({})
+            .sort({ pointsNo: -1 })
+            .limit(100); // Limit to top 100 users
+
+        // Cache the result
+        cache.set(cacheKey, topUsers);
+        
+        //console.log(topUsers[0]);
+
+        const currentUser = topUsers[0];
+
+        const getUser = await User.findOne({
+          'user.id': currentUser.user.id
+        })
+
+        console.log('old points no', getUser.pointsNo, 'referralPoints', getUser.referralPoints);
+
+        /*if (getUser) {
+          getUser.pointsNo = 1000;
+          await getUser.save()
+          const newGetUser = await User.findOne({
+            'user.id': currentUser.user.id
+          })
+          
+          console.log(newGetUser.pointsNo, 'saved')
+        }*/
+
+    } catch (err) {
+        console.error('Error fetching top users:', err);
+        throw err; // Handle or throw the error further
     }
 }
 
@@ -74,7 +203,7 @@ async function getTop100Users() {
         console.error('Error updating referrer codes:', error);
     }
 }*/
-const countTotalUsers = async () => {
+/*const countTotalUsers = async () => {
   try {
     // Define a limit for how many users to fetch at a time
     const limit = 5000;
@@ -113,8 +242,10 @@ countTotalUsers()
   })
   .catch(error => {
     console.error('Failed to count users:', error);
-  });
+  });*/
 
 //updateReferrerPoints()
 //getUsers();
 //updateReferrerCode();
+//getTop100Users();
+getTop100UsersAndUpdate();
