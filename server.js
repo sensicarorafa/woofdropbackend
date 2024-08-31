@@ -177,8 +177,8 @@ async function getTop100UsersByReferrals() {
   }
 
   try {
-      const topUsers = await User.find({}, { _id: 1, user: 1, pointsNo: 1, referralPoints: 1 })
-          .sort({ referralPoints: -1 })
+      const topUsers = await User.find({}, { _id: 1, user: 1, pointsNo: 1, referralContest: 1 })
+          .sort({ referralContest: -1 })
           .limit(100); // Limit to top 100 users
 
       // Cache the result
@@ -194,7 +194,7 @@ async function getTop100UsersByReferrals() {
           lastName: user.user.last_name,
           username: user.user.username,
           pointsNo: user.pointsNo,
-          referralPoints: user.referralPoints
+          referralPoints: user.referralContest
       }));
 
       await ReferralLeaderboard.insertMany(leaderboardEntries);
@@ -516,7 +516,7 @@ const addReferralPoints = async (referralCode) => {
   const user = await User.findOne({ referralCode });
   if (user) {
     user.referralPoints += 1;
-    //user.pointsNo += 250000;
+    user.referralContest += 1;
     await user.save();
     const userAgain = await User.findOne({ referralCode });
   }

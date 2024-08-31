@@ -9,6 +9,10 @@ const UserSchema = new mongoose.Schema({
         type: Number,
         default: 0
     },
+    referralContest: {
+        type: Number,
+        default: 0
+    },
     referrerCode: {
         type: String,
         default: ''

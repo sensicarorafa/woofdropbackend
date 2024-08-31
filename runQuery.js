@@ -244,8 +244,25 @@ countTotalUsers()
     console.error('Failed to count users:', error);
   });*/
 
+  async function updateReferralContestField() {
+    try {
+        // Update all users with the new referralContest field
+        const result = await User.updateMany(
+            { referralContest: { $exists: false } }, // Only update users without this field
+            { $set: { referralContest: 0 } }
+        );
+
+        console.log(`${result.nModified} users were updated with the referralContest field.`);
+    } catch (err) {
+        console.error('Error updating users:', err);
+    }
+}
+
+// Call the function
+updateReferralContestField();
+
 //updateReferrerPoints()
 //getUsers();
 //updateReferrerCode();
 //getTop100Users();
-getTop100UsersAndUpdate();
+//getTop100UsersAndUpdate();
