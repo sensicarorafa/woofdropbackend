@@ -249,7 +249,8 @@ async function updateSocialRewardDeets(userId) {
           { claimTreshold: 'yt-vid-one', rewardClaimed: false },
           { claimTreshold: 'rt-tag-three-frens', rewardClaimed: false },
           { claimTreshold: 'twenty-frens', rewardClaimed: false },
-          { claimTreshold: 'thirty-frens', rewardClaimed: false }
+          { claimTreshold: 'thirty-frens', rewardClaimed: false },
+          { claimTreshold: 'gift-for-tomarket', rewardClaimed: false }
       ];
 
       // Find the user by user.id and update the socialRewardDeets field
