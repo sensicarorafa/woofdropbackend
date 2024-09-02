@@ -10,13 +10,17 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@faker-js/faker": "^8.4.1",
     "axios": "^1.7.5",
+    "chance": "^1.1.12",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "crypto": "^1.0.1",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "mongoose": "^8.5.4",
+    "faker": "^6.6.6",
+    "fs": "^0.0.1-security",
+    "mongoose": "^8.6.0",
     "morgan": "^1.10.0",
     "node-cron": "^3.0.3",
     "telegraf": "^4.16.3"

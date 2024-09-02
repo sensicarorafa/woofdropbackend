@@ -1,0 +1,8082 @@
+[
+  {
+    "pointsNo": 972,
+    "referralPoints": 252,
+    "referralContest": 198,
+    "referrerCode": "9RcqtY9B",
+    "userLevel": 5,
+    "totalSteps": 87722,
+    "pointsToday": 392,
+    "totalStepsToday": 780,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 7917,
+      "first_name": "Ora",
+      "last_name": "Chandler",
+      "username": "ora_chandler_495",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "tyAYfpJhta",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f53",
+    "__v": 0
+  },
+  {
+    "pointsNo": 981,
+    "referralPoints": 746,
+    "referralContest": 181,
+    "referrerCode": "v4zi5sfn",
+    "userLevel": 4,
+    "totalSteps": 29390,
+    "pointsToday": 65,
+    "totalStepsToday": 8067,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": true,
+    "user": {
+      "id": 3846,
+      "first_name": "Nicholas",
+      "last_name": "Mclean",
+      "username": "nicholas_mclean_701",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "qfQyMzxvNQ",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f54",
+    "__v": 0
+  },
+  {
+    "pointsNo": 832,
+    "referralPoints": 803,
+    "referralContest": 259,
+    "referrerCode": "xkmM7Soe",
+    "userLevel": 1,
+    "totalSteps": 1007,
+    "pointsToday": 26,
+    "totalStepsToday": 9767,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 5730,
+      "first_name": "Tillie",
+      "last_name": "Palmer",
+      "username": "tillie_palmer_553",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "GDWrzY84Q6",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f55",
+    "__v": 0
+  },
+  {
+    "pointsNo": 979,
+    "referralPoints": 191,
+    "referralContest": 578,
+    "referrerCode": "F7UoZF0n",
+    "userLevel": 7,
+    "totalSteps": 29429,
+    "pointsToday": 369,
+    "totalStepsToday": 9218,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": false,
+    "user": {
+      "id": 6271,
+      "first_name": "Patrick",
+      "last_name": "Lewis",
+      "username": "patrick_lewis_42",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "68gJRDk3y0",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": true
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f56",
+    "__v": 0
+  },
+  {
+    "pointsNo": 980,
+    "referralPoints": 675,
+    "referralContest": 434,
+    "referrerCode": "9lZfZj22",
+    "userLevel": 10,
+    "totalSteps": 51589,
+    "pointsToday": 193,
+    "totalStepsToday": 5709,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": true,
+    "user": {
+      "id": 1196,
+      "first_name": "Landon",
+      "last_name": "Étienne",
+      "username": "landon_étienne_992",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "bUPN02jdSl",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f57",
+    "__v": 0
+  },
+  {
+    "pointsNo": 560,
+    "referralPoints": 204,
+    "referralContest": 215,
+    "referrerCode": "rfr501ss",
+    "userLevel": 5,
+    "totalSteps": 72491,
+    "pointsToday": 210,
+    "totalStepsToday": 5987,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": true,
+    "user": {
+      "id": 5170,
+      "first_name": "Effie",
+      "last_name": "Hughes",
+      "username": "effie_hughes_831",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "HVcJY25c9F",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": true
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f58",
+    "__v": 0
+  },
+  {
+    "pointsNo": 819,
+    "referralPoints": 260,
+    "referralContest": 508,
+    "referrerCode": "gOgYidaJ",
+    "userLevel": 2,
+    "totalSteps": 84360,
+    "pointsToday": 170,
+    "totalStepsToday": 7602,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": true,
+    "user": {
+      "id": 3320,
+      "first_name": "Sara",
+      "last_name": "Wagenaar",
+      "username": "sara_wagenaar_125",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "LaMe0qsXUi",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": true
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f59",
+    "__v": 0
+  },
+  {
+    "pointsNo": 621,
+    "referralPoints": 679,
+    "referralContest": 339,
+    "referrerCode": "RW7qR5cX",
+    "userLevel": 5,
+    "totalSteps": 14364,
+    "pointsToday": 132,
+    "totalStepsToday": 7349,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 144,
+      "first_name": "Evelyn",
+      "last_name": "Iandelli",
+      "username": "evelyn_iandelli_124",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "eCenM8xc5o",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f5a",
+    "__v": 0
+  },
+  {
+    "pointsNo": 264,
+    "referralPoints": 657,
+    "referralContest": 976,
+    "referrerCode": "YCVuByJJ",
+    "userLevel": 4,
+    "totalSteps": 8536,
+    "pointsToday": 131,
+    "totalStepsToday": 7980,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": true,
+    "user": {
+      "id": 5120,
+      "first_name": "Scott",
+      "last_name": "Ono",
+      "username": "scott_ono_432",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "cBlhTBOksb",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f5b",
+    "__v": 0
+  },
+  {
+    "pointsNo": 721,
+    "referralPoints": 570,
+    "referralContest": 126,
+    "referrerCode": "WOliRQQb",
+    "userLevel": 7,
+    "totalSteps": 37233,
+    "pointsToday": 118,
+    "totalStepsToday": 7536,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 6068,
+      "first_name": "Eleanor",
+      "last_name": "Horton",
+      "username": "eleanor_horton_741",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "vAcBzQmuCo",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": true
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f5c",
+    "__v": 0
+  },
+  {
+    "pointsNo": 961,
+    "referralPoints": 905,
+    "referralContest": 476,
+    "referrerCode": "N8uciYWe",
+    "userLevel": 9,
+    "totalSteps": 11757,
+    "pointsToday": 117,
+    "totalStepsToday": 431,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": true,
+    "user": {
+      "id": 1203,
+      "first_name": "Barry",
+      "last_name": "Tanaka",
+      "username": "barry_tanaka_515",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "NATuDlE44g",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f5d",
+    "__v": 0
+  },
+  {
+    "pointsNo": 637,
+    "referralPoints": 939,
+    "referralContest": 445,
+    "referrerCode": "09JLBLLs",
+    "userLevel": 5,
+    "totalSteps": 40313,
+    "pointsToday": 500,
+    "totalStepsToday": 3126,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": true,
+    "user": {
+      "id": 7212,
+      "first_name": "Jerry",
+      "last_name": "Barlow",
+      "username": "jerry_barlow_248",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "fyqJ154Cqf",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f5e",
+    "__v": 0
+  },
+  {
+    "pointsNo": 916,
+    "referralPoints": 749,
+    "referralContest": 758,
+    "referrerCode": "lkslI4Q1",
+    "userLevel": 6,
+    "totalSteps": 22629,
+    "pointsToday": 489,
+    "totalStepsToday": 5584,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 6411,
+      "first_name": "Adrian",
+      "last_name": "Étienne",
+      "username": "adrian_étienne_755",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "GpViVbyCGb",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f5f",
+    "__v": 0
+  },
+  {
+    "pointsNo": 986,
+    "referralPoints": 321,
+    "referralContest": 215,
+    "referrerCode": "CoJMNt2P",
+    "userLevel": 9,
+    "totalSteps": 433,
+    "pointsToday": 170,
+    "totalStepsToday": 3335,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": true,
+    "user": {
+      "id": 2406,
+      "first_name": "Christian",
+      "last_name": "Lemaire",
+      "username": "christian_lemaire_655",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "rXzunwUiRC",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": true
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f60",
+    "__v": 0
+  },
+  {
+    "pointsNo": 251,
+    "referralPoints": 371,
+    "referralContest": 152,
+    "referrerCode": "pdD9Hjq3",
+    "userLevel": 2,
+    "totalSteps": 52542,
+    "pointsToday": 360,
+    "totalStepsToday": 8282,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": false,
+    "user": {
+      "id": 3700,
+      "first_name": "Brent",
+      "last_name": "Armstrong",
+      "username": "brent_armstrong_401",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "ceTsvIrt4S",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f61",
+    "__v": 0
+  },
+  {
+    "pointsNo": 617,
+    "referralPoints": 127,
+    "referralContest": 150,
+    "referrerCode": "uKYZLbFv",
+    "userLevel": 3,
+    "totalSteps": 70870,
+    "pointsToday": 263,
+    "totalStepsToday": 9732,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 2696,
+      "first_name": "Viola",
+      "last_name": "Zanieri",
+      "username": "viola_zanieri_1000",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "LnKgUeUyEj",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f62",
+    "__v": 0
+  },
+  {
+    "pointsNo": 222,
+    "referralPoints": 315,
+    "referralContest": 66,
+    "referrerCode": "mMYTt7GQ",
+    "userLevel": 7,
+    "totalSteps": 80107,
+    "pointsToday": 79,
+    "totalStepsToday": 7076,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": true,
+    "user": {
+      "id": 4632,
+      "first_name": "Cody",
+      "last_name": "Herrera",
+      "username": "cody_herrera_191",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "TDYABfElrg",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f63",
+    "__v": 0
+  },
+  {
+    "pointsNo": 745,
+    "referralPoints": 729,
+    "referralContest": 227,
+    "referrerCode": "EHOnF7Ti",
+    "userLevel": 2,
+    "totalSteps": 12501,
+    "pointsToday": 401,
+    "totalStepsToday": 3503,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": true,
+    "user": {
+      "id": 3156,
+      "first_name": "Todd",
+      "last_name": "Martinez",
+      "username": "todd_martinez_996",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "uHgXHFSrSX",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f64",
+    "__v": 0
+  },
+  {
+    "pointsNo": 463,
+    "referralPoints": 599,
+    "referralContest": 396,
+    "referrerCode": "TERgqaNU",
+    "userLevel": 2,
+    "totalSteps": 96556,
+    "pointsToday": 23,
+    "totalStepsToday": 3436,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": true,
+    "user": {
+      "id": 714,
+      "first_name": "Max",
+      "last_name": "Arrighi",
+      "username": "max_arrighi_683",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "9c4208rXVR",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f65",
+    "__v": 0
+  },
+  {
+    "pointsNo": 159,
+    "referralPoints": 239,
+    "referralContest": 216,
+    "referrerCode": "LhjvHUho",
+    "userLevel": 7,
+    "totalSteps": 89466,
+    "pointsToday": 187,
+    "totalStepsToday": 1199,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 1818,
+      "first_name": "Estelle",
+      "last_name": "Fanfani",
+      "username": "estelle_fanfani_491",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "Tcgdrgkea3",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f66",
+    "__v": 0
+  },
+  {
+    "pointsNo": 156,
+    "referralPoints": 230,
+    "referralContest": 633,
+    "referrerCode": "U0bZAwfw",
+    "userLevel": 7,
+    "totalSteps": 31661,
+    "pointsToday": 186,
+    "totalStepsToday": 8137,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 3102,
+      "first_name": "Aiden",
+      "last_name": "Giannoni",
+      "username": "aiden_giannoni_361",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "uM8WRw9EY9",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f67",
+    "__v": 0
+  },
+  {
+    "pointsNo": 403,
+    "referralPoints": 13,
+    "referralContest": 931,
+    "referrerCode": "K22X5xg6",
+    "userLevel": 7,
+    "totalSteps": 68231,
+    "pointsToday": 119,
+    "totalStepsToday": 79,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": false,
+    "user": {
+      "id": 8663,
+      "first_name": "Carl",
+      "last_name": "Ohno",
+      "username": "carl_ohno_321",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "m9zap54mxH",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": true
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f68",
+    "__v": 0
+  },
+  {
+    "pointsNo": 766,
+    "referralPoints": 980,
+    "referralContest": 211,
+    "referrerCode": "nO9fTv8u",
+    "userLevel": 6,
+    "totalSteps": 42539,
+    "pointsToday": 392,
+    "totalStepsToday": 3483,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": true,
+    "user": {
+      "id": 1932,
+      "first_name": "Rosie",
+      "last_name": "Smeets",
+      "username": "rosie_smeets_407",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "GCzHL7inan",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f69",
+    "__v": 0
+  },
+  {
+    "pointsNo": 694,
+    "referralPoints": 959,
+    "referralContest": 987,
+    "referrerCode": "cszr6ioU",
+    "userLevel": 9,
+    "totalSteps": 47632,
+    "pointsToday": 84,
+    "totalStepsToday": 4466,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 4645,
+      "first_name": "Jeffery",
+      "last_name": "Romeo",
+      "username": "jeffery_romeo_589",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "BBzGLl4eHN",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f6a",
+    "__v": 0
+  },
+  {
+    "pointsNo": 593,
+    "referralPoints": 703,
+    "referralContest": 446,
+    "referrerCode": "ytwgdsfZ",
+    "userLevel": 3,
+    "totalSteps": 50946,
+    "pointsToday": 297,
+    "totalStepsToday": 9108,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": false,
+    "user": {
+      "id": 387,
+      "first_name": "Roger",
+      "last_name": "Zanieri",
+      "username": "roger_zanieri_985",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "k0AZFz8BYd",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": true
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f6b",
+    "__v": 0
+  },
+  {
+    "pointsNo": 799,
+    "referralPoints": 283,
+    "referralContest": 937,
+    "referrerCode": "fJijleo6",
+    "userLevel": 6,
+    "totalSteps": 13628,
+    "pointsToday": 311,
+    "totalStepsToday": 3847,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": true,
+    "user": {
+      "id": 1018,
+      "first_name": "Joshua",
+      "last_name": "Manning",
+      "username": "joshua_manning_839",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "gOOHr3A7TQ",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f6c",
+    "__v": 0
+  },
+  {
+    "pointsNo": 263,
+    "referralPoints": 802,
+    "referralContest": 73,
+    "referrerCode": "thCSaric",
+    "userLevel": 3,
+    "totalSteps": 73125,
+    "pointsToday": 105,
+    "totalStepsToday": 5479,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": true,
+    "user": {
+      "id": 6807,
+      "first_name": "Roy",
+      "last_name": "Lewis",
+      "username": "roy_lewis_133",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "pBWEGFKYnG",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f6d",
+    "__v": 0
+  },
+  {
+    "pointsNo": 238,
+    "referralPoints": 305,
+    "referralContest": 223,
+    "referrerCode": "YTxq1eu9",
+    "userLevel": 6,
+    "totalSteps": 61372,
+    "pointsToday": 394,
+    "totalStepsToday": 4,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": false,
+    "user": {
+      "id": 7609,
+      "first_name": "Sarah",
+      "last_name": "Caldini",
+      "username": "sarah_caldini_775",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "LqfZHtcThx",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f6e",
+    "__v": 0
+  },
+  {
+    "pointsNo": 205,
+    "referralPoints": 741,
+    "referralContest": 856,
+    "referrerCode": "8YQlkhn8",
+    "userLevel": 4,
+    "totalSteps": 23585,
+    "pointsToday": 118,
+    "totalStepsToday": 2483,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": true,
+    "user": {
+      "id": 3233,
+      "first_name": "Mabelle",
+      "last_name": "Corti",
+      "username": "mabelle_corti_821",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "Qn3ZqKwO6G",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": true
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f6f",
+    "__v": 0
+  },
+  {
+    "pointsNo": 311,
+    "referralPoints": 354,
+    "referralContest": 390,
+    "referrerCode": "ECOjhKoa",
+    "userLevel": 9,
+    "totalSteps": 69293,
+    "pointsToday": 409,
+    "totalStepsToday": 32,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": false,
+    "user": {
+      "id": 7028,
+      "first_name": "Ada",
+      "last_name": "Fei",
+      "username": "ada_fei_205",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "n2BhoDA8QT",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": true
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f70",
+    "__v": 0
+  },
+  {
+    "pointsNo": 525,
+    "referralPoints": 892,
+    "referralContest": 852,
+    "referrerCode": "tyelN6Dl",
+    "userLevel": 7,
+    "totalSteps": 25305,
+    "pointsToday": 32,
+    "totalStepsToday": 2356,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 9570,
+      "first_name": "Ann",
+      "last_name": "Thornton",
+      "username": "ann_thornton_296",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "RlqjKj9B4O",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": true
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f71",
+    "__v": 0
+  },
+  {
+    "pointsNo": 793,
+    "referralPoints": 153,
+    "referralContest": 118,
+    "referrerCode": "AnY0XQ59",
+    "userLevel": 5,
+    "totalSteps": 13157,
+    "pointsToday": 366,
+    "totalStepsToday": 9942,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": false,
+    "user": {
+      "id": 6682,
+      "first_name": "Cecilia",
+      "last_name": "Gramigni",
+      "username": "cecilia_gramigni_675",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "rSppjgaRUu",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": true
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f72",
+    "__v": 0
+  },
+  {
+    "pointsNo": 89,
+    "referralPoints": 141,
+    "referralContest": 699,
+    "referrerCode": "el2WkI31",
+    "userLevel": 2,
+    "totalSteps": 5983,
+    "pointsToday": 224,
+    "totalStepsToday": 4760,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": true,
+    "user": {
+      "id": 2906,
+      "first_name": "Ann",
+      "last_name": "Coles",
+      "username": "ann_coles_145",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "LDsJOLlMqb",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": true
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f73",
+    "__v": 0
+  },
+  {
+    "pointsNo": 383,
+    "referralPoints": 115,
+    "referralContest": 853,
+    "referrerCode": "XWZjKw58",
+    "userLevel": 8,
+    "totalSteps": 51250,
+    "pointsToday": 270,
+    "totalStepsToday": 3445,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 5527,
+      "first_name": "Bruce",
+      "last_name": "Schmitz",
+      "username": "bruce_schmitz_26",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "FyjAPB3iBG",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": true
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f74",
+    "__v": 0
+  },
+  {
+    "pointsNo": 269,
+    "referralPoints": 431,
+    "referralContest": 830,
+    "referrerCode": "xbzxlzYc",
+    "userLevel": 8,
+    "totalSteps": 70455,
+    "pointsToday": 145,
+    "totalStepsToday": 7021,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": true,
+    "user": {
+      "id": 2060,
+      "first_name": "Sophie",
+      "last_name": "Warner",
+      "username": "sophie_warner_886",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "MANdHxqc5N",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f75",
+    "__v": 0
+  },
+  {
+    "pointsNo": 639,
+    "referralPoints": 436,
+    "referralContest": 177,
+    "referrerCode": "L7jBVWKj",
+    "userLevel": 5,
+    "totalSteps": 43125,
+    "pointsToday": 184,
+    "totalStepsToday": 3820,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 386,
+      "first_name": "Joshua",
+      "last_name": "Hooper",
+      "username": "joshua_hooper_978",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "e6PrTdK2ZP",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": true
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f76",
+    "__v": 0
+  },
+  {
+    "pointsNo": 332,
+    "referralPoints": 184,
+    "referralContest": 875,
+    "referrerCode": "HbzXAvuL",
+    "userLevel": 3,
+    "totalSteps": 96099,
+    "pointsToday": 247,
+    "totalStepsToday": 7411,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": false,
+    "user": {
+      "id": 534,
+      "first_name": "Chris",
+      "last_name": "De Simone",
+      "username": "chris_de simone_614",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "6DQlcpyqFF",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f77",
+    "__v": 0
+  },
+  {
+    "pointsNo": 360,
+    "referralPoints": 937,
+    "referralContest": 325,
+    "referrerCode": "UQqAqWum",
+    "userLevel": 7,
+    "totalSteps": 97026,
+    "pointsToday": 178,
+    "totalStepsToday": 4933,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 6906,
+      "first_name": "George",
+      "last_name": "Peacock",
+      "username": "george_peacock_867",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "ZoeRLbOx0m",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f78",
+    "__v": 0
+  },
+  {
+    "pointsNo": 234,
+    "referralPoints": 342,
+    "referralContest": 183,
+    "referrerCode": "KGw5t6eb",
+    "userLevel": 5,
+    "totalSteps": 95726,
+    "pointsToday": 482,
+    "totalStepsToday": 2125,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": false,
+    "user": {
+      "id": 9591,
+      "first_name": "Bryan",
+      "last_name": "Maldonado",
+      "username": "bryan_maldonado_978",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "fIBQ4miJlC",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f79",
+    "__v": 0
+  },
+  {
+    "pointsNo": 311,
+    "referralPoints": 82,
+    "referralContest": 601,
+    "referrerCode": "0OD3b1NK",
+    "userLevel": 3,
+    "totalSteps": 34082,
+    "pointsToday": 437,
+    "totalStepsToday": 6006,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": true,
+    "user": {
+      "id": 2603,
+      "first_name": "Randy",
+      "last_name": "Maillard",
+      "username": "randy_maillard_66",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "Aq4WgLtRKc",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f7a",
+    "__v": 0
+  },
+  {
+    "pointsNo": 956,
+    "referralPoints": 341,
+    "referralContest": 347,
+    "referrerCode": "UiXdZy09",
+    "userLevel": 8,
+    "totalSteps": 76777,
+    "pointsToday": 315,
+    "totalStepsToday": 2087,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": true,
+    "user": {
+      "id": 7901,
+      "first_name": "Steven",
+      "last_name": "Williamson",
+      "username": "steven_williamson_633",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "L6J0MQWY1a",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f7b",
+    "__v": 0
+  },
+  {
+    "pointsNo": 654,
+    "referralPoints": 632,
+    "referralContest": 422,
+    "referrerCode": "8UzOjrMi",
+    "userLevel": 4,
+    "totalSteps": 63146,
+    "pointsToday": 86,
+    "totalStepsToday": 900,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": true,
+    "user": {
+      "id": 7955,
+      "first_name": "Tom",
+      "last_name": "Zanieri",
+      "username": "tom_zanieri_4",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "cILifjHG9A",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f7c",
+    "__v": 0
+  },
+  {
+    "pointsNo": 109,
+    "referralPoints": 591,
+    "referralContest": 101,
+    "referrerCode": "khGyu49U",
+    "userLevel": 6,
+    "totalSteps": 51841,
+    "pointsToday": 496,
+    "totalStepsToday": 5660,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": true,
+    "user": {
+      "id": 5339,
+      "first_name": "Minnie",
+      "last_name": "Bacherini",
+      "username": "minnie_bacherini_514",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "PQ3CUFqNRk",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": true
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f7d",
+    "__v": 0
+  },
+  {
+    "pointsNo": 13,
+    "referralPoints": 420,
+    "referralContest": 781,
+    "referrerCode": "r1JRpypj",
+    "userLevel": 7,
+    "totalSteps": 40313,
+    "pointsToday": 53,
+    "totalStepsToday": 231,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 4705,
+      "first_name": "Mario",
+      "last_name": "Peters",
+      "username": "mario_peters_55",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "zCiV0nvDcE",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": true
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f7e",
+    "__v": 0
+  },
+  {
+    "pointsNo": 513,
+    "referralPoints": 865,
+    "referralContest": 901,
+    "referrerCode": "pff4M9mc",
+    "userLevel": 10,
+    "totalSteps": 46019,
+    "pointsToday": 159,
+    "totalStepsToday": 8005,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": true,
+    "user": {
+      "id": 1221,
+      "first_name": "Cordelia",
+      "last_name": "Higgins",
+      "username": "cordelia_higgins_130",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "iEfkfQZuNk",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f7f",
+    "__v": 0
+  },
+  {
+    "pointsNo": 261,
+    "referralPoints": 943,
+    "referralContest": 39,
+    "referrerCode": "FuSPLyOG",
+    "userLevel": 5,
+    "totalSteps": 61946,
+    "pointsToday": 88,
+    "totalStepsToday": 9211,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": true,
+    "user": {
+      "id": 3679,
+      "first_name": "Willie",
+      "last_name": "Gutierrez",
+      "username": "willie_gutierrez_40",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "BoqRnW1NG9",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": true
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f80",
+    "__v": 0
+  },
+  {
+    "pointsNo": 562,
+    "referralPoints": 483,
+    "referralContest": 474,
+    "referrerCode": "BRDyE5Uj",
+    "userLevel": 7,
+    "totalSteps": 23416,
+    "pointsToday": 474,
+    "totalStepsToday": 115,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": false,
+    "user": {
+      "id": 9123,
+      "first_name": "Claudia",
+      "last_name": "Herrera",
+      "username": "claudia_herrera_798",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "Q5VMlCYjs4",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f81",
+    "__v": 0
+  },
+  {
+    "pointsNo": 491,
+    "referralPoints": 617,
+    "referralContest": 904,
+    "referrerCode": "0dJ297Fi",
+    "userLevel": 10,
+    "totalSteps": 54262,
+    "pointsToday": 188,
+    "totalStepsToday": 781,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": false,
+    "user": {
+      "id": 6746,
+      "first_name": "Tyler",
+      "last_name": "Lecomte",
+      "username": "tyler_lecomte_338",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "fQAJmKiuGR",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f82",
+    "__v": 0
+  },
+  {
+    "pointsNo": 431,
+    "referralPoints": 951,
+    "referralContest": 504,
+    "referrerCode": "rLdAZvrK",
+    "userLevel": 2,
+    "totalSteps": 21487,
+    "pointsToday": 283,
+    "totalStepsToday": 7672,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 9452,
+      "first_name": "Frances",
+      "last_name": "Pritchard",
+      "username": "frances_pritchard_709",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "9EYxmr29Ml",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f83",
+    "__v": 0
+  },
+  {
+    "pointsNo": 286,
+    "referralPoints": 474,
+    "referralContest": 600,
+    "referrerCode": "DMdxUUxy",
+    "userLevel": 4,
+    "totalSteps": 67727,
+    "pointsToday": 164,
+    "totalStepsToday": 264,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 1017,
+      "first_name": "Sarah",
+      "last_name": "Ortega",
+      "username": "sarah_ortega_936",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "Nd51TopWo7",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f84",
+    "__v": 0
+  },
+  {
+    "pointsNo": 371,
+    "referralPoints": 896,
+    "referralContest": 999,
+    "referrerCode": "EsLnkoF2",
+    "userLevel": 4,
+    "totalSteps": 77248,
+    "pointsToday": 330,
+    "totalStepsToday": 9284,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 9506,
+      "first_name": "Alfred",
+      "last_name": "Perrot",
+      "username": "alfred_perrot_280",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "3HDq802bH5",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f85",
+    "__v": 0
+  },
+  {
+    "pointsNo": 947,
+    "referralPoints": 921,
+    "referralContest": 79,
+    "referrerCode": "yYg7JWmn",
+    "userLevel": 1,
+    "totalSteps": 79452,
+    "pointsToday": 497,
+    "totalStepsToday": 765,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": true,
+    "user": {
+      "id": 1224,
+      "first_name": "Hallie",
+      "last_name": "Schipper",
+      "username": "hallie_schipper_824",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "f2u2zGQvFP",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": true
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f86",
+    "__v": 0
+  },
+  {
+    "pointsNo": 760,
+    "referralPoints": 37,
+    "referralContest": 934,
+    "referrerCode": "c1oQBgIx",
+    "userLevel": 2,
+    "totalSteps": 7953,
+    "pointsToday": 424,
+    "totalStepsToday": 6590,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 4649,
+      "first_name": "Charlie",
+      "last_name": "Sottili",
+      "username": "charlie_sottili_45",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "cT2ljHgPS5",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": true
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f87",
+    "__v": 0
+  },
+  {
+    "pointsNo": 563,
+    "referralPoints": 39,
+    "referralContest": 16,
+    "referrerCode": "OAKGv1gK",
+    "userLevel": 3,
+    "totalSteps": 17996,
+    "pointsToday": 435,
+    "totalStepsToday": 444,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": false,
+    "user": {
+      "id": 826,
+      "first_name": "Rebecca",
+      "last_name": "Kramer",
+      "username": "rebecca_kramer_189",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "3FRFHw7GiH",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": true
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f88",
+    "__v": 0
+  },
+  {
+    "pointsNo": 964,
+    "referralPoints": 713,
+    "referralContest": 488,
+    "referrerCode": "Bb6pnojM",
+    "userLevel": 4,
+    "totalSteps": 55037,
+    "pointsToday": 472,
+    "totalStepsToday": 4312,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": false,
+    "user": {
+      "id": 3243,
+      "first_name": "Henry",
+      "last_name": "Guerrero",
+      "username": "henry_guerrero_144",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "4chAWeFGKH",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f89",
+    "__v": 0
+  },
+  {
+    "pointsNo": 818,
+    "referralPoints": 744,
+    "referralContest": 306,
+    "referrerCode": "YGo0rwLC",
+    "userLevel": 3,
+    "totalSteps": 42581,
+    "pointsToday": 55,
+    "totalStepsToday": 5390,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": true,
+    "user": {
+      "id": 4532,
+      "first_name": "Inez",
+      "last_name": "Pratesi",
+      "username": "inez_pratesi_809",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "BqEHsExUet",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": true
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f8a",
+    "__v": 0
+  },
+  {
+    "pointsNo": 413,
+    "referralPoints": 998,
+    "referralContest": 144,
+    "referrerCode": "2HIjbzJE",
+    "userLevel": 1,
+    "totalSteps": 81120,
+    "pointsToday": 491,
+    "totalStepsToday": 9324,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 690,
+      "first_name": "Eugene",
+      "last_name": "Garner",
+      "username": "eugene_garner_462",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "MheItvsxYb",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": true
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f8b",
+    "__v": 0
+  },
+  {
+    "pointsNo": 572,
+    "referralPoints": 984,
+    "referralContest": 473,
+    "referrerCode": "IAEBmaUs",
+    "userLevel": 2,
+    "totalSteps": 32442,
+    "pointsToday": 211,
+    "totalStepsToday": 1,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": true,
+    "user": {
+      "id": 8604,
+      "first_name": "William",
+      "last_name": "Fedi",
+      "username": "william_fedi_549",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "csfs5g4hsZ",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": true
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f8c",
+    "__v": 0
+  },
+  {
+    "pointsNo": 924,
+    "referralPoints": 282,
+    "referralContest": 963,
+    "referrerCode": "0oExEq2s",
+    "userLevel": 5,
+    "totalSteps": 44672,
+    "pointsToday": 460,
+    "totalStepsToday": 707,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 6758,
+      "first_name": "Hulda",
+      "last_name": "Griffin",
+      "username": "hulda_griffin_352",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "Caedfs4eYG",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f8d",
+    "__v": 0
+  },
+  {
+    "pointsNo": 903,
+    "referralPoints": 21,
+    "referralContest": 891,
+    "referrerCode": "x0SmnEmm",
+    "userLevel": 7,
+    "totalSteps": 1369,
+    "pointsToday": 434,
+    "totalStepsToday": 128,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 7743,
+      "first_name": "Sylvia",
+      "last_name": "Bibi",
+      "username": "sylvia_bibi_417",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "xyQnZLJspz",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": true
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f8e",
+    "__v": 0
+  },
+  {
+    "pointsNo": 363,
+    "referralPoints": 741,
+    "referralContest": 349,
+    "referrerCode": "K7BBAlnG",
+    "userLevel": 1,
+    "totalSteps": 34074,
+    "pointsToday": 471,
+    "totalStepsToday": 8605,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 6097,
+      "first_name": "Elsie",
+      "last_name": "Holland",
+      "username": "elsie_holland_727",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "8QCPB5QJxA",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": true
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f8f",
+    "__v": 0
+  },
+  {
+    "pointsNo": 684,
+    "referralPoints": 749,
+    "referralContest": 931,
+    "referrerCode": "xDRQ60lV",
+    "userLevel": 2,
+    "totalSteps": 55372,
+    "pointsToday": 74,
+    "totalStepsToday": 6404,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": true,
+    "user": {
+      "id": 9736,
+      "first_name": "Adeline",
+      "last_name": "Mazzetti",
+      "username": "adeline_mazzetti_327",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "LR5ffIzgOD",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": true
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f90",
+    "__v": 0
+  },
+  {
+    "pointsNo": 513,
+    "referralPoints": 627,
+    "referralContest": 385,
+    "referrerCode": "U2AYebgE",
+    "userLevel": 6,
+    "totalSteps": 74419,
+    "pointsToday": 376,
+    "totalStepsToday": 1483,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": true,
+    "user": {
+      "id": 776,
+      "first_name": "Marvin",
+      "last_name": "Finch",
+      "username": "marvin_finch_523",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "gg6bvV8kE0",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f91",
+    "__v": 0
+  },
+  {
+    "pointsNo": 886,
+    "referralPoints": 169,
+    "referralContest": 684,
+    "referrerCode": "LHZj9N8X",
+    "userLevel": 6,
+    "totalSteps": 90736,
+    "pointsToday": 333,
+    "totalStepsToday": 3722,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": false,
+    "user": {
+      "id": 2475,
+      "first_name": "Vincent",
+      "last_name": "Blom",
+      "username": "vincent_blom_77",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "sPW81k5xJW",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f92",
+    "__v": 0
+  },
+  {
+    "pointsNo": 622,
+    "referralPoints": 118,
+    "referralContest": 197,
+    "referrerCode": "SvLRJLLW",
+    "userLevel": 9,
+    "totalSteps": 39329,
+    "pointsToday": 379,
+    "totalStepsToday": 4103,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": true,
+    "user": {
+      "id": 1297,
+      "first_name": "Dean",
+      "last_name": "Thomas",
+      "username": "dean_thomas_579",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "0m5wwLABva",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": true
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f93",
+    "__v": 0
+  },
+  {
+    "pointsNo": 501,
+    "referralPoints": 807,
+    "referralContest": 731,
+    "referrerCode": "2hFg884j",
+    "userLevel": 1,
+    "totalSteps": 31233,
+    "pointsToday": 335,
+    "totalStepsToday": 9070,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 5992,
+      "first_name": "Millie",
+      "last_name": "Lotti",
+      "username": "millie_lotti_383",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "mxncK19ml5",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f94",
+    "__v": 0
+  },
+  {
+    "pointsNo": 452,
+    "referralPoints": 726,
+    "referralContest": 992,
+    "referrerCode": "jANQgZ8d",
+    "userLevel": 8,
+    "totalSteps": 26938,
+    "pointsToday": 157,
+    "totalStepsToday": 9678,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 3989,
+      "first_name": "Aaron",
+      "last_name": "Fedi",
+      "username": "aaron_fedi_325",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "zHP8Wy0Q53",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f95",
+    "__v": 0
+  },
+  {
+    "pointsNo": 123,
+    "referralPoints": 371,
+    "referralContest": 639,
+    "referrerCode": "cvoGeyWZ",
+    "userLevel": 5,
+    "totalSteps": 75458,
+    "pointsToday": 141,
+    "totalStepsToday": 2439,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 5361,
+      "first_name": "Glen",
+      "last_name": "Forconi",
+      "username": "glen_forconi_777",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "dzCzM2vMqL",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": true
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f96",
+    "__v": 0
+  },
+  {
+    "pointsNo": 686,
+    "referralPoints": 568,
+    "referralContest": 154,
+    "referrerCode": "ltPzXkbH",
+    "userLevel": 3,
+    "totalSteps": 35147,
+    "pointsToday": 310,
+    "totalStepsToday": 1002,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 1735,
+      "first_name": "Brent",
+      "last_name": "Tyler",
+      "username": "brent_tyler_450",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "i9XpHpXOJq",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": true
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f97",
+    "__v": 0
+  },
+  {
+    "pointsNo": 557,
+    "referralPoints": 992,
+    "referralContest": 795,
+    "referrerCode": "HcjpQw2h",
+    "userLevel": 10,
+    "totalSteps": 59187,
+    "pointsToday": 360,
+    "totalStepsToday": 2315,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 1898,
+      "first_name": "Chase",
+      "last_name": "Wong",
+      "username": "chase_wong_79",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "WsTnw76R2y",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f98",
+    "__v": 0
+  },
+  {
+    "pointsNo": 331,
+    "referralPoints": 539,
+    "referralContest": 402,
+    "referrerCode": "DF50f2FW",
+    "userLevel": 5,
+    "totalSteps": 1594,
+    "pointsToday": 287,
+    "totalStepsToday": 3487,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 2737,
+      "first_name": "Darrell",
+      "last_name": "Pozzi",
+      "username": "darrell_pozzi_854",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "cYI7BGkDM5",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f99",
+    "__v": 0
+  },
+  {
+    "pointsNo": 905,
+    "referralPoints": 286,
+    "referralContest": 511,
+    "referrerCode": "kQsBZEYl",
+    "userLevel": 1,
+    "totalSteps": 87375,
+    "pointsToday": 341,
+    "totalStepsToday": 4664,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": false,
+    "user": {
+      "id": 9750,
+      "first_name": "Chase",
+      "last_name": "Querci",
+      "username": "chase_querci_649",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "odXynsVbP7",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f9a",
+    "__v": 0
+  },
+  {
+    "pointsNo": 345,
+    "referralPoints": 825,
+    "referralContest": 594,
+    "referrerCode": "YsND3hJn",
+    "userLevel": 10,
+    "totalSteps": 95639,
+    "pointsToday": 364,
+    "totalStepsToday": 9590,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 7595,
+      "first_name": "Eleanor",
+      "last_name": "Owen",
+      "username": "eleanor_owen_779",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "bS65uR9LBj",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": true
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f9b",
+    "__v": 0
+  },
+  {
+    "pointsNo": 480,
+    "referralPoints": 52,
+    "referralContest": 467,
+    "referrerCode": "6M0qdR7G",
+    "userLevel": 5,
+    "totalSteps": 59981,
+    "pointsToday": 61,
+    "totalStepsToday": 2410,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": true,
+    "user": {
+      "id": 9276,
+      "first_name": "Timothy",
+      "last_name": "Bonini",
+      "username": "timothy_bonini_283",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "DnFXdf8FLY",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": true
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f9c",
+    "__v": 0
+  },
+  {
+    "pointsNo": 857,
+    "referralPoints": 635,
+    "referralContest": 516,
+    "referrerCode": "x5bvfa4N",
+    "userLevel": 3,
+    "totalSteps": 24454,
+    "pointsToday": 498,
+    "totalStepsToday": 7524,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": true,
+    "user": {
+      "id": 8538,
+      "first_name": "Jerry",
+      "last_name": "Miller",
+      "username": "jerry_miller_12",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "fFMw88hjis",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f9d",
+    "__v": 0
+  },
+  {
+    "pointsNo": 907,
+    "referralPoints": 788,
+    "referralContest": 589,
+    "referrerCode": "1Absi0ax",
+    "userLevel": 9,
+    "totalSteps": 14112,
+    "pointsToday": 364,
+    "totalStepsToday": 4655,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": true,
+    "user": {
+      "id": 262,
+      "first_name": "Loretta",
+      "last_name": "Floyd",
+      "username": "loretta_floyd_407",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "utwgebkQIn",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": true
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f9e",
+    "__v": 0
+  },
+  {
+    "pointsNo": 218,
+    "referralPoints": 438,
+    "referralContest": 110,
+    "referrerCode": "G9Nsnvjc",
+    "userLevel": 2,
+    "totalSteps": 53746,
+    "pointsToday": 302,
+    "totalStepsToday": 1475,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": true,
+    "user": {
+      "id": 3084,
+      "first_name": "Antonio",
+      "last_name": "Cooper",
+      "username": "antonio_cooper_807",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "j0iTmaU9Rt",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030f9f",
+    "__v": 0
+  },
+  {
+    "pointsNo": 794,
+    "referralPoints": 253,
+    "referralContest": 462,
+    "referrerCode": "zHuAeHdl",
+    "userLevel": 6,
+    "totalSteps": 86594,
+    "pointsToday": 63,
+    "totalStepsToday": 1809,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 6584,
+      "first_name": "Evan",
+      "last_name": "Briggs",
+      "username": "evan_briggs_389",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "tBAiwSpqRU",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": true
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030fa0",
+    "__v": 0
+  },
+  {
+    "pointsNo": 506,
+    "referralPoints": 386,
+    "referralContest": 244,
+    "referrerCode": "mNyDTfZT",
+    "userLevel": 5,
+    "totalSteps": 18980,
+    "pointsToday": 341,
+    "totalStepsToday": 5362,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": false,
+    "user": {
+      "id": 5724,
+      "first_name": "Flora",
+      "last_name": "Staderini",
+      "username": "flora_staderini_410",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "kYO5UBW7Df",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": false
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030fa1",
+    "__v": 0
+  },
+  {
+    "pointsNo": 446,
+    "referralPoints": 53,
+    "referralContest": 416,
+    "referrerCode": "L1i1Hf1o",
+    "userLevel": 5,
+    "totalSteps": 52855,
+    "pointsToday": 123,
+    "totalStepsToday": 2492,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": true,
+    "user": {
+      "id": 4640,
+      "first_name": "Mildred",
+      "last_name": "Miles",
+      "username": "mildred_miles_589",
+      "language_code": "en",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "mcnWy5wPR2",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "two-frens",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "five-frens",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "ten-frens",
+        "rewardClaimed": true
+      }
+    ],
+    "_id": "66d5a22d0ba574ee93030fa2",
+    "__v": 0
+  }
+]

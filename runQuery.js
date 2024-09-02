@@ -61,14 +61,14 @@ async function getTop100UsersAndUpdate() {
 
       // Save new top users to Leaderboard
       const leaderboardEntries = topUsers.map(user => ({
-          userId: user._id,
-          firstName: user.user.first_name,
-          lastName: user.user.last_name,
-          username: user.user.username,
-          pointsNo: user.pointsNo,
-          referralPoints: user.referralPoints,
-          totalScore: user.totalScore
-      }));
+        userId: user._id,
+        firstName: user.user.first_name,
+        lastName: user.user.last_name,
+        username: user.user.first_name.length > 10 ? user.user.first_name.slice(0, 10) : user.user.first_name,
+        pointsNo: user.pointsNo,
+        referralPoints: user.referralPoints,
+        totalScore: user.totalScore
+    }));
 
       await Leaderboard.insertMany(leaderboardEntries);
       console.log('Leaderboard updated successfully');
@@ -101,12 +101,12 @@ async function getTop100UsersAndUpdate() {
 
         // Save new top users to Leaderboard
         const leaderboardEntries = topUsers.map(user => ({
-            userId: user._id,
-            firstName: user.user.first_name,
-            lastName: user.user.last_name,
-            username: user.user.username,
-            pointsNo: user.pointsNo
-        }));
+          userId: user._id,
+          firstName: user.user.first_name,
+          lastName: user.user.last_name,
+          username: user.user.first_name.length > 10 ? user.user.first_name.slice(0, 10) : user.user.first_name,
+          pointsNo: user.pointsNo
+      }));
 
         await Leaderboard.insertMany(leaderboardEntries);
         console.log('all updated')
@@ -127,7 +127,7 @@ async function getTop100Users() {
 
     try {
         const topUsers = await User.find({})
-            .sort({ pointsNo: -1 })
+            .sort({ referralContest: -1 })
             .limit(100); // Limit to top 100 users
 
         // Cache the result
@@ -141,10 +141,12 @@ async function getTop100Users() {
           'user.id': currentUser.user.id
         })
 
-        console.log('old points no', getUser.pointsNo, 'referralPoints', getUser.referralPoints);
+        console.log('old points no', getUser.pointsNo, 'referralPoints', getUser.referralPoints, 'referralContest', getUser.referralContest);
 
         /*if (getUser) {
-          getUser.pointsNo = 1000;
+          getUser.pointsNo = 0;
+          getUser.referralPoints = 0;
+          getUser.referralContest = 0;
           await getUser.save()
           const newGetUser = await User.findOne({
             'user.id': currentUser.user.id
@@ -259,10 +261,10 @@ countTotalUsers()
 }
 
 // Call the function
-updateReferralContestField();
+//updateReferralContestField();
 
 //updateReferrerPoints()
 //getUsers();
 //updateReferrerCode();
-//getTop100Users();
+getTop100Users();
 //getTop100UsersAndUpdate();
