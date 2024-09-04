@@ -20,7 +20,7 @@ db.once("open", function () {
 
 const cache = new Map(); 
 
-async function getTop100UsersAndUpdate() {
+/*async function getTop100UsersAndUpdate() {
   const cacheKey = 'top100Users';
 
   // Check if the data is in cache
@@ -77,7 +77,7 @@ async function getTop100UsersAndUpdate() {
       console.error('Error fetching top users:', err);
       throw err; // Handle or throw the error further
   }
-}
+}*/
 
 
 /*async function getTop100UsersAndUpdate() {
@@ -117,7 +117,7 @@ async function getTop100UsersAndUpdate() {
     }
 }*/
 
-async function getTop100Users() {
+/*async function getTop100Users() {
     const cacheKey = 'top100Users';
   
     // Check if the data is in cache
@@ -127,7 +127,7 @@ async function getTop100Users() {
 
     try {
         const topUsers = await User.find({})
-            .sort({ referralContest: -1 })
+            .sort({ pointsNo: -1 })
             .limit(100); // Limit to top 100 users
 
         // Cache the result
@@ -141,9 +141,9 @@ async function getTop100Users() {
           'user.id': currentUser.user.id
         })
 
-        console.log('old points no', getUser.pointsNo, 'referralPoints', getUser.referralPoints, 'referralContest', getUser.referralContest);
+        console.log('old points no', getUser.pointsNo, 'referralPoints', getUser.referralPoints, 'referralContest', getUser.referralContest, 'user id', getUser.user.id, 'referrer code', getUser.referrerCode);
 
-        /*if (getUser) {
+        if (getUser) {
           getUser.pointsNo = 0;
           getUser.referralPoints = 0;
           getUser.referralContest = 0;
@@ -153,13 +153,13 @@ async function getTop100Users() {
           })
           
           console.log(newGetUser.pointsNo, 'saved')
-        }*/
+        }
 
     } catch (err) {
         console.error('Error fetching top users:', err);
         throw err; // Handle or throw the error further
     }
-}
+}*/
 
 /*const getUsers = async () => {
     const users = await User.find({});
@@ -205,10 +205,11 @@ async function getTop100Users() {
         console.error('Error updating referrer codes:', error);
     }
 }*/
+
 /*const countTotalUsers = async () => {
   try {
     // Define a limit for how many users to fetch at a time
-    const limit = 5000;
+    const limit = 50000;
     let totalCount = 0;
     let hasMore = true;
     let skip = 0;
@@ -246,7 +247,7 @@ countTotalUsers()
     console.error('Failed to count users:', error);
   });*/
 
-  async function updateReferralContestField() {
+/*async function updateReferralContestField() {
     try {
         // Update all users with the new referralContest field
         const result = await User.updateMany(
@@ -258,7 +259,42 @@ countTotalUsers()
     } catch (err) {
         console.error('Error updating users:', err);
     }
+}*/
+
+async function updateUsers() {
+    try {
+        // Find users who match the condition
+        const usersToUpdate = await User.find({
+            pointsNo: { $gt: 10000000 },
+            referralPoints: { $lt: 200 }
+        });
+
+        if (usersToUpdate.length === 0) {
+            console.log('No users found that match the criteria.');
+            return;
+        }
+
+        // Update the necessary fields for each user
+        const updatePromises = usersToUpdate.map(user => {
+            user.referralPoints = 0; // Example update, you can adjust this as needed
+            user.pointsNo = 0; // Add more updates if needed
+            user.referralContest = 0;
+
+            return user.save();
+        });
+
+        // Wait for all updates to complete
+        await Promise.all(updatePromises);
+
+        console.log(`${usersToUpdate.length} users updated successfully.`);
+    } catch (error) {
+        console.error('Error updating users:', error);
+    }
 }
+
+// Call the function
+updateUsers();
+
 
 // Call the function
 //updateReferralContestField();
@@ -266,5 +302,5 @@ countTotalUsers()
 //updateReferrerPoints()
 //getUsers();
 //updateReferrerCode();
-getTop100Users();
+//getTop100Users();
 //getTop100UsersAndUpdate();

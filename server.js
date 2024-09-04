@@ -49,64 +49,6 @@ app.use(cors());
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-/*async function getUsersSortedByTotalPoints() {
-  try {
-    // Fetch all users from the database
-    const users = await User.find();
-
-    // Map users to add the totalPoints field
-    const usersWithTotalPoints = users.slice(0, 50).map(user => {
-      const totalPoints = user.pointsNo;
-      return { ...user._doc, totalPoints }; // user._doc contains the raw user data
-    });
-
-    // Sort users by totalPoints in descending order
-    usersWithTotalPoints.sort((a, b) => b.totalPoints - a.totalPoints);
-
-    // Return sorted users
-    return usersWithTotalPoints;
-  } catch (error) {
-    console.error('Error fetching users:', error);
-    throw error;
-  }
-}
-
-async function getTop100Users() {
-    const cacheKey = 'top100Users';
-  
-    // Check if the data is in cache
-    if (cache.has(cacheKey)) {
-        return cache.get(cacheKey);
-    }
-
-    try {
-        const topUsers = await User.find({}, { _id: 1, user: 1, pointsNo: 1 })
-            .sort({ pointsNo: -1 })
-            .limit(100); // Limit to top 100 users
-
-        // Cache the result
-        cache.set(cacheKey, topUsers);
-
-        // Clear existing Leaderboard data
-        await Leaderboard.deleteMany({});
-
-        // Save new top users to Leaderboard
-        const leaderboardEntries = topUsers.map(user => ({
-            userId: user._id,
-            firstName: user.user.first_name,
-            lastName: user.user.last_name,
-            username: user.user.username,
-            pointsNo: user.pointsNo
-        }));
-
-        await Leaderboard.insertMany(leaderboardEntries);
-        return topUsers;
-    } catch (err) {
-        console.error('Error fetching top users:', err);
-        throw err; // Handle or throw the error further
-    }
-}*/
-
 const cache = new Map(); 
 
 async function getTop100Users() {
@@ -253,7 +195,8 @@ async function updateSocialRewardDeets(userId) {
           { claimTreshold: 'gift-for-tomarket', rewardClaimed: false },
           { claimTreshold: 'invite-url-tomarket', rewardClaimed: false },
           { claimTreshold: 'rt-tag-three-frens-two', rewardClaimed: false },
-          { claimTreshold: 'join-goats', rewardClaimed: false }
+          { claimTreshold: 'join-goats', rewardClaimed: false },
+          { claimTreshold: 'yt-vid-two', rewardClaimed: false }
       ];
 
       // Find the user by user.id and update the socialRewardDeets field
@@ -532,7 +475,7 @@ const addReferralPoints = async (referralCode) => {
 };
 
 // Telegram Bot Setup
-bot.start(async (ctx) => {
+/*bot.start(async (ctx) => {
   try {
     const telegramId = ctx.from.id;
     const referralCode = ctx.payload;
@@ -622,7 +565,7 @@ bot.start(async (ctx) => {
   }
 });
 
-bot.launch();
+bot.launch();*/
 
 process.on('uncaughtException', (err) => {
   console.error('Uncaught Exception:', err);
