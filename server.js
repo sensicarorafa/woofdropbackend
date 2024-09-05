@@ -196,7 +196,13 @@ async function updateSocialRewardDeets(userId) {
           { claimTreshold: 'invite-url-tomarket', rewardClaimed: false },
           { claimTreshold: 'rt-tag-three-frens-two', rewardClaimed: false },
           { claimTreshold: 'join-goats', rewardClaimed: false },
-          { claimTreshold: 'yt-vid-two', rewardClaimed: false }
+          { claimTreshold: 'yt-vid-two', rewardClaimed: false },
+          { claimTreshold: 'rt-tag-three-frens-three', rewardClaimed: false },
+          { claimTreshold: 'birds-container', rewardClaimed: false },
+          { claimTreshold: 'play-birds', rewardClaimed: false },
+          { claimTreshold: 'sub-birds-yt', rewardClaimed: false },
+          { claimTreshold: 'follow-birds-x', rewardClaimed: false },
+          { claimTreshold: 'ton-ai', rewardClaimed: false }
       ];
 
       // Find the user by user.id and update the socialRewardDeets field
@@ -478,7 +484,7 @@ const addReferralPoints = async (referralCode) => {
 bot.start(async (ctx) => {
   try {
     const telegramId = ctx.from.id;
-    const referralCode = ctx.payload;
+    const referralCode = ctx.payload ? ctx.payload : ctx.startPayload;
     let existingUser = await User.findOne({ 'user.id': telegramId });
 
     if (referralCode && !existingUser) {
