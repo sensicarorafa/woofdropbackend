@@ -198,11 +198,10 @@ async function updateSocialRewardDeets(userId) {
           { claimTreshold: 'join-goats', rewardClaimed: false },
           { claimTreshold: 'yt-vid-two', rewardClaimed: false },
           { claimTreshold: 'rt-tag-three-frens-three', rewardClaimed: false },
-          { claimTreshold: 'birds-container', rewardClaimed: false },
           { claimTreshold: 'play-birds', rewardClaimed: false },
           { claimTreshold: 'sub-birds-yt', rewardClaimed: false },
           { claimTreshold: 'follow-birds-x', rewardClaimed: false },
-          { claimTreshold: 'rt-tag-three-frens-three', rewardClaimed: false },
+          { claimTreshold: 'rt-tag-three-frens-four', rewardClaimed: false },
           { claimTreshold: 'ton-ai', rewardClaimed: false },
           { claimTreshold: 'hold-coin-bot', rewardClaimed: false },
           { claimTreshold: 'hold-coin-channel', rewardClaimed: false }
