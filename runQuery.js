@@ -292,8 +292,28 @@ async function updateUsers() {
     }
 }
 
+async function deleteUserByUserId(userId) {
+    try {
+        // Find and delete the user using the user.id field
+        const deletedUser = await User.findOneAndDelete({ 'user.id': userId });
+
+        if (deletedUser) {
+            console.log(`User with user.id ${userId} was deleted.`);
+            return deletedUser;
+        } else {
+            console.log(`No user found with user.id ${userId}.`);
+            return null;
+        }
+    } catch (error) {
+        console.error(`Error deleting user with user.id ${userId}:`, error);
+        throw error;
+    }
+}
+
+//deleteUserByUserId(1354055384)
+
 // Call the function
-updateUsers();
+//updateUsers();
 
 
 // Call the function
