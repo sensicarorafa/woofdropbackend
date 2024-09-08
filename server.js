@@ -12,6 +12,7 @@ const User = require('./models/User');
 const Leaderboard = require('./models/Leaderboard');
 const cron = require('node-cron');
 const ReferralLeaderboard = require('./models/ReferralLeaderboard');
+const Task = require('./models/Task');
 require('dotenv').config();
 
 // Express App Initialization
@@ -180,10 +181,28 @@ app.post('/referral-leaderboard-data', async (req, res) => {
   
 })
 
+async function getAllTasks() {
+  try {
+      const tasks = await Task.find();
+      return tasks;
+  } catch (error) {
+      console.error('Error retrieving tasks:', error);
+      throw error; // You can throw the error to handle it where the function is called
+  }
+}
+
 async function updateSocialRewardDeets(userId) {
   try {
       // Define the new fields to add to the socialRewardDeets array
       const newFields = [
+          { claimTreshold: 'follow', rewardClaimed: false },
+          { claimTreshold: 'repost', rewardClaimed: false },
+          { claimTreshold: 'telegram', rewardClaimed: false },
+          { claimTreshold: 'two-frens', rewardClaimed: false },
+          { claimTreshold: 'youtube', rewardClaimed: false },
+          { claimTreshold: 'instagram', rewardClaimed: false },
+          { claimTreshold: 'five-frens', rewardClaimed: false },
+          { claimTreshold: 'ten-frens', rewardClaimed: false },
           { claimTreshold: 'youtube', rewardClaimed: false },
           { claimTreshold: 'instagram', rewardClaimed: false },
           { claimTreshold: 'five-frens', rewardClaimed: false },
@@ -206,6 +225,7 @@ async function updateSocialRewardDeets(userId) {
           { claimTreshold: 'hold-coin-bot', rewardClaimed: false },
           { claimTreshold: 'hold-coin-channel', rewardClaimed: false },
           { claimTreshold: 'yt-vid-three', rewardClaimed: false },
+          { claimTreshold: 'rt-tag-three-frens-five', rewardClaimed: false }
       ];
 
       // Find the user by user.id and update the socialRewardDeets field
@@ -233,6 +253,60 @@ async function updateSocialRewardDeets(userId) {
       console.error('Error updating socialRewardDeets:', error);
   }
 }
+
+/*async function updateUserSocialRewards(userId) {
+  try {
+      // Fetch all tasks from the Task collection
+      const tasks = await Task.find();
+
+      // Fetch the user based on user.id
+      const user = await User.findOne({ 'user.id': userId });
+
+      if (!user) {
+          console.log(`No user found with user.id ${userId}`);
+          return null;
+      }
+
+      // Loop through the tasks and update user's socialRewardDeets
+      tasks.forEach(task => {
+          // Find existing reward for the task's claimTreshold
+          let existingReward = user.socialRewardDeets.find(reward => reward.claimTreshold === task.claimTreshold);
+
+          if (existingReward) {
+              // Update only missing fields in the existingReward
+              existingReward.btnText = task.btnText || existingReward.btnText;
+              existingReward.rewardClaimed = existingReward.rewardClaimed !== undefined ? existingReward.rewardClaimed : task.rewardClaimed;
+              existingReward.taskText = task.taskText || existingReward.taskText;
+              existingReward.taskPoints = task.taskPoints !== undefined ? task.taskPoints : existingReward.taskPoints;
+              existingReward.taskCategory = task.taskCategory || existingReward.taskCategory;
+          } else {
+              // If the task is not found in socialRewardDeets, add it with all fields from Task
+              user.socialRewardDeets.push({
+                  claimTreshold: task.claimTreshold,
+                  rewardClaimed: task.rewardClaimed,
+                  btnText: task.btnText,
+                  taskText: task.taskText,
+                  taskPoints: task.taskPoints,
+                  taskCategory: task.taskCategory,
+              });
+          }
+      });
+
+      // Mark the array as modified for Mongoose to detect the change
+      user.markModified('socialRewardDeets');
+
+      // Save the updated user document
+      await user.save();
+
+      console.log(`User with user.id ${userId} updated successfully`);
+      return user;
+
+  } catch (error) {
+      console.error('Error updating user social rewards:', error);
+      throw error;
+  }
+}*/
+
 
 
 // Clear cache periodically (Optional)
@@ -428,7 +502,45 @@ app.post('/get-user-referrals', async (req, res) => {
   }
 })
 
-// Additional routes as per your requirement...
+// POST /tasks - Create a new Task
+app.post('/tasks', async (req, res) => {
+  try {
+      const newTask = new Task(req.body);
+      const savedTask = await newTask.save();
+      res.status(201).json(savedTask);
+  } catch (error) {
+      res.status(400).json({ message: 'Error creating task', error });
+  }
+});
+
+
+// PUT /tasks/:id - Edit a Task by its ID
+app.put('/tasks/:id', async (req, res) => {
+  try {
+      const updatedTask = await Task.findByIdAndUpdate(req.params.id, req.body, { new: true });
+      if (!updatedTask) {
+          return res.status(404).json({ message: 'Task not found' });
+      }
+      res.json(updatedTask);
+  } catch (error) {
+      res.status(400).json({ message: 'Error updating task', error });
+  }
+});
+
+// DELETE /tasks/:id - Delete a Task by its ID
+app.delete('/tasks/:id', async (req, res) => {
+  try {
+      const deletedTask = await Task.findByIdAndDelete(req.params.id);
+      if (!deletedTask) {
+          return res.status(404).json({ message: 'Task not found' });
+      }
+      res.json({ message: 'Task deleted successfully' });
+  } catch (error) {
+      res.status(400).json({ message: 'Error deleting task', error });
+  }
+});
+
+
 
 
 async function generateUniqueReferralCode(userId) {

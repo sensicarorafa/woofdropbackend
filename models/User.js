@@ -105,35 +105,75 @@ const UserSchema = new mongoose.Schema({
         default: [
             {
                 claimTreshold: 'follow',
-                rewardClaimed: false
+                rewardClaimed: false,
+                btnText: String,
+                taskText: String,
+                taskPoints: Number,
+                taskCategory: String,
+                taskUrl: String
             },
             {
                 claimTreshold: 'repost',
-                rewardClaimed: false
+                rewardClaimed: false,
+                btnText: String,
+                taskText: String,
+                taskPoints: Number,
+                taskCategory: String,
+                taskUrl: String
             },
             {
                 claimTreshold: 'telegram',
-                rewardClaimed: false
+                rewardClaimed: false,
+                btnText: String,
+                taskText: String,
+                taskPoints: Number,
+                taskCategory: String,
+                taskUrl: String
             },
             {
                 claimTreshold: 'two-frens',
-                rewardClaimed: false
+                rewardClaimed: false,
+                btnText: String,
+                taskText: String,
+                taskPoints: Number,
+                taskCategory: String,
+                taskUrl: String
             },
             {
                 claimTreshold: 'youtube',
-                rewardClaimed: false
+                rewardClaimed: false,
+                btnText: String,
+                taskText: String,
+                taskPoints: Number,
+                taskCategory: String,
+                taskUrl: String
             },
             {
                 claimTreshold: 'instagram',
-                rewardClaimed: false
+                rewardClaimed: false,
+                btnText: String,
+                taskText: String,
+                taskPoints: Number,
+                taskCategory: String,
+                taskUrl: String
             },
             {
                 claimTreshold: 'five-frens',
-                rewardClaimed: false
+                rewardClaimed: false,
+                btnText: String,
+                taskText: String,
+                taskPoints: Number,
+                taskCategory: String,
+                taskUrl: String
             },
             {
                 claimTreshold: 'ten-frens',
-                rewardClaimed: false
+                rewardClaimed: false,
+                btnText: String,
+                taskText: String,
+                taskPoints: Number,
+                taskCategory: String,
+                taskUrl: String
             }
         ]
     }

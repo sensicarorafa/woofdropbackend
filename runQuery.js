@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const User = require('./models/User');
 const Leaderboard = require('./models/Leaderboard');
+const Task = require('./models/Task');
 const crypto = require('crypto');
 require('dotenv').config()
 
@@ -261,7 +262,7 @@ countTotalUsers()
     }
 }*/
 
-async function updateUsers() {
+/*async function updateUsers() {
     try {
         // Find users who match the condition
         const usersToUpdate = await User.find({
@@ -290,9 +291,9 @@ async function updateUsers() {
     } catch (error) {
         console.error('Error updating users:', error);
     }
-}
+}*/
 
-async function deleteUserByUserId(userId) {
+/*async function deleteUserByUserId(userId) {
     try {
         // Find and delete the user using the user.id field
         const deletedUser = await User.findOneAndDelete({ 'user.id': userId });
@@ -308,7 +309,89 @@ async function deleteUserByUserId(userId) {
         console.error(`Error deleting user with user.id ${userId}:`, error);
         throw error;
     }
+}*/
+
+/*async function updateUserPointsToday(userId, newPointsToday) {
+    try {
+        // Find the user based on user.id
+        const user = await User.findOne({ 'user.id': userId });
+
+        if (!user) {
+            console.log(`No user found with user.id ${userId}`);
+            return null;
+        }
+
+        // Update the pointsToday field with the new value
+        user.pointsToday = newPointsToday;
+
+        // Save the updated user document
+        await user.save();
+
+        console.log(`User with user.id ${userId} updated successfully with pointsToday: ${newPointsToday}`);
+        return user;
+    } catch (error) {
+        console.error('Error updating pointsToday field:', error);
+        throw error;
+    }
+}*/
+
+/*async function resetReferralRewards(userId) {
+    try {
+        // Find the user based on user.id
+        const user = await User.findOne({ 'user.id': userId });
+
+        if (!user) {
+            console.log(`No user found with user.id ${userId}`);
+            return null;
+        }
+
+        // Loop through referralRewardDeets and set rewardClaimed to false
+        user.referralRewardDeets = user.referralRewardDeets.map(reward => ({
+            ...reward,
+            rewardClaimed: false
+        }));
+
+        // Save the updated user document
+        await user.save();
+
+        console.log(`All referralRewardDeets set to false for user with user.id ${userId}`);
+        return user;
+    } catch (error) {
+        console.error('Error resetting referral rewards:', error);
+        throw error;
+    }
+}*/
+
+async function resetSocialRewards(userId) {
+    try {
+        // Find the user based on user.id
+        const user = await User.findOne({ 'user.id': userId });
+
+        if (!user) {
+            console.log(`No user found with user.id ${userId}`);
+            return null;
+        }
+
+        // Loop through referralRewardDeets and set rewardClaimed to false
+        user.socialRewardDeets = user.socialRewardDeets.map(reward => ({
+            ...reward,
+            rewardClaimed: false
+        }));
+
+        // Save the updated user document
+        await user.save();
+
+        console.log(`All socialRewardDeets set to false for user with user.id ${userId}`);
+        return user;
+    } catch (error) {
+        console.error('Error resetting referral rewards:', error);
+        throw error;
+    }
 }
+
+resetSocialRewards(1354055384)
+//resetReferralRewards(1354055384)
+//updateUserPointsToday(1354055384, 0)
 
 //deleteUserByUserId(1354055384)
 
