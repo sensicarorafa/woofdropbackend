@@ -362,7 +362,7 @@ countTotalUsers()
     }
 }*/
 
-async function resetSocialRewards(userId) {
+/*async function resetSocialRewards(userId) {
     try {
         // Find the user based on user.id
         const user = await User.findOne({ 'user.id': userId });
@@ -389,7 +389,7 @@ async function resetSocialRewards(userId) {
     }
 }
 
-resetSocialRewards(1354055384)
+resetSocialRewards(1354055384)*/
 //resetReferralRewards(1354055384)
 //updateUserPointsToday(1354055384, 0)
 
