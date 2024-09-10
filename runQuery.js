@@ -169,13 +169,16 @@ const cache = new Map();
 
 }*/
 
-/*async function updateReferrerPoints () {
+async function updateReferrerPoints () {
+    console.log('Running')
     const users = await User.find({
-        referrerCode: '91c968db'
+        referrerCode: 'c668bca1'
         //referralCode: '71605e28'
     })
 
-    let totalPoints = 2500;
+    console.log('Referrals', users.length)
+
+    /*let totalPoints = 2500;
 
     users.forEach(async (user) => {
         const userPoints = user.pointsNo / 10;
@@ -190,8 +193,9 @@ const cache = new Map();
 
     referrer.pointsNo = totalPoints;
     await referrer.save();
-    console.log('Total users:', {referrer: referrer.pointsNo})
-}*/
+    console.log('Total users:', {referrer: referrer.pointsNo})*/
+}
+
 
 /*async function updateReferrerCode() {
     try {
@@ -387,9 +391,48 @@ countTotalUsers()
         console.error('Error resetting referral rewards:', error);
         throw error;
     }
+}*/
+
+async function updateReferralPoints() {
+    try {
+        // Fetch all users from the database
+        const users = await User.find();
+
+        for (let index = 0; index < users.length; index++) {
+            const user = users[index];
+
+            // Log the index of the user
+            console.log(`Processing user at index: ${index}`);
+
+            // Check if the user has referralPoints greater than 0
+            if (user.referralPoints > 0) {
+                const userReferralCode = user.referralCode;
+
+                // Find all users whose referrerCode matches the current user's referralCode
+                const referredUsers = await User.find({ referrerCode: userReferralCode });
+
+                // Compare the length of referredUsers array with the current user's referralPoints
+                if (referredUsers.length !== user.referralPoints) {
+                    // Update referralPoints to the length of referredUsers array
+                    user.referralPoints = referredUsers.length;
+
+                    // Save the updated user in the database
+                    await user.save();
+                    console.log(`Updated referralPoints for user with id: ${user.user.id} at index: ${index}`);
+                }
+            }
+        }
+        console.log('Referral points update completed for all users.');
+    } catch (error) {
+        console.error('Error updating referral points:', error);
+        throw error;
+    }
 }
 
-resetSocialRewards(1354055384)*/
+// Call the function to update referral points
+updateReferralPoints();
+
+//resetSocialRewards(1354055384)
 //resetReferralRewards(1354055384)
 //updateUserPointsToday(1354055384, 0)
 
