@@ -171,29 +171,28 @@ const cache = new Map();
 
 async function updateReferrerPoints () {
     console.log('Running')
-    const users = await User.find({
-        referrerCode: 'c668bca1'
-        //referralCode: '71605e28'
+    /*const user = await User.findOne({
+        //referrerCode: 'c668bca1'
+        referralCode: '71605e28'
     })
 
-    console.log('Referrals', users.length)
-
-    /*let totalPoints = 2500;
+    let totalPoints = 2500;
 
     users.forEach(async (user) => {
         const userPoints = user.pointsNo / 10;
         if (userPoints !== Infinity) totalPoints += userPoints;
         console.log(user.pointsNo)
-    })
+    })*/
     
     const referrer = await User.findOne({
-        referralCode: '91c968db'
+        referralCode: 'ddd7eecc'
     })
-    console.log(totalPoints)
 
-    referrer.pointsNo = totalPoints;
-    await referrer.save();
-    console.log('Total users:', {referrer: referrer.pointsNo})*/
+    console.log(referrer)
+
+    //referrer.pointsNo = totalPoints;
+    //await referrer.save();
+    //console.log('Total users:', {referrer: referrer.pointsNo})
 }
 
 
@@ -393,7 +392,7 @@ countTotalUsers()
     }
 }*/
 
-async function updateReferralPoints() {
+/*async function updateReferralPoints() {
     try {
         // Fetch all users from the database
         const users = await User.find();
@@ -427,10 +426,10 @@ async function updateReferralPoints() {
         console.error('Error updating referral points:', error);
         throw error;
     }
-}
+}*/
 
 // Call the function to update referral points
-updateReferralPoints();
+//updateReferralPoints();
 
 //resetSocialRewards(1354055384)
 //resetReferralRewards(1354055384)
@@ -445,7 +444,7 @@ updateReferralPoints();
 // Call the function
 //updateReferralContestField();
 
-//updateReferrerPoints()
+updateReferrerPoints()
 //getUsers();
 //updateReferrerCode();
 //getTop100Users();
