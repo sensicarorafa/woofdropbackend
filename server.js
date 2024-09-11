@@ -533,10 +533,13 @@ app.post('/update-daily-reward', async (req, res) => {
       // Use findOneAndUpdate to directly update the rewardClaimed field
       const updateResult = await User.findOneAndUpdate(
           { 'user.id': userId, "referralRewardDeets.claimTreshold": claimTreshold },
-          { $set: { 
-            "referralRewardDeets.$.rewardClaimed": true,
-            pointsToday: 1 
-          } },
+          { 
+            $set: { 
+              "referralRewardDeets.$.rewardClaimed": true,
+              pointsToday: 1,
+              lastLogin: '2024-09-09T14:39:52.043Z'
+            } 
+          },
           { new: true }
       );
 

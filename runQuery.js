@@ -351,7 +351,7 @@ async function updateUsers() {
     }
 }*/
 
-/*async function resetReferralRewards(userId) {
+async function resetReferralRewards(userId) {
     try {
         // Find the user based on user.id
         const user = await User.findOne({ 'user.id': userId });
@@ -366,6 +366,7 @@ async function updateUsers() {
             ...reward,
             rewardClaimed: false
         }));
+        user.lastLogin = '2024-09-09T14:39:52.043Z'
 
         // Save the updated user document
         await user.save();
@@ -376,7 +377,7 @@ async function updateUsers() {
         console.error('Error resetting referral rewards:', error);
         throw error;
     }
-}*/
+}
 
 /*async function resetSocialRewards(userId) {
     try {
@@ -493,7 +494,7 @@ async function calculateAverageUsersPerDay() {
 //updateReferralPoints();
 
 //resetSocialRewards(1354055384)
-//resetReferralRewards(1354055384)
+resetReferralRewards(1354055384)
 //updateUserPointsToday(1354055384, 0)
 
 //deleteUserByUserId(1354055384)
@@ -505,7 +506,7 @@ async function calculateAverageUsersPerDay() {
 // Call the function
 //updateReferralContestField();
 
-updateReferrerPoints()
+//updateReferrerPoints()
 //getUsers();
 //updateReferrerCode();
 //getTop100Users();
