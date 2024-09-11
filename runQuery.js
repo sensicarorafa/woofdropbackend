@@ -10,13 +10,17 @@ const mongooseUrl = process.env.MONGOOSE_URL;
 
 mongoose.connect(mongooseUrl, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  serverSelectionTimeoutMS: 3000000,
+  connectTimeoutMS: 3000000,
+  socketTimeoutMS: 3000000  
 });
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error: "));
 db.once("open", function () {
   console.log("Connected successfully");
+  //calculateAverageUsersPerDay();
 });
 
 const cache = new Map(); 
@@ -265,8 +269,9 @@ countTotalUsers()
     }
 }*/
 
-/*async function updateUsers() {
+async function updateUsers() {
     try {
+        console.log('Running update')
         // Find users who match the condition
         const usersToUpdate = await User.find({
             pointsNo: { $gt: 10000000 },
@@ -294,7 +299,7 @@ countTotalUsers()
     } catch (error) {
         console.error('Error updating users:', error);
     }
-}*/
+}
 
 /*async function deleteUserByUserId(userId) {
     try {
@@ -392,36 +397,41 @@ countTotalUsers()
     }
 }*/
 
-async function updateReferralPoints() {
+async function updateReferralPoints(batchSize = 100) {
     try {
-        console.log('Starting referral jobs')
-        // Fetch all users from the database
-        const users = await User.find();
+        console.log('Starting referral jobs');
 
-        for (let index = 0; index < users.length; index++) {
-            const user = users[index];
+        let skip = 0;
+        let hasMoreUsers = true;
 
-            // Log the index of the user
-            console.log(`Processing user at index: ${index}`);
+        while (hasMoreUsers) {
+            // Fetch users in batches
+            const users = await User.find({ referralPoints: { $gt: 0 } }).skip(skip).limit(batchSize);
 
-            // Check if the user has referralPoints greater than 0
-            if (user.referralPoints > 0) {
-                const userReferralCode = user.referralCode;
-
-                // Find all users whose referrerCode matches the current user's referralCode
-                const referredUsers = await User.find({ referrerCode: userReferralCode });
-
-                // Compare the length of referredUsers array with the current user's referralPoints
-                if (referredUsers.length !== user.referralPoints) {
-                    // Update referralPoints to the length of referredUsers array
-                    user.referralPoints = referredUsers.length;
-
-                    // Save the updated user in the database
-                    await user.save();
-                    console.log(`Updated referralPoints for user with id: ${user.user.id} at index: ${index}`);
-                }
+            if (users.length === 0) {
+                hasMoreUsers = false;
+                break;
             }
+
+            // Perform aggregation in parallel for all users in the current batch
+            const updatePromises = users.map(async (user) => {
+                const userReferralCode = user.referralCode;
+                const referredUsersCount = await User.countDocuments({ referrerCode: userReferralCode });
+
+                if (referredUsersCount !== user.referralPoints) {
+                    user.referralPoints = referredUsersCount;
+                    await user.save();
+                    console.log(`Updated referralPoints for user with id: ${user.user.id}`);
+                }
+            });
+
+            // Run all the update operations in parallel
+            await Promise.all(updatePromises);
+
+            // Move to the next batch
+            skip += batchSize;
         }
+
         console.log('Referral points update completed for all users.');
     } catch (error) {
         console.error('Error updating referral points:', error);
@@ -429,8 +439,50 @@ async function updateReferralPoints() {
     }
 }
 
+
+async function calculateAverageUsersPerDay() {
+  try {
+    // Get the total number of users
+    console.log('Counting');
+    const totalUsers = await User.countDocuments();
+    console.log({totalUsers})
+
+    if (totalUsers === 0) {
+      console.log("No users in the database.");
+      return 0;
+    }
+
+    // Get the earliest and latest user creation dates
+    const firstUser = await User.findOne().sort({ createdAt: 1 }); // Oldest user
+    const lastUser = await User.findOne().sort({ createdAt: -1 }); // Most recent user
+
+    // Calculate the number of days between the first and last user
+    const startDate = new Date(firstUser.createdAt);
+    const endDate = new Date(lastUser.createdAt);
+    
+    // Calculate the difference in time (in milliseconds) and convert to days
+    const timeDiff = endDate - startDate;
+    const daysDiff = timeDiff / (1000 * 60 * 60 * 24); // Convert from ms to days
+
+    // Prevent division by zero if all users were created on the same day
+    const daysCount = daysDiff === 0 ? 1 : daysDiff;
+
+    // Calculate the average users per day
+    const averageUsersPerDay = totalUsers / daysCount;
+
+    console.log(`Average users created per day: ${averageUsersPerDay.toFixed(2)}`);
+    return averageUsersPerDay.toFixed(2);
+    
+  } catch (error) {
+    console.error('Error calculating average users per day:', error);
+    throw error;
+  }
+}
+
+
+//calculateAverageUsersPerDay()
 // Call the function to update referral points
-updateReferralPoints();
+//updateReferralPoints();
 
 //resetSocialRewards(1354055384)
 //resetReferralRewards(1354055384)
@@ -439,7 +491,7 @@ updateReferralPoints();
 //deleteUserByUserId(1354055384)
 
 // Call the function
-//updateUsers();
+updateUsers();
 
 
 // Call the function
