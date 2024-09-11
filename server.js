@@ -231,7 +231,9 @@ async function updateSocialRewardDeets(userId) {
           { claimTreshold: 'ton-party-bot', rewardClaimed: false },
           { claimTreshold: 'ton-party-channel', rewardClaimed: false },
           { claimTreshold: 'yt-vid-four', rewardClaimed: false },
-          { claimTreshold: 'yt-vid-five', rewardClaimed: false }
+          { claimTreshold: 'yt-vid-five', rewardClaimed: false },
+          { claimTreshold: 'fish-coin-bot', rewardClaimed: false },
+          { claimTreshold: 'fish-coin-channel', rewardClaimed: false }
       ];
 
       // Find the user by user.id and update the socialRewardDeets field
@@ -259,6 +261,32 @@ async function updateSocialRewardDeets(userId) {
       console.error('Error updating socialRewardDeets:', error);
   }
 }
+
+async function getUserAndEnsureLastLogin(userId) {
+  try {
+    // Find user by `user.id`
+    const user = await User.findOne({ 'user.id': userId });
+
+    if (!user) {
+      console.log(`User with id: ${userId} not found`);
+    }
+
+    // Check if `lastLogin` is missing or null
+    if (user && !user.lastLogin) {
+      // Set `lastLogin` to the current date
+      user.lastLogin = new Date();
+      
+      // Save the updated user document
+      await user.save();
+    }
+
+    return user;
+  } catch (error) {
+    console.error('Error fetching or updating user:', error);
+    throw error; // Re-throw the error for further handling if needed
+  }
+}
+
 
 /*async function updateUserSocialRewards(userId) {
   try {
@@ -327,6 +355,7 @@ app.post('/get-user-data', async (req, res) => {
   try {
     // Find the user by id and username
     await updateSocialRewardDeets(user.id);
+    await getUserAndEnsureLastLogin(user.id)
     let existingUser = await User.findOne({
       'user.id': user.id,
       'user.username': user.username
@@ -602,7 +631,7 @@ const addReferralPoints = async (referralCode) => {
 };
 
 // Telegram Bot Setup
-/*bot.start(async (ctx) => {
+bot.start(async (ctx) => {
   try {
     const telegramId = ctx.from.id;
     const referralCode = ctx.payload ? ctx.payload : ctx.startPayload;
@@ -692,7 +721,7 @@ const addReferralPoints = async (referralCode) => {
   }
 });
 
-bot.launch();*/
+bot.launch();
 
 process.on('uncaughtException', (err) => {
   console.error('Uncaught Exception:', err);

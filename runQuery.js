@@ -173,14 +173,21 @@ const cache = new Map();
 
 }*/
 
-/*async function updateReferrerPoints () {
+async function updateReferrerPoints () {
     console.log('Running')
-    const user = await User.findOne({
-        //referrerCode: 'c668bca1'
-        referralCode: '71605e28'
+    /*const user = await User.find({
+        referrerCode: 'e5293b05'
+        //referralCode: '71605e28'
+    })*/
+
+    const user = await User.countDocuments({
+        referrerCode: 'e5293b05'
+        //referralCode: '71605e28'
     })
 
-    let totalPoints = 2500;
+    console.log('Total referrals', user)
+
+    /*let totalPoints = 2500;
 
     users.forEach(async (user) => {
         const userPoints = user.pointsNo / 10;
@@ -196,8 +203,8 @@ const cache = new Map();
 
     //referrer.pointsNo = totalPoints;
     //await referrer.save();
-    //console.log('Total users:', {referrer: referrer.pointsNo})
-}*/
+    //console.log('Total users:', {referrer: referrer.pointsNo})*/
+}
 
 
 /*async function updateReferrerCode() {
@@ -217,6 +224,7 @@ const cache = new Map();
 /*const countTotalUsers = async () => {
   try {
     // Define a limit for how many users to fetch at a time
+    console.log('starting')
     const limit = 50000;
     let totalCount = 0;
     let hasMore = true;
@@ -441,48 +449,48 @@ async function updateReferralPoints(batchSize = 10) {
 
 
 async function calculateAverageUsersPerDay() {
-  try {
-    // Get the total number of users
-    console.log('Counting');
-    const totalUsers = await User.countDocuments();
-    console.log({totalUsers})
-
-    if (totalUsers === 0) {
-      console.log("No users in the database.");
-      return 0;
+    try {
+      // Get the total number of users
+      console.log('Counting users...');
+      const totalUsers = await User.countDocuments();
+      console.log({ totalUsers });
+  
+      if (totalUsers === 0) {
+        console.log("No users in the database.");
+        return 0;
+      }
+  
+      // Get the first and last user based on the _id timestamp
+      const firstUser = await User.findOne().sort({ _id: 1 });  // Oldest user by _id
+      const lastUser = await User.findOne().sort({ _id: -1 });  // Newest user by _id
+  
+      // Extract the timestamps from the _id field of both users
+      const firstUserIdTimestamp = new Date(parseInt(firstUser._id.toString().substring(0, 8), 16) * 1000);
+      const lastUserIdTimestamp = new Date(parseInt(lastUser._id.toString().substring(0, 8), 16) * 1000);
+  
+      // Calculate the time difference in milliseconds and convert to days
+      const timeDiff = lastUserIdTimestamp - firstUserIdTimestamp;
+      const daysDiff = timeDiff / (1000 * 60 * 60 * 24);  // Convert from milliseconds to days
+  
+      // Prevent division by zero if all users were created on the same day
+      const daysCount = daysDiff === 0 ? 1 : daysDiff;
+  
+      // Calculate the average users per day
+      const averageUsersPerDay = totalUsers / daysCount;
+  
+      console.log(`Average users created per day: ${averageUsersPerDay.toFixed(2)}`);
+      return averageUsersPerDay.toFixed(2);
+      
+    } catch (error) {
+      console.error('Error calculating average users per day:', error);
+      throw error;
     }
-
-    // Get the earliest and latest user creation dates
-    const firstUser = await User.findOne().sort({ createdAt: 1 }); // Oldest user
-    const lastUser = await User.findOne().sort({ createdAt: -1 }); // Most recent user
-
-    // Calculate the number of days between the first and last user
-    const startDate = new Date(firstUser.createdAt);
-    const endDate = new Date(lastUser.createdAt);
-    
-    // Calculate the difference in time (in milliseconds) and convert to days
-    const timeDiff = endDate - startDate;
-    const daysDiff = timeDiff / (1000 * 60 * 60 * 24); // Convert from ms to days
-
-    // Prevent division by zero if all users were created on the same day
-    const daysCount = daysDiff === 0 ? 1 : daysDiff;
-
-    // Calculate the average users per day
-    const averageUsersPerDay = totalUsers / daysCount;
-
-    console.log(`Average users created per day: ${averageUsersPerDay.toFixed(2)}`);
-    return averageUsersPerDay.toFixed(2);
-    
-  } catch (error) {
-    console.error('Error calculating average users per day:', error);
-    throw error;
   }
-}
-
+  
 
 //calculateAverageUsersPerDay()
 // Call the function to update referral points
-updateReferralPoints();
+//updateReferralPoints();
 
 //resetSocialRewards(1354055384)
 //resetReferralRewards(1354055384)
@@ -491,13 +499,13 @@ updateReferralPoints();
 //deleteUserByUserId(1354055384)
 
 // Call the function
-updateUsers();
+//updateUsers();
 
 
 // Call the function
 //updateReferralContestField();
 
-//updateReferrerPoints()
+updateReferrerPoints()
 //getUsers();
 //updateReferrerCode();
 //getTop100Users();
