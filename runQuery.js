@@ -397,7 +397,7 @@ async function updateUsers() {
     }
 }*/
 
-async function updateReferralPoints(batchSize = 100) {
+async function updateReferralPoints(batchSize = 10) {
     try {
         console.log('Starting referral jobs');
 
