@@ -482,7 +482,7 @@ async function calculateAverageUsersPerDay() {
 
 //calculateAverageUsersPerDay()
 // Call the function to update referral points
-//updateReferralPoints();
+updateReferralPoints();
 
 //resetSocialRewards(1354055384)
 //resetReferralRewards(1354055384)
