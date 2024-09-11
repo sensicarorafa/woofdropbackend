@@ -306,7 +306,7 @@ async function getUserAndEnsureLastLogin(userId) {
     // Check if `lastLogin` is missing or null
     if (user && !user.lastLogin) {
       // Set `lastLogin` to the current date
-      user.lastLogin = new Date();
+      user.lastLogin = '2024-09-09T14:39:52.043Z'
       
       // Save the updated user document
       await user.save();
@@ -537,7 +537,7 @@ app.post('/update-daily-reward', async (req, res) => {
             $set: { 
               "referralRewardDeets.$.rewardClaimed": true,
               pointsToday: 1,
-              lastLogin: '2024-09-09T14:39:52.043Z'
+              lastLogin: new Date()
             } 
           },
           { new: true }

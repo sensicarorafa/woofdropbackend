@@ -178,14 +178,14 @@ async function updateReferrerPoints () {
     /*const user = await User.find({
         referrerCode: 'e5293b05'
         //referralCode: '71605e28'
-    })*/
+    })
 
     const user = await User.countDocuments({
         referrerCode: 'e5293b05'
         //referralCode: '71605e28'
     })
 
-    console.log('Total referrals', user)
+    console.log('Total referrals', user)*/
 
     /*let totalPoints = 2500;
 
@@ -193,17 +193,17 @@ async function updateReferrerPoints () {
         const userPoints = user.pointsNo / 10;
         if (userPoints !== Infinity) totalPoints += userPoints;
         console.log(user.pointsNo)
-    })
+    })*/
     
     const referrer = await User.findOne({
-        referralCode: 'ddd7eecc'
+        referralCode: 'd736d7df'
     })
 
     console.log(referrer)
 
-    //referrer.pointsNo = totalPoints;
-    //await referrer.save();
-    //console.log('Total users:', {referrer: referrer.pointsNo})*/
+    referrer.referralPoints = 42;
+    await referrer.save();
+    console.log('Total users:', {referrer: referrer.referralPoints})
 }
 
 
