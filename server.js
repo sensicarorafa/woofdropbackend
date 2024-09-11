@@ -233,7 +233,39 @@ async function updateSocialRewardDeets(userId) {
           { claimTreshold: 'yt-vid-four', rewardClaimed: false },
           { claimTreshold: 'yt-vid-five', rewardClaimed: false },
           { claimTreshold: 'fish-coin-bot', rewardClaimed: false },
-          { claimTreshold: 'fish-coin-channel', rewardClaimed: false }
+          { claimTreshold: 'fish-coin-channel', rewardClaimed: false },
+          {
+            claimTreshold: 'whatsapp-status',
+            rewardClaimed: false
+          },
+          {
+            claimTreshold: 'whatsapp-group',
+            rewardClaimed: false,
+          },
+          {
+            claimTreshold: 'instagram-reels',
+            rewardClaimed: false,
+          },
+          {
+            claimTreshold: 'facebook',
+            rewardClaimed: false,
+          },
+          {
+            claimTreshold: 'tiktok',
+            rewardClaimed: false,
+          },
+          {
+            claimTreshold: 'snapchat',
+            rewardClaimed: false,
+          },
+          {
+            claimTreshold: 'telegram-group',
+            rewardClaimed: false,
+          },
+          {
+            claimTreshold: 'facebook-post',
+            rewardClaimed: false,
+          }
       ];
 
       // Find the user by user.id and update the socialRewardDeets field
