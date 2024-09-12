@@ -234,6 +234,11 @@ async function updateSocialRewardDeets(userId) {
           { claimTreshold: 'yt-vid-five', rewardClaimed: false },
           { claimTreshold: 'fish-coin-bot', rewardClaimed: false },
           { claimTreshold: 'fish-coin-channel', rewardClaimed: false },
+          { claimTreshold: 'yt-vid-six', rewardClaimed: false },
+          { claimTreshold: 'tiktok-aidogs', rewardClaimed: false },
+          { claimTreshold: 'aidogs-ugc', rewardClaimed: false },
+          { claimTreshold: 'send-to-binance', rewardClaimed: false },
+          { claimTreshold: 'send-to-hamster', rewardClaimed: false },
           {
             claimTreshold: 'whatsapp-status',
             rewardClaimed: false
