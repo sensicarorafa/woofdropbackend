@@ -178,14 +178,14 @@ async function updateReferrerPoints () {
     /*const user = await User.find({
         referrerCode: 'e5293b05'
         //referralCode: '71605e28'
-    })
+    })*/
 
-    const user = await User.countDocuments({
+    const userDocs = await User.countDocuments({
         referrerCode: 'e5293b05'
         //referralCode: '71605e28'
     })
 
-    console.log('Total referrals', user)*/
+    console.log('Total referrals', userDocs)
 
     /*let totalPoints = 2500;
 
@@ -486,7 +486,7 @@ async function calculateAverageUsersPerDay() {
       console.error('Error calculating average users per day:', error);
       throw error;
     }
-  }
+}
   
 
 //calculateAverageUsersPerDay()
@@ -494,7 +494,7 @@ async function calculateAverageUsersPerDay() {
 //updateReferralPoints();
 
 //resetSocialRewards(1354055384)
-resetReferralRewards(1354055384)
+resetReferralRewards(7166403003)
 //updateUserPointsToday(1354055384, 0)
 
 //deleteUserByUserId(1354055384)
