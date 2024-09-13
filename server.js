@@ -239,6 +239,13 @@ async function updateSocialRewardDeets(userId) {
           { claimTreshold: 'aidogs-ugc', rewardClaimed: false },
           { claimTreshold: 'send-to-binance', rewardClaimed: false },
           { claimTreshold: 'send-to-hamster', rewardClaimed: false },
+          { claimTreshold: 'piggy-bot', rewardClaimed: false },
+          { claimTreshold: 'dl-coin-bot', rewardClaimed: false },
+          { claimTreshold: 'dl-coin-channel', rewardClaimed: false },
+          { claimTreshold: 'ghost-drive-bot', rewardClaimed: false },
+          { claimTreshold: 'ghost-drive-channel', rewardClaimed: false },
+          { claimTreshold: 'pokemon-ball-bot', rewardClaimed: false },
+          { claimTreshold: 'pokemon-bot-channel', rewardClaimed: false },
           {
             claimTreshold: 'whatsapp-status',
             rewardClaimed: false
