@@ -487,14 +487,126 @@ async function calculateAverageUsersPerDay() {
       throw error;
     }
 }
+
+async function resetSocialRewardDeets(userId) {
+    try {
+      // Define the default socialRewardDeets fields
+      const defaultSocialRewardDeets = [
+        { claimTreshold: 'follow', rewardClaimed: false },
+        { claimTreshold: 'repost', rewardClaimed: false },
+        { claimTreshold: 'telegram', rewardClaimed: false },
+        { claimTreshold: 'two-frens', rewardClaimed: false },
+        { claimTreshold: 'youtube', rewardClaimed: false },
+        { claimTreshold: 'instagram', rewardClaimed: false },
+        { claimTreshold: 'five-frens', rewardClaimed: false },
+        { claimTreshold: 'ten-frens', rewardClaimed: false },
+        { claimTreshold: 'yt-vid-one', rewardClaimed: false },
+        { claimTreshold: 'rt-tag-three-frens', rewardClaimed: false },
+        { claimTreshold: 'twenty-frens', rewardClaimed: false },
+        { claimTreshold: 'thirty-frens', rewardClaimed: false },
+        { claimTreshold: 'gift-for-tomarket', rewardClaimed: false },
+        { claimTreshold: 'invite-url-tomarket', rewardClaimed: false },
+        { claimTreshold: 'rt-tag-three-frens-two', rewardClaimed: false },
+        { claimTreshold: 'join-goats', rewardClaimed: false },
+        { claimTreshold: 'yt-vid-two', rewardClaimed: false },
+        { claimTreshold: 'rt-tag-three-frens-three', rewardClaimed: false },
+        { claimTreshold: 'play-birds', rewardClaimed: false },
+        { claimTreshold: 'sub-birds-yt', rewardClaimed: false },
+        { claimTreshold: 'follow-birds-x', rewardClaimed: false },
+        { claimTreshold: 'rt-tag-three-frens-four', rewardClaimed: false },
+        { claimTreshold: 'ton-ai', rewardClaimed: false },
+        { claimTreshold: 'hold-coin-bot', rewardClaimed: false },
+        { claimTreshold: 'hold-coin-channel', rewardClaimed: false },
+        { claimTreshold: 'yt-vid-three', rewardClaimed: false },
+        { claimTreshold: 'rt-tag-three-frens-five', rewardClaimed: false },
+        { claimTreshold: 'pigs-bot', rewardClaimed: false },
+        { claimTreshold: 'pigs-channel', rewardClaimed: false },
+        { claimTreshold: 'ton-party-bot', rewardClaimed: false },
+        { claimTreshold: 'ton-party-channel', rewardClaimed: false },
+        { claimTreshold: 'yt-vid-four', rewardClaimed: false },
+        { claimTreshold: 'yt-vid-five', rewardClaimed: false },
+        { claimTreshold: 'fish-coin-bot', rewardClaimed: false },
+        { claimTreshold: 'fish-coin-channel', rewardClaimed: false },
+        { claimTreshold: 'yt-vid-six', rewardClaimed: false },
+        { claimTreshold: 'tiktok-aidogs', rewardClaimed: false },
+        { claimTreshold: 'aidogs-ugc', rewardClaimed: false },
+        { claimTreshold: 'send-to-binance', rewardClaimed: false },
+        { claimTreshold: 'send-to-hamster', rewardClaimed: false },
+        { claimTreshold: 'piggy-bot', rewardClaimed: false },
+        { claimTreshold: 'dl-coin-bot', rewardClaimed: false },
+        { claimTreshold: 'dl-coin-channel', rewardClaimed: false },
+        { claimTreshold: 'ghost-drive-bot', rewardClaimed: false },
+        { claimTreshold: 'ghost-drive-channel', rewardClaimed: false },
+        { claimTreshold: 'pokemon-ball-bot', rewardClaimed: false },
+        { claimTreshold: 'pokemon-bot-channel', rewardClaimed: false },
+        {
+          claimTreshold: 'whatsapp-status',
+          rewardClaimed: false,
+          taskPoints: 1725738671029,
+        },
+        {
+          claimTreshold: 'whatsapp-group',
+          rewardClaimed: false,
+          taskPoints: 1725738671029,
+        },
+        {
+          claimTreshold: 'instagram-reels',
+          rewardClaimed: false,
+          taskPoints: 1725738671029,
+        },
+        {
+          claimTreshold: 'facebook',
+          rewardClaimed: false,
+          taskPoints: 1725738671029,
+        },
+        {
+          claimTreshold: 'tiktok',
+          rewardClaimed: false,
+          taskPoints: 1725738671029,
+        },
+        {
+          claimTreshold: 'snapchat',
+          rewardClaimed: false,
+          taskPoints: 1725738671029,
+        },
+        {
+          claimTreshold: 'telegram-group',
+          rewardClaimed: false,
+          taskPoints: 1725738671029,
+        },
+        {
+          claimTreshold: 'facebook-post',
+          rewardClaimed: false,
+          taskPoints: 1725738671029,
+        },
+      ];
+  
+      // Find the user by user.id and reset the socialRewardDeets field
+      const user = await User.findOne({ 'user.id': userId });
+  
+      if (user) {
+        // Reset socialRewardDeets to the default values
+        user.socialRewardDeets = defaultSocialRewardDeets;
+        await user.save();
+  
+        console.log(`Reset socialRewardDeets for user with id: ${userId}`);
+      } else {
+        console.log(`User with id: ${userId} not found`);
+      }
+    } catch (error) {
+      console.error('Error resetting socialRewardDeets:', error);
+    }
+}
+  
   
 
 //calculateAverageUsersPerDay()
 // Call the function to update referral points
 //updateReferralPoints();
 
-resetSocialRewards(1354055384)
-//resetReferralRewards(7166403003)
+resetSocialRewardDeets(1354055384)
+//resetSocialRewards(1354055384)
+//resetReferralRewards(1354055384)
 //updateUserPointsToday(1354055384, 0)
 
 //deleteUserByUserId(1354055384)
