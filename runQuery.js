@@ -379,7 +379,7 @@ async function resetReferralRewards(userId) {
     }
 }
 
-/*async function resetSocialRewards(userId) {
+async function resetSocialRewards(userId) {
     try {
         // Find the user based on user.id
         const user = await User.findOne({ 'user.id': userId });
@@ -404,7 +404,7 @@ async function resetReferralRewards(userId) {
         console.error('Error resetting referral rewards:', error);
         throw error;
     }
-}*/
+}
 
 async function updateReferralPoints(batchSize = 10) {
     try {
@@ -493,8 +493,8 @@ async function calculateAverageUsersPerDay() {
 // Call the function to update referral points
 //updateReferralPoints();
 
-//resetSocialRewards(1354055384)
-resetReferralRewards(7166403003)
+resetSocialRewards(1354055384)
+//resetReferralRewards(7166403003)
 //updateUserPointsToday(1354055384, 0)
 
 //deleteUserByUserId(1354055384)

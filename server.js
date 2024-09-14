@@ -678,7 +678,7 @@ const addReferralPoints = async (referralCode) => {
 };
 
 // Telegram Bot Setup
-/*bot.start(async (ctx) => {
+bot.start(async (ctx) => {
   try {
     const telegramId = ctx.from.id;
     const referralCode = ctx.payload ? ctx.payload : ctx.startPayload;
@@ -748,7 +748,7 @@ const addReferralPoints = async (referralCode) => {
         parse_mode: 'HTML',
         reply_markup: {
           inline_keyboard: [
-            [{ text: "Open Portal",  web_app: { url: 'https://aidawgs.xyz' }}],
+            [{ text: "Open Portal",  web_app: { url: 'https://shalom.aidawgs.xyz/' }}],
             [{ text: 'Join Community', url: 'https://t.me/aidogs_community' }],
             [{ text: 'Twitter(X)', url: 'https://x.com/aidogscomm' }]
           ],
@@ -768,7 +768,7 @@ const addReferralPoints = async (referralCode) => {
   }
 });
 
-bot.launch();*/
+bot.launch();
 
 process.on('uncaughtException', (err) => {
   console.error('Uncaught Exception:', err);
