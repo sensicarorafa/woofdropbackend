@@ -391,8 +391,8 @@ async function resetSocialRewards(userId) {
 
         // Loop through referralRewardDeets and set rewardClaimed to false
         user.socialRewardDeets = user.socialRewardDeets.map(reward => ({
-            ...reward,
-            rewardClaimed: false
+            //...reward,
+            //rewardClaimed: false
         }));
 
         // Save the updated user document
