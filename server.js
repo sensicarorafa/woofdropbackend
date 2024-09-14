@@ -645,7 +645,7 @@ app.post('/update-social-timer', async (req, res) => {
   const { user, claimTreshold, time } = req.body;
   const userId = user.id
 
-  if (!userId || !claimTreshold || time) {
+  if (!userId || !claimTreshold || !time) {
       return res.status(400).send('userId, time and claimTreshold are required');
   }
 
