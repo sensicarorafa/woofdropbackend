@@ -641,6 +641,35 @@ app.post('/update-social-reward', async (req, res) => {
   }
 });
 
+app.post('/update-social-timer', async (req, res) => {
+  const { user, claimTreshold, time } = req.body;
+  const userId = user.id
+
+  if (!userId || !claimTreshold || time) {
+      return res.status(400).send('userId, time and claimTreshold are required');
+  }
+
+  try {
+      // Use findOneAndUpdate to directly update the rewardClaimed field
+      const updateResult = await User.findOneAndUpdate(
+          { 'user.id': userId, "socialRewardDeets.claimTreshold": claimTreshold },
+          { $set: { "socialRewardDeets.$.rewardClaimed": true, "socialRewardDeets.$.taskPoints": time } },
+          { new: true }
+      );
+
+      if (!updateResult) {
+          return res.status(404).send('User or claimTreshold not found');
+      }
+
+      // Return the updated user document
+      const updatedUser = await User.findOne({ 'user.id': user.id });
+      res.status(200).send({ message: 'Points updated successfully', userData: updatedUser, success: true });
+  } catch (error) {
+    console.error('Error updating social reward:', error);
+    res.status(500).send({ message: 'Internal Server Error', success: false });
+  }
+});
+
 app.post('/update-daily-reward', async (req, res) => {
   const { user, claimTreshold } = req.body;
   const userId = user.id
