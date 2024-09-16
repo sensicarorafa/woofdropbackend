@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const User = require('./models/User');
 const Leaderboard = require('./models/Leaderboard');
+const ReferralLeaderboard = require('./models/ReferralLeaderboard');
 const Task = require('./models/Task');
 const crypto = require('crypto');
 require('dotenv').config()
@@ -1307,12 +1308,24 @@ const resetReferralRewardsOp = async (userId) => {
   
     // Save the updated user data
     await user.save();
-  };
+};
+
+const getLeaderboard = async () => {
+    const leaderboard = await Leaderboard.find({});
+    console.log(leaderboard)
+}
+
+const getReferralLeaderboard = async () => {
+    const leaderboard = await ReferralLeaderboard.find({});
+    console.log(leaderboard)
+}
+
+getLeaderboard()
   
-  // Usage
-  //resetReferralRewardsOp(1354055384)
-    //.then(() => console.log('All referral rewards reset successfully'))
-    //.catch(err => console.error('Error resetting referral rewards:', err));
+// Usage
+//resetReferralRewardsOp(1354055384)
+//.then(() => console.log('All referral rewards reset successfully'))
+//.catch(err => console.error('Error resetting referral rewards:', err));
   
 
 //updateTaskByClaimTreshold('dl-coin-channel', {taskStatus: 'paused'})
@@ -1325,7 +1338,7 @@ const resetReferralRewardsOp = async (userId) => {
 
 //resetSocialRewardDeets(1354055384)
 //resetSocialRewards(1354055384)
-resetReferralRewards(1354055384)
+//resetReferralRewards(1354055384)
 //updateUserPointsToday(1354055384, 0)
 
 //deleteUserByUserId(1354055384)
