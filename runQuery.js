@@ -1152,8 +1152,112 @@ const tasks = [
     }
 ]
 
+const tasksNew = [
+    {
+      btnText: 'Start',
+      taskText: 'DejenDog Bot',
+      taskPoints: 2000,
+      taskCategory: 'Partners',
+      taskUrl: 'https://t.me/DejenDogBot/djdog?startapp=c14b8b84',
+      taskStatus: 'active',
+      claimTreshold: 'unique-id-1',
+      rewardClaimed: false
+    },
+    {
+      btnText: 'Start',
+      taskText: 'DejenDog Channel',
+      taskPoints: 500,
+      taskCategory: 'Partners',
+      taskUrl: 'https://t.me/+jo6lyvMWawM3M2Q1',
+      taskStatus: 'active',
+      claimTreshold: 'unique-id-2',
+      rewardClaimed: false
+    },
+    {
+      btnText: 'Start',
+      taskText: 'Pigs Bot',
+      taskPoints: 2000,
+      taskCategory: 'Partners',
+      taskUrl: 'https://t.me/PigshouseBot?start=773354626',
+      taskStatus: 'active',
+      claimTreshold: 'unique-id-3',
+      rewardClaimed: false
+    },
+    {
+      btnText: 'Start',
+      taskText: 'Pigs Channel',
+      taskPoints: 500,
+      taskCategory: 'Partners',
+      taskUrl: 'https://t.me/+5fewubcxSHViZWM0',
+      taskStatus: 'active',
+      claimTreshold: 'unique-id-4',
+      rewardClaimed: false
+    },
+    {
+      btnText: 'Start',
+      taskText: 'GemsWall Bot',
+      taskPoints: 2000,
+      taskCategory: 'Partners',
+      taskUrl: 'https://t.me/GleamRewardsBot/app?startapp=cmM9cF9haWRvZ3M',
+      taskStatus: 'active',
+      claimTreshold: 'unique-id-5',
+      rewardClaimed: false
+    },
+    {
+      btnText: 'Start',
+      taskText: 'GemsWall Channel',
+      taskPoints: 500,
+      taskCategory: 'Partners',
+      taskUrl: 'https://t.me/+zevh1InyRf4wYjAy',
+      taskStatus: 'active',
+      claimTreshold: 'unique-id-6',
+      rewardClaimed: false
+    },
+    {
+      btnText: 'Start',
+      taskText: 'BFDCoin Bot',
+      taskPoints: 2000,
+      taskCategory: 'Partners',
+      taskUrl: 'https://t.me/BFDCoin_bot/BFDCoin?startapp=1035892983',
+      taskStatus: 'active',
+      claimTreshold: 'unique-id-7',
+      rewardClaimed: false
+    },
+    {
+      btnText: 'Start',
+      taskText: 'BFDCoin Channel',
+      taskPoints: 500,
+      taskCategory: 'Partners',
+      taskUrl: 'https://t.me/+VoudIa8h4ek1YjRl',
+      taskStatus: 'active',
+      claimTreshold: 'unique-id-8',
+      rewardClaimed: false
+    },
+    {
+      btnText: 'Start',
+      taskText: 'Obix Bot',
+      taskPoints: 2000,
+      taskCategory: 'Partners',
+      taskUrl: 'https://t.me/obix_bot?start=6426024318',
+      taskStatus: 'active',
+      claimTreshold: 'unique-id-9',
+      rewardClaimed: false
+    },
+    {
+      btnText: 'Start',
+      taskText: 'Obix Channel',
+      taskPoints: 500,
+      taskCategory: 'Partners',
+      taskUrl: 'https://t.me/+XJPJKXSTpONlZGJk',
+      taskStatus: 'active',
+      claimTreshold: 'unique-id-10',
+      rewardClaimed: false
+    }
+];
+  
+
 const runTasksUpdate = async () => {
-    const insertMany = await Task.insertMany(tasks);
+    const insertMany = await Task.insertMany(tasksNew);
     const getTasks = await Task.find()
     console.log(getTasks)
 }

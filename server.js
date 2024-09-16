@@ -465,7 +465,7 @@ async function updateUserSocialRewards(userId) {
               existingReward.taskText = task.taskText || existingReward.taskText;
               existingReward.taskPoints = task.taskPoints !== undefined ? task.taskPoints : existingReward.taskPoints;
               existingReward.taskCategory = task.taskCategory || existingReward.taskCategory;
-              existingReward.taskStatus = existingReward.taskStatus || task.taskCategory;
+              existingReward.taskStatus = task.taskStatus;
               existingReward.taskUrl = existingReward.taskUrl || task.taskUrl;
           } else {
               // If the task is not found in socialRewardDeets, add it with all fields from Task
@@ -476,7 +476,7 @@ async function updateUserSocialRewards(userId) {
                   taskText: task.taskText,
                   taskPoints: task.taskPoints,
                   taskCategory: task.taskCategory,
-                  taskStatus : task.taskCategory,
+                  taskStatus : task.taskStatus,
                   taskUrl : task.taskUrl
               });
           }
