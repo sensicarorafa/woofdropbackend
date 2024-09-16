@@ -8078,5 +8078,1745 @@
     ],
     "_id": "66d5a22d0ba574ee93030fa2",
     "__v": 0
+  },
+  {
+    "pointsNo": 655,
+    "referralPoints": 86,
+    "referralContest": 168,
+    "referrerCode": "199wg2e7",
+    "userLevel": 4,
+    "totalSteps": 67415,
+    "pointsToday": 143,
+    "totalStepsToday": 290,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 81,
+      "first_name": "Sanjay",
+      "last_name": "Patel",
+      "username": "sanjay_patel_81",
+      "language_code": "kr",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "SanjayPatel81",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      }
+    ]
+  },
+  {
+    "pointsNo": 303,
+    "referralPoints": 295,
+    "referralContest": 290,
+    "referrerCode": "kl0sp3of",
+    "userLevel": 7,
+    "totalSteps": 68399,
+    "pointsToday": 488,
+    "totalStepsToday": 135,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": true,
+    "user": {
+      "id": 82,
+      "first_name": "Sami",
+      "last_name": "Bakir",
+      "username": "sami_bakir_82",
+      "language_code": "fr",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "SamiBakir82",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      }
+    ]
+  },
+  {
+    "pointsNo": 168,
+    "referralPoints": 139,
+    "referralContest": 98,
+    "referrerCode": "fdfwl4w1",
+    "userLevel": 6,
+    "totalSteps": 70698,
+    "pointsToday": 359,
+    "totalStepsToday": 672,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": true,
+    "user": {
+      "id": 83,
+      "first_name": "Adebayo",
+      "last_name": "Nkosi",
+      "username": "adebayo_nkosi_83",
+      "language_code": "fr",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "AdebayoNkosi83",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      }
+    ]
+  },
+  {
+    "pointsNo": 681,
+    "referralPoints": 123,
+    "referralContest": 223,
+    "referrerCode": "keere3v5",
+    "userLevel": 4,
+    "totalSteps": 56562,
+    "pointsToday": 353,
+    "totalStepsToday": 400,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": true,
+    "user": {
+      "id": 84,
+      "first_name": "Katarina",
+      "last_name": "Ivanov",
+      "username": "katarina_ivanov_84",
+      "language_code": "bg",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "KatarinaIvanov84",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      }
+    ]
+  },
+  {
+    "pointsNo": 988,
+    "referralPoints": 267,
+    "referralContest": 83,
+    "referrerCode": "qid42ni0",
+    "userLevel": 4,
+    "totalSteps": 24700,
+    "pointsToday": 283,
+    "totalStepsToday": 710,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": true,
+    "user": {
+      "id": 85,
+      "first_name": "Jia",
+      "last_name": "Hussain",
+      "username": "jia_hussain_85",
+      "language_code": "zh",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "JiaHussain85",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      }
+    ]
+  },
+  {
+    "pointsNo": 957,
+    "referralPoints": 149,
+    "referralContest": 159,
+    "referrerCode": "ljatdz7l",
+    "userLevel": 7,
+    "totalSteps": 78607,
+    "pointsToday": 380,
+    "totalStepsToday": 276,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": true,
+    "user": {
+      "id": 86,
+      "first_name": "Noor",
+      "last_name": "Bakir",
+      "username": "noor_bakir_86",
+      "language_code": "ar",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "NoorBakir86",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      }
+    ]
+  },
+  {
+    "pointsNo": 623,
+    "referralPoints": 282,
+    "referralContest": 264,
+    "referrerCode": "tcef6z02",
+    "userLevel": 6,
+    "totalSteps": 12765,
+    "pointsToday": 270,
+    "totalStepsToday": 655,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 87,
+      "first_name": "Adewale",
+      "last_name": "Adebayo",
+      "username": "adewale_adebayo_87",
+      "language_code": "fr",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "AdewaleAdebayo87",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      }
+    ]
+  },
+  {
+    "pointsNo": 747,
+    "referralPoints": 113,
+    "referralContest": 102,
+    "referrerCode": "4l1rbnh8",
+    "userLevel": 6,
+    "totalSteps": 53456,
+    "pointsToday": 149,
+    "totalStepsToday": 244,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 88,
+      "first_name": "Ivana",
+      "last_name": "Morozov",
+      "username": "ivana_morozov_88",
+      "language_code": "ru",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "IvanaMorozov88",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      }
+    ]
+  },
+  {
+    "pointsNo": 790,
+    "referralPoints": 212,
+    "referralContest": 289,
+    "referrerCode": "nlfzn8qh",
+    "userLevel": 7,
+    "totalSteps": 39774,
+    "pointsToday": 178,
+    "totalStepsToday": 363,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 89,
+      "first_name": "Tariq",
+      "last_name": "Sharma",
+      "username": "tariq_sharma_89",
+      "language_code": "kr",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "TariqSharma89",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      }
+    ]
+  },
+  {
+    "pointsNo": 600,
+    "referralPoints": 245,
+    "referralContest": 253,
+    "referrerCode": "7xocf36h",
+    "userLevel": 5,
+    "totalSteps": 30314,
+    "pointsToday": 414,
+    "totalStepsToday": 862,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": false,
+    "user": {
+      "id": 90,
+      "first_name": "Amina",
+      "last_name": "Bakir",
+      "username": "amina_bakir_90",
+      "language_code": "ar",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "AminaBakir90",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      }
+    ]
+  },
+  {
+    "pointsNo": 514,
+    "referralPoints": 270,
+    "referralContest": 86,
+    "referrerCode": "08voqggz",
+    "userLevel": 6,
+    "totalSteps": 53807,
+    "pointsToday": 377,
+    "totalStepsToday": 508,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 91,
+      "first_name": "Kwame",
+      "last_name": "Okeke",
+      "username": "kwame_okeke_91",
+      "language_code": "sw",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "KwameOkeke91",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      }
+    ]
+  },
+  {
+    "pointsNo": 201,
+    "referralPoints": 156,
+    "referralContest": 111,
+    "referrerCode": "vp6n8pev",
+    "userLevel": 2,
+    "totalSteps": 73747,
+    "pointsToday": 163,
+    "totalStepsToday": 403,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": false,
+    "user": {
+      "id": 92,
+      "first_name": "Mikhail",
+      "last_name": "Sokolov",
+      "username": "mikhail_sokolov_92",
+      "language_code": "ru",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "MikhailSokolov92",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      }
+    ]
+  },
+  {
+    "pointsNo": 937,
+    "referralPoints": 65,
+    "referralContest": 70,
+    "referrerCode": "x71ktln3",
+    "userLevel": 2,
+    "totalSteps": 17157,
+    "pointsToday": 373,
+    "totalStepsToday": 365,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": false,
+    "user": {
+      "id": 93,
+      "first_name": "Kavita",
+      "last_name": "Hussain",
+      "username": "kavita_hussain_93",
+      "language_code": "jp",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "KavitaHussain93",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      }
+    ]
+  },
+  {
+    "pointsNo": 735,
+    "referralPoints": 137,
+    "referralContest": 151,
+    "referrerCode": "yhc3gdjs",
+    "userLevel": 7,
+    "totalSteps": 20364,
+    "pointsToday": 116,
+    "totalStepsToday": 972,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 94,
+      "first_name": "Sami",
+      "last_name": "Sharif",
+      "username": "sami_sharif_94",
+      "language_code": "ar",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "SamiSharif94",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      }
+    ]
+  },
+  {
+    "pointsNo": 797,
+    "referralPoints": 166,
+    "referralContest": 120,
+    "referrerCode": "38baukoe",
+    "userLevel": 4,
+    "totalSteps": 52575,
+    "pointsToday": 249,
+    "totalStepsToday": 348,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 95,
+      "first_name": "Adebayo",
+      "last_name": "Obi",
+      "username": "adebayo_obi_95",
+      "language_code": "fr",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "AdebayoObi95",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": false
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      }
+    ]
+  },
+  {
+    "pointsNo": 874,
+    "referralPoints": 274,
+    "referralContest": 165,
+    "referrerCode": "rp3mrbwx",
+    "userLevel": 3,
+    "totalSteps": 24726,
+    "pointsToday": 364,
+    "totalStepsToday": 740,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": true,
+    "user": {
+      "id": 96,
+      "first_name": "Mikhail",
+      "last_name": "Kozlov",
+      "username": "mikhail_kozlov_96",
+      "language_code": "ru",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "MikhailKozlov96",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      }
+    ]
+  },
+  {
+    "pointsNo": 781,
+    "referralPoints": 120,
+    "referralContest": 204,
+    "referrerCode": "id43mz1l",
+    "userLevel": 5,
+    "totalSteps": 59319,
+    "pointsToday": 227,
+    "totalStepsToday": 183,
+    "gender": "Female",
+    "earlyAdopterBonusClaimed": false,
+    "isTracking": true,
+    "user": {
+      "id": 97,
+      "first_name": "Ravi",
+      "last_name": "Nguyen",
+      "username": "ravi_nguyen_97",
+      "language_code": "kr",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "RaviNguyen97",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      }
+    ]
+  },
+  {
+    "pointsNo": 237,
+    "referralPoints": 148,
+    "referralContest": 103,
+    "referrerCode": "duck370t",
+    "userLevel": 6,
+    "totalSteps": 47589,
+    "pointsToday": 189,
+    "totalStepsToday": 446,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": true,
+    "user": {
+      "id": 98,
+      "first_name": "Fatima",
+      "last_name": "Ibrahim",
+      "username": "fatima_ibrahim_98",
+      "language_code": "ar",
+      "allows_write_to_pm": true
+    },
+    "referralCode": "FatimaIbrahim98",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      }
+    ]
+  },
+  {
+    "pointsNo": 180,
+    "referralPoints": 294,
+    "referralContest": 226,
+    "referrerCode": "brwsgs8p",
+    "userLevel": 1,
+    "totalSteps": 10555,
+    "pointsToday": 412,
+    "totalStepsToday": 683,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 99,
+      "first_name": "Mandisa",
+      "last_name": "Jalloh",
+      "username": "mandisa_jalloh_99",
+      "language_code": "en",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "MandisaJalloh99",
+    "referredBy": true,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": true
+      }
+    ]
+  },
+  {
+    "pointsNo": 816,
+    "referralPoints": 241,
+    "referralContest": 157,
+    "referrerCode": "iymx26il",
+    "userLevel": 4,
+    "totalSteps": 63733,
+    "pointsToday": 398,
+    "totalStepsToday": 694,
+    "gender": "Male",
+    "earlyAdopterBonusClaimed": true,
+    "isTracking": false,
+    "user": {
+      "id": 100,
+      "first_name": "Mikhail",
+      "last_name": "Sokolov",
+      "username": "mikhail_sokolov_100",
+      "language_code": "pl",
+      "allows_write_to_pm": false
+    },
+    "referralCode": "MikhailSokolov100",
+    "referredBy": false,
+    "referralRewardDeets": [
+      {
+        "claimTreshold": 5,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 10,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 15,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 20,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 25,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 30,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 35,
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": 40,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 45,
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": 50,
+        "rewardClaimed": true
+      }
+    ],
+    "socialRewardDeets": [
+      {
+        "claimTreshold": "follow",
+        "rewardClaimed": true
+      },
+      {
+        "claimTreshold": "repost",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "telegram",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "youtube",
+        "rewardClaimed": false
+      },
+      {
+        "claimTreshold": "instagram",
+        "rewardClaimed": false
+      }
+    ]
   }
 ]

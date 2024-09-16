@@ -366,7 +366,7 @@ async function resetReferralRewards(userId) {
             ...reward,
             rewardClaimed: false
         }));
-        user.lastLogin = '2024-09-09T14:39:52.043Z'
+        //user.lastLogin = '2024-09-09T14:39:52.043Z'
 
         // Save the updated user document
         await user.save();
@@ -599,7 +599,7 @@ async function resetSocialRewardDeets(userId) {
 }
 
   
-const tasks = [
+const allTasks = [
     {
         btnText: 'Start',
         taskText: 'Follow On X',
@@ -1149,128 +1149,183 @@ const tasks = [
         taskStatus: 'active',
         claimTreshold: 'facebook-post',
         rewardClaimed: false
-    }
+    },
+    {
+        btnText: 'Start',
+        taskText: 'DejenDog Bot',
+        taskPoints: 2000,
+        taskCategory: 'Partners',
+        taskUrl: 'https://t.me/DejenDogBot/djdog?startapp=c14b8b84',
+        taskStatus: 'active',
+        claimTreshold: 'unique-id-1',
+        rewardClaimed: false
+      },
+      {
+        btnText: 'Start',
+        taskText: 'DejenDog Channel',
+        taskPoints: 500,
+        taskCategory: 'Partners',
+        taskUrl: 'https://t.me/+jo6lyvMWawM3M2Q1',
+        taskStatus: 'active',
+        claimTreshold: 'unique-id-2',
+        rewardClaimed: false
+      },
+      {
+        btnText: 'Start',
+        taskText: 'Pigs Bot',
+        taskPoints: 2000,
+        taskCategory: 'Partners',
+        taskUrl: 'https://t.me/PigshouseBot?start=773354626',
+        taskStatus: 'active',
+        claimTreshold: 'unique-id-3',
+        rewardClaimed: false
+      },
+      {
+        btnText: 'Start',
+        taskText: 'Pigs Channel',
+        taskPoints: 500,
+        taskCategory: 'Partners',
+        taskUrl: 'https://t.me/+5fewubcxSHViZWM0',
+        taskStatus: 'active',
+        claimTreshold: 'unique-id-4',
+        rewardClaimed: false
+      },
+      {
+        btnText: 'Start',
+        taskText: 'GemsWall Bot',
+        taskPoints: 2000,
+        taskCategory: 'Partners',
+        taskUrl: 'https://t.me/GleamRewardsBot/app?startapp=cmM9cF9haWRvZ3M',
+        taskStatus: 'active',
+        claimTreshold: 'unique-id-5',
+        rewardClaimed: false
+      },
+      {
+        btnText: 'Start',
+        taskText: 'GemsWall Channel',
+        taskPoints: 500,
+        taskCategory: 'Partners',
+        taskUrl: 'https://t.me/+zevh1InyRf4wYjAy',
+        taskStatus: 'active',
+        claimTreshold: 'unique-id-6',
+        rewardClaimed: false
+      },
+      {
+        btnText: 'Start',
+        taskText: 'BFDCoin Bot',
+        taskPoints: 2000,
+        taskCategory: 'Partners',
+        taskUrl: 'https://t.me/BFDCoin_bot/BFDCoin?startapp=1035892983',
+        taskStatus: 'active',
+        claimTreshold: 'unique-id-7',
+        rewardClaimed: false
+      },
+      {
+        btnText: 'Start',
+        taskText: 'BFDCoin Channel',
+        taskPoints: 500,
+        taskCategory: 'Partners',
+        taskUrl: 'https://t.me/+VoudIa8h4ek1YjRl',
+        taskStatus: 'active',
+        claimTreshold: 'unique-id-8',
+        rewardClaimed: false
+      },
+      {
+        btnText: 'Start',
+        taskText: 'Obix Bot',
+        taskPoints: 2000,
+        taskCategory: 'Partners',
+        taskUrl: 'https://t.me/obix_bot?start=6426024318',
+        taskStatus: 'active',
+        claimTreshold: 'unique-id-9',
+        rewardClaimed: false
+      },
+      {
+        btnText: 'Start',
+        taskText: 'Obix Channel',
+        taskPoints: 500,
+        taskCategory: 'Partners',
+        taskUrl: 'https://t.me/+XJPJKXSTpONlZGJk',
+        taskStatus: 'active',
+        claimTreshold: 'unique-id-10',
+        rewardClaimed: false
+      },
+      {
+          btnText: 'Start',
+          taskText: 'Tonnchi Bot',
+          taskPoints: 2000,
+          taskCategory: 'Partners',
+          taskUrl: 'https://t.me/Tonnchi_Bot/launch?startapp=wibLf8nL',
+          taskStatus: 'active',
+          claimTreshold: 'tonnchi-bot',
+          rewardClaimed: false
+      }
 ]
 
-const tasksNew = [
-    {
-      btnText: 'Start',
-      taskText: 'DejenDog Bot',
-      taskPoints: 2000,
-      taskCategory: 'Partners',
-      taskUrl: 'https://t.me/DejenDogBot/djdog?startapp=c14b8b84',
-      taskStatus: 'active',
-      claimTreshold: 'unique-id-1',
-      rewardClaimed: false
-    },
-    {
-      btnText: 'Start',
-      taskText: 'DejenDog Channel',
-      taskPoints: 500,
-      taskCategory: 'Partners',
-      taskUrl: 'https://t.me/+jo6lyvMWawM3M2Q1',
-      taskStatus: 'active',
-      claimTreshold: 'unique-id-2',
-      rewardClaimed: false
-    },
-    {
-      btnText: 'Start',
-      taskText: 'Pigs Bot',
-      taskPoints: 2000,
-      taskCategory: 'Partners',
-      taskUrl: 'https://t.me/PigshouseBot?start=773354626',
-      taskStatus: 'active',
-      claimTreshold: 'unique-id-3',
-      rewardClaimed: false
-    },
-    {
-      btnText: 'Start',
-      taskText: 'Pigs Channel',
-      taskPoints: 500,
-      taskCategory: 'Partners',
-      taskUrl: 'https://t.me/+5fewubcxSHViZWM0',
-      taskStatus: 'active',
-      claimTreshold: 'unique-id-4',
-      rewardClaimed: false
-    },
-    {
-      btnText: 'Start',
-      taskText: 'GemsWall Bot',
-      taskPoints: 2000,
-      taskCategory: 'Partners',
-      taskUrl: 'https://t.me/GleamRewardsBot/app?startapp=cmM9cF9haWRvZ3M',
-      taskStatus: 'active',
-      claimTreshold: 'unique-id-5',
-      rewardClaimed: false
-    },
-    {
-      btnText: 'Start',
-      taskText: 'GemsWall Channel',
-      taskPoints: 500,
-      taskCategory: 'Partners',
-      taskUrl: 'https://t.me/+zevh1InyRf4wYjAy',
-      taskStatus: 'active',
-      claimTreshold: 'unique-id-6',
-      rewardClaimed: false
-    },
-    {
-      btnText: 'Start',
-      taskText: 'BFDCoin Bot',
-      taskPoints: 2000,
-      taskCategory: 'Partners',
-      taskUrl: 'https://t.me/BFDCoin_bot/BFDCoin?startapp=1035892983',
-      taskStatus: 'active',
-      claimTreshold: 'unique-id-7',
-      rewardClaimed: false
-    },
-    {
-      btnText: 'Start',
-      taskText: 'BFDCoin Channel',
-      taskPoints: 500,
-      taskCategory: 'Partners',
-      taskUrl: 'https://t.me/+VoudIa8h4ek1YjRl',
-      taskStatus: 'active',
-      claimTreshold: 'unique-id-8',
-      rewardClaimed: false
-    },
-    {
-      btnText: 'Start',
-      taskText: 'Obix Bot',
-      taskPoints: 2000,
-      taskCategory: 'Partners',
-      taskUrl: 'https://t.me/obix_bot?start=6426024318',
-      taskStatus: 'active',
-      claimTreshold: 'unique-id-9',
-      rewardClaimed: false
-    },
-    {
-      btnText: 'Start',
-      taskText: 'Obix Channel',
-      taskPoints: 500,
-      taskCategory: 'Partners',
-      taskUrl: 'https://t.me/+XJPJKXSTpONlZGJk',
-      taskStatus: 'active',
-      claimTreshold: 'unique-id-10',
-      rewardClaimed: false
-    }
-];
+const newTasks = [
+    
+] 
   
 
 const runTasksUpdate = async () => {
-    const insertMany = await Task.insertMany(tasksNew);
-    const getTasks = await Task.find()
+    const insertMany = await Task.insertMany(newTasks);
+    const getTasks = await Task.find({
+        claimTreshold: 'tonnchi-bot'
+    })
     console.log(getTasks)
 }
+
+const updateTaskByClaimTreshold = async (claimTreshold, updateData) => {
+    try {
+      // Find the task by claimTreshold and update with the new data
+      const updatedTask = await Task.findOneAndUpdate(
+        { claimTreshold }, // Match the task by claimTreshold
+        { $set: updateData }, // Update fields with updateData
+        { new: true } // Return the updated task
+      );
   
-runTasksUpdate();
+      if (!updatedTask) {
+        return { message: "Task not found" };
+      }
+  
+      console.log(updatedTask);
+    } catch (error) {
+      console.error('Error updating task:', error);
+      throw new Error('Task update failed');
+    }
+};
+
+const resetReferralRewardsOp = async (userId) => {
+    const user = await User.findOne({ 'user.id': userId });
+  
+    if (!user) {
+      throw new Error('User not found');
+    }
+  
+    // Reset all rewardClaimed fields to false
+    user.referralRewardDeets.forEach(reward => reward.rewardClaimed = false);
+  
+    // Save the updated user data
+    await user.save();
+  };
+  
+  // Usage
+  //resetReferralRewardsOp(1354055384)
+    //.then(() => console.log('All referral rewards reset successfully'))
+    //.catch(err => console.error('Error resetting referral rewards:', err));
+  
+
+//updateTaskByClaimTreshold('dl-coin-channel', {taskStatus: 'paused'})
+  
+//runTasksUpdate();
 
 //calculateAverageUsersPerDay()
 // Call the function to update referral points
 //updateReferralPoints();
 
-resetSocialRewardDeets(1354055384)
+//resetSocialRewardDeets(1354055384)
 //resetSocialRewards(1354055384)
-//resetReferralRewards(1354055384)
+resetReferralRewards(1354055384)
 //updateUserPointsToday(1354055384, 0)
 
 //deleteUserByUserId(1354055384)

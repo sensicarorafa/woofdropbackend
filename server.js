@@ -504,6 +504,39 @@ setInterval(() => {
   cache.clear();
 }, 5 * 60 * 1000); // Clear cache every 5 minutes
 
+const updateReferralRewards = async (userId) => {
+  const user = await User.findOne({ 'user.id': userId });
+
+  if (!user) {
+    throw new Error('User not found');
+  }
+
+  // Step 1: Reduce referralRewardDeets array to length 7 if it's longer
+  if (user.referralRewardDeets.length > 7) {
+    user.referralRewardDeets = user.referralRewardDeets.slice(0, 7);
+  }
+
+  // Step 2: Check if all rewardClaimed are true, set them to false if so
+  const allRewardsClaimed = user.referralRewardDeets.every(reward => reward.rewardClaimed === true);
+
+  if (allRewardsClaimed) {
+    user.referralRewardDeets.forEach(reward => reward.rewardClaimed = false);
+  }
+
+  // Step 3: Check if lastLogin was more than 24 hours ago
+  const lastLoginDate = new Date(user.lastLogin);
+  const currentDate = new Date();
+  const timeDifference = currentDate - lastLoginDate;
+  const oneDayInMilliseconds = 24 * 60 * 60 * 1000;
+
+  if (timeDifference > oneDayInMilliseconds) {
+    user.referralRewardDeets.forEach(reward => reward.rewardClaimed = false);
+  }
+
+  // Save the updated user data
+  await user.save();
+};
+
 
 app.post('/get-user-data', async (req, res) => {
   const { user } = req.body;
@@ -512,7 +545,8 @@ app.post('/get-user-data', async (req, res) => {
     // Find the user by id and username
     //await updateSocialRewardDeets(user.id);
     await updateUserSocialRewards(user.id);
-    await getUserAndEnsureLastLogin(user.id)
+    await getUserAndEnsureLastLogin(user.id);
+    await updateReferralRewards(user.id);
     let existingUser = await User.findOne({
       'user.id': user.id,
       'user.username': user.username
@@ -765,6 +799,168 @@ app.delete('/tasks/:id', async (req, res) => {
 });
 
 
+//Boost leaderboard
+
+
+app.post('/activate-boost', async (req, res) => {
+  const { user, boostCode, refBoostCode } = req.body;
+
+  try {
+    // Find the refuser by boostcode
+    let existingUser = await BoostLeaderboard.findOne({
+      userId: user.id
+    });
+
+    if (existingUser) {
+    res.status(200).send({ message: 'Boost already activated', userData: existingUser, success: true });
+
+      return
+    } else {
+ 
+      const userReferrer = await BoostLeaderboard.findOne({ boostCode: refBoostCode });
+      if(userReferrer || !boostCode) {
+        existingUser = new BoostLeaderboard({
+          pointsNo: 7000,
+          userId: user.id,
+          boostCode: boostCode,
+          boostActivated: true,
+          referrerBoostCode:refBoostCode
+  
+        });
+  
+        await existingUser.save();
+      
+
+      const dbUser = await User.findOne({ "user.id": user.id });
+      if (dbUser) {
+        dbUser.pointsNo += 7000
+        dbUser.save()
+      }
+          userReferrer.pointsNo += 2800;
+          userReferrer.referralPoints += 1;
+
+          await userReferrer.save();
+          const refUser = await User.findOne({ "user.id": userReferrer.userId });
+          if (refUser) {
+            refUser.pointsNo += 2800
+            refUser.save()
+
+          
+        
+      }
+         // If user doesn't exist, create a new user
+         const rankData = await BoostLeaderboard.aggregate([
+          // Sort documents by points in descending order
+          { $sort: { pointsNo: -1 } },
+    
+          // Add a rank field using $rank
+          {
+            $setWindowFields: {
+              sortBy: { pointsNo: -1 },
+              output: {
+                rank: { $rank: {} },
+              },
+            },
+          },
+    
+          // Match the document with the given userId
+          { $match: { userId: user.id } },
+        ]);
+        const rank= rankData.length > 0 ? rankData[0].rank : null;
+
+    res.status(200).send({ message: 'Points updated successfully', userData: existingUser, userRank:rank, success: true });
+    } else {
+      res.status(200).send({ message: 'Boost key not active', userData: existingUser, success: true });
+
+    }}
+  } catch (error) {
+    console.error('Error updating points:', error);
+    res.status(500).send({ message: 'Internal Server Error', success: false });
+  }
+})
+
+app.post('/get-user-data/boost-data', async (req, res) => {
+  const { user } = req.body;
+
+  try {
+    // Find the user by id and username
+
+    let existingUser = await BoostLeaderboard.findOne({
+      userId: user.id,
+    });
+    
+
+    if (existingUser) {
+      const rankData = await BoostLeaderboard.aggregate([
+        // Sort documents by points in descending order
+        { $sort: { pointsNo: -1 } },
+  
+        // Add a rank field using $rank
+        {
+          $setWindowFields: {
+            sortBy: { pointsNo: -1 },
+            output: {
+              rank: { $rank: {} },
+            },
+          },
+        },
+  
+        // Match the document with the given userId
+        { $match: { userId: user.id } },
+      ]);
+  
+      const rank= rankData.length > 0 ? rankData[0].rank : null;
+      return res.status(200).send({ message: 'Boost data retrieved successfully', userData: existingUser, userRank:rank, success: true });
+    } else {
+         // Step 1: Sort users by points in descending order and get all users
+       
+      
+      return res.status(200).send({
+        message: 'User retrieved successfully',
+        userData: {
+          pointsNo: 0,
+          referralPoints: 0,
+          boostCode: "",
+          boostActivated:false,
+          
+        },
+        success: false
+      });
+    }
+
+
+
+  } catch (error) {
+    console.error('Error fetching boost data:', error);
+    res.status(500).send({ message: 'Internal Server Error' });
+  }
+})
+
+app.post('/get-boost-participants', async (req, res) => {
+
+
+  try {
+    // Find the user by id and username
+
+    const count = await BoostLeaderboard.countDocuments();
+
+ 
+      return res.status(200).send({
+        message: 'Total boost participants',
+        boostData: {
+     count:count
+        },
+        success: false
+      });
+    
+
+
+
+  } catch (error) {
+    console.error('Error fetching boost data:', error);
+    res.status(500).send({ message: 'Internal Server Error' });
+  }
+})
 
 
 async function generateUniqueReferralCode(userId) {
