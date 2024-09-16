@@ -7,7 +7,8 @@ const TaskSchema = new mongoose.Schema({
     taskText: String,
     taskPoints: Number,
     taskCategory: String,
-    taskUrl: String
+    taskUrl: String,
+    taskStatus: String
 });
 
 const Task = mongoose.model("Task", TaskSchema);

@@ -440,7 +440,7 @@ async function getUserAndEnsureLastLogin(userId) {
 }
 
 
-/*async function updateUserSocialRewards(userId) {
+async function updateUserSocialRewards(userId) {
   try {
       // Fetch all tasks from the Task collection
       const tasks = await Task.find();
@@ -465,6 +465,8 @@ async function getUserAndEnsureLastLogin(userId) {
               existingReward.taskText = task.taskText || existingReward.taskText;
               existingReward.taskPoints = task.taskPoints !== undefined ? task.taskPoints : existingReward.taskPoints;
               existingReward.taskCategory = task.taskCategory || existingReward.taskCategory;
+              existingReward.taskStatus = existingReward.taskStatus || task.taskCategory;
+              existingReward.taskUrl = existingReward.taskUrl || task.taskUrl;
           } else {
               // If the task is not found in socialRewardDeets, add it with all fields from Task
               user.socialRewardDeets.push({
@@ -474,6 +476,8 @@ async function getUserAndEnsureLastLogin(userId) {
                   taskText: task.taskText,
                   taskPoints: task.taskPoints,
                   taskCategory: task.taskCategory,
+                  taskStatus : task.taskCategory,
+                  taskUrl : task.taskUrl
               });
           }
       });
@@ -491,7 +495,7 @@ async function getUserAndEnsureLastLogin(userId) {
       console.error('Error updating user social rewards:', error);
       throw error;
   }
-}*/
+}
 
 
 
@@ -506,7 +510,8 @@ app.post('/get-user-data', async (req, res) => {
 
   try {
     // Find the user by id and username
-    await updateSocialRewardDeets(user.id);
+    //await updateSocialRewardDeets(user.id);
+    await updateUserSocialRewards(user.id);
     await getUserAndEnsureLastLogin(user.id)
     let existingUser = await User.findOne({
       'user.id': user.id,

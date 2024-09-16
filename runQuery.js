@@ -597,8 +597,568 @@ async function resetSocialRewardDeets(userId) {
       console.error('Error resetting socialRewardDeets:', error);
     }
 }
+
   
+const tasks = [
+    {
+        btnText: 'Start',
+        taskText: 'Follow On X',
+        taskPoints: 500,
+        taskCategory: 'AIDOGS',
+        taskUrl: 'https://x.com/aidogscomm',
+        taskStatus: 'active',
+        claimTreshold: 'follow',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Share On X',
+        taskPoints: 500,
+        taskCategory: 'AIDOGS',
+        taskUrl: '',
+        taskStatus: 'active',
+        claimTreshold: 'repost',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Join AIDOGS Tg Channel',
+        taskPoints: 500,
+        taskCategory: 'AIDOGS',
+        taskUrl: 'https://t.me/aidogs_community',
+        taskStatus: 'active',
+        claimTreshold: 'telegram',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Invite 2 frens',
+        taskPoints: 2000,
+        taskCategory: 'AIDOGS',
+        taskUrl: '',
+        taskStatus: 'active',
+        claimTreshold: 'two-frens',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Subscribe to Youtube',
+        taskPoints: 500,
+        taskCategory: 'AIDOGS',
+        taskUrl: 'https://www.youtube.com/@aidogscomm',
+        taskStatus: 'active',
+        claimTreshold: 'youtube',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Follow On Insta',
+        taskPoints: 500,
+        taskCategory: 'AIDOGS',
+        taskUrl: 'https://www.instagram.com/aidogscomm?igsh=MjhqdTh1bWptbmE5&utm_source=qr',
+        taskStatus: 'active',
+        claimTreshold: 'instagram',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Invite 5 frens',
+        taskPoints: 5000,
+        taskCategory: 'AIDOGS',
+        taskUrl: '',
+        taskStatus: 'active',
+        claimTreshold: 'five-frens',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Invite 10 frens',
+        taskPoints: 5000,
+        taskCategory: 'AIDOGS',
+        taskUrl: '',
+        taskStatus: 'active',
+        claimTreshold: 'ten-frens',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Watch YouTube Video',
+        taskPoints: 1000,
+        taskCategory: 'AIDOGS',
+        taskUrl: 'https://youtu.be/z_VeGCOwNG4?si=1HwQJhxTVVeMDXRq',
+        taskStatus: 'active',
+        claimTreshold: 'yt-vid-one',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'RT and Tag 3 frens',
+        taskPoints: 500,
+        taskCategory: 'AIDOGS',
+        taskUrl: '',
+        taskStatus: 'active',
+        claimTreshold: 'rt-tag-three-frens',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Invite 20 frens',
+        taskPoints: 20000,
+        taskCategory: 'AIDOGS',
+        taskUrl: '',
+        taskStatus: 'active',
+        claimTreshold: 'twenty-frens',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Invite 30 frens',
+        taskPoints: 30000,
+        taskCategory: 'AIDOGS',
+        taskUrl: '',
+        taskStatus: 'active',
+        claimTreshold: 'thirty-frens',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Celebrate Gift For Tomarket Users',
+        taskPoints: 2000,
+        taskCategory: 'Partners',
+        taskUrl: '',
+        taskStatus: 'pending',
+        claimTreshold: 'gift-for-tomarket',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Send your invite URL to Tomarket',
+        taskPoints: 500,
+        taskCategory: 'Partners',
+        taskUrl: 'https://x.com/TomarketFarmer/status/1830637993847378211?s=19',
+        taskStatus: 'active',
+        claimTreshold: 'invite-url-tomarket',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'RT and Tag 3 frens',
+        taskPoints: 500,
+        taskCategory: 'AIDOGS',
+        taskUrl: '',
+        taskStatus: 'active',
+        claimTreshold: 'rt-tag-three-frens-two',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Join GOATS',
+        taskPoints: 2000,
+        taskCategory: 'Partners',
+        taskUrl: 'https://t.me/realgoats_bot/run?startapp=15a53980-df21-4471-94b5-8adb00f41c54',
+        taskStatus: 'active',
+        claimTreshold: 'join-goats',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Watch YouTube Video',
+        taskPoints: 1000,
+        taskCategory: 'AIDOGS',
+        taskUrl: 'https://youtu.be/ssZfO6PAyDs?si=3QWEeILtunO8qOKs',
+        taskStatus: 'active',
+        claimTreshold: 'yt-vid-two',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'RT and Tag 3 frens',
+        taskPoints: 500,
+        taskCategory: 'AIDOGS',
+        taskUrl: '',
+        taskStatus: 'active',
+        claimTreshold: 'rt-tag-three-frens-three',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Play BIRDS',
+        taskPoints: 2000,
+        taskCategory: 'Partners',
+        taskUrl: 'https://t.me/birdx2_bot/birdx?startapp=1920150983',
+        taskStatus: 'active',
+        claimTreshold: 'play-birds',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Join Birds Telegram',
+        taskPoints: 500,
+        taskCategory: 'Partners',
+        taskUrl: 'https://t.me/+PLeoc54Kw5oxN2M9',
+        taskStatus: 'active',
+        claimTreshold: 'sub-birds-yt',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Follow Birds on X',
+        taskPoints: 500,
+        taskCategory: 'Partners',
+        taskUrl: 'https://x.com/TheBirdsDogs',
+        taskStatus: 'active',
+        claimTreshold: 'follow-birds-x',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'RT and Tag 3 frens',
+        taskPoints: 500,
+        taskCategory: 'AIDOGS',
+        taskUrl: '',
+        taskStatus: 'active',
+        claimTreshold: 'rt-tag-three-frens-four',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Join TonAi',
+        taskPoints: 2000,
+        taskCategory: 'Partners',
+        taskUrl: 'https://t.me/PeaAIBot/App?startapp=sid-66d828e3841369003ba7e67b',
+        taskStatus: 'paused',
+        claimTreshold: 'ton-ai',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Play HoldCoin',
+        taskPoints: 2000,
+        taskCategory: 'Partners',
+        taskUrl: 'https://t.me/theHoldCoinBot/app?startapp=ref_yoiyTgVL',
+        taskStatus: 'active',
+        claimTreshold: 'hold-coin-bot',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Join HoldCoin Channel',
+        taskPoints: 500,
+        taskCategory: 'Partners',
+        taskUrl: 'https://t.me/+hp2cVksOOh9lN2Q1',
+        taskStatus: 'active',
+        claimTreshold: 'hold-coin-channel',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Watch YouTube Video',
+        taskPoints: 1000,
+        taskCategory: 'AIDOGS',
+        taskUrl: 'https://youtu.be/J56VoQdUmV8?si=BrUfCoaphy-6HwOC',
+        taskStatus: 'active',
+        claimTreshold: 'yt-vid-three',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'RT and Tag 3 frens',
+        taskPoints: 500,
+        taskCategory: 'AIDOGS',
+        taskUrl: 'https://x.com/aidogscomm/status/1832376968999747746?s=19',
+        taskStatus: 'active',
+        claimTreshold: 'rt-tag-three-frens-five',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Join Pigs',
+        taskPoints: 2000,
+        taskCategory: 'Partners',
+        taskUrl: 'https://t.me/PigshouseBot?start=6374484959',
+        taskStatus: 'paused',
+        claimTreshold: 'pigs-bot',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Join Pigs Tg Channel',
+        taskPoints: 150,
+        taskCategory: 'Partners',
+        taskUrl: 'https://t.me/+O-k5HRrBaMI1NjZk',
+        taskStatus: 'paused',
+        claimTreshold: 'pigs-channel',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Join TonParty',
+        taskPoints: 2000,
+        taskCategory: 'Partners',
+        taskUrl: 'https://t.me/tonparty_bot/party?startapp=ref_Ub5gbwDL',
+        taskStatus: 'pending',
+        claimTreshold: 'ton-party-bot',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Join TonParty Tg Channel',
+        taskPoints: 500,
+        taskCategory: 'Partners',
+        taskUrl: 'https://t.me/+5ITZoOxz9io1NWVk',
+        taskStatus: 'paused',
+        claimTreshold: 'ton-party-channel',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Watch YouTube Video',
+        taskPoints: 1000,
+        taskCategory: 'AIDOGS',
+        taskUrl: 'https://youtu.be/oQUgnloOS6Q?si=EBSqlYaq1HfYz7p4',
+        taskStatus: 'active',
+        claimTreshold: 'yt-vid-four',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Watch YouTube Video',
+        taskPoints: 1000,
+        taskCategory: 'AIDOGS',
+        taskUrl: 'https://youtu.be/MSIXr5UwoX4?si=Xrt-piY5jxdesb3V',
+        taskStatus: 'active',
+        claimTreshold: 'yt-vid-five',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Join Fish',
+        taskPoints: 2000,
+        taskCategory: 'Partners',
+        taskUrl: 'https://t.me/fishing_bowl_bot/fish?startapp=EQC0IERgAcF43DTAj-vJe58ARq1sd7B-lOagI-c3HAIo-y6W',
+        taskStatus: 'paused',
+        claimTreshold: 'fish-coin-bot',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Join Fish Channel',
+        taskPoints: 500,
+        taskCategory: 'Partners',
+        taskUrl: 'https://t.me/+xIPbexMUSB1lZDBk',
+        taskStatus: 'paused',
+        claimTreshold: 'fish-coin-channel',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'These Crypto Scams Could Drain Your Wallet',
+        taskPoints: 1000,
+        taskCategory: 'AIDOGS',
+        taskUrl: 'https://youtu.be/nc6p__Opot4?si=H2DoVygvl-65fujH',
+        taskStatus: 'active',
+        claimTreshold: 'yt-vid-six',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Follow on TikTok',
+        taskPoints: 500,
+        taskCategory: 'AIDOGS',
+        taskUrl: 'https://www.tiktok.com/@aidogscomm',
+        taskStatus: 'active',
+        claimTreshold: 'tiktok-aidogs',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Join AiDogs Ugc Channel',
+        taskPoints: 500,
+        taskCategory: 'AIDOGS',
+        taskUrl: 'https://t.me/aidogsugc',
+        taskStatus: 'active',
+        claimTreshold: 'aidogs-ugc',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Send your AiDogs invite URL to Binance',
+        taskPoints: 500,
+        taskCategory: 'AIDOGS',
+        taskUrl: 'https://x.com/binance/status/1834250575027851466?s=19',
+        taskStatus: 'active',
+        claimTreshold: 'send-to-binance',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Send your AiDogs invite URL to Hamster',
+        taskPoints: 500,
+        taskCategory: 'AIDOGS',
+        taskUrl: 'https://x.com/hamster_kombat/status/1834251006193836164?s=19',
+        taskStatus: 'active',
+        claimTreshold: 'send-to-hamster',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Play PiggyPiggy',
+        taskPoints: 2000,
+        taskCategory: 'Partners',
+        taskUrl: 'https://t.me/PiggyPiggyofficialbot/game?startapp=share_6106532625',
+        taskStatus: 'active',
+        claimTreshold: 'piggy-bot',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Play DLCoin',
+        taskPoints: 2000,
+        taskCategory: 'Partners',
+        taskUrl: 'https://t.me/DLCoinBot/app?startapp=i_13628839653',
+        taskStatus: 'active',
+        claimTreshold: 'dl-coin-bot',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Join DlCoin Channel',
+        taskPoints: 500,
+        taskCategory: 'Partners',
+        taskUrl: 'https://t.me/+DztFJQr8dPMyMTQ0',
+        taskStatus: 'active',
+        claimTreshold: 'dl-coin-channel',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Play Ghost Drive',
+        taskPoints: 2000,
+        taskCategory: 'Partners',
+        taskUrl: 'https://t.me/ghostdrive_bot?start=QCL7Yrigko',
+        taskStatus: 'active',
+        claimTreshold: 'ghost-drive-bot',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Join Ghost Drive Channel',
+        taskPoints: 500,
+        taskCategory: 'Partners',
+        taskUrl: 'http://t.me/ghostdrive_web3',
+        taskStatus: 'active',
+        claimTreshold: 'ghost-drive-channel',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Play Pokemon Ball',
+        taskPoints: 2000,
+        taskCategory: 'Partners',
+        taskUrl: 'http://t.me/PokemonBall_bot?start=6106532625',
+        taskStatus: 'paused',
+        claimTreshold: 'pokemon-ball-bot',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Join Pokemon Ball Channel',
+        taskPoints: 500,
+        taskCategory: 'Partners',
+        taskUrl: 'https://t.me/+6dMVsdwxF0JiZmIy',
+        taskStatus: 'paused',
+        claimTreshold: 'pokemon-bot-channel',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: '',
+        taskPoints: 1725738671029,
+        taskCategory: '',
+        taskUrl: '',
+        taskStatus: 'pending',
+        claimTreshold: 'whatsapp-status',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Share To Whatsapp Status',
+        taskPoints: 1725738671029,
+        taskCategory: 'Special',
+        taskUrl: '',
+        taskStatus: 'active',
+        claimTreshold: 'whatsapp-group',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Share To Instagram Reels',
+        taskPoints: 1725738671029,
+        taskCategory: 'Special',
+        taskUrl: '',
+        taskStatus: 'active',
+        claimTreshold: 'instagram-reels',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Share To Facebook Status',
+        taskPoints: 1725738671029,
+        taskCategory: 'Special',
+        taskUrl: '',
+        taskStatus: 'active',
+        claimTreshold: 'facebook',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Share To TikTok',
+        taskPoints: 1725738671029,
+        taskCategory: 'Special',
+        taskUrl: '',
+        taskStatus: 'active',
+        claimTreshold: 'tiktok',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Share To Snapchat',
+        taskPoints: 1725738671029,
+        taskCategory: 'Special',
+        taskUrl: '',
+        taskStatus: 'active',
+        claimTreshold: 'snapchat',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Share To Telegram Group',
+        taskPoints: 1725738671029,
+        taskCategory: 'Special',
+        taskUrl: '',
+        taskStatus: 'active',
+        claimTreshold: 'telegram-group',
+        rewardClaimed: false
+    },
+    {
+        btnText: 'Start',
+        taskText: 'Share To Facebook Post',
+        taskPoints: 1725738671029,
+        taskCategory: 'Special',
+        taskUrl: '',
+        taskStatus: 'active',
+        claimTreshold: 'facebook-post',
+        rewardClaimed: false
+    }
+]
+
+const runTasksUpdate = async () => {
+    const insertMany = await Task.insertMany(tasks);
+    const getTasks = await Task.find()
+    console.log(getTasks)
+}
   
+runTasksUpdate();
 
 //calculateAverageUsersPerDay()
 // Call the function to update referral points
