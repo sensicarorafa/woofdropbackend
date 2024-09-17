@@ -1320,7 +1320,18 @@ const getReferralLeaderboard = async () => {
     console.log(leaderboard)
 }
 
-getLeaderboard()
+//66dd8f2124e519e7e03e14a0, 66d7330beef934d7d4f44ee0
+
+const getUser = async () => {
+    const user = await User.findOne({
+        'user.username': 'zk_maximalis'
+    })
+    console.log(user);
+}
+
+getUser()
+
+//getLeaderboard()
   
 // Usage
 //resetReferralRewardsOp(1354055384)

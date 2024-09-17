@@ -461,13 +461,13 @@ async function updateUserSocialRewards(userId) {
 
           if (existingReward) {
               // Update only missing fields in the existingReward
-              existingReward.btnText = task.btnText || existingReward.btnText;
+              existingReward.btnText = task.btnText !== undefined ? task.btnText : existingReward.btnText;
               existingReward.rewardClaimed = existingReward.rewardClaimed !== undefined ? existingReward.rewardClaimed : task.rewardClaimed;
-              existingReward.taskText = task.taskText || existingReward.taskText;
+              existingReward.taskText = task.taskText !== undefined ?  task.taskText : existingReward.taskText;
               existingReward.taskPoints = task.taskPoints !== undefined ? task.taskPoints : existingReward.taskPoints;
-              existingReward.taskCategory = task.taskCategory || existingReward.taskCategory;
+              existingReward.taskCategory =  task.taskCategory !== undefined ? task.taskCategory : existingReward.taskCategory;
               existingReward.taskStatus = task.taskStatus;
-              existingReward.taskUrl = existingReward.taskUrl || task.taskUrl;
+              existingReward.taskUrl = existingReward.taskUrl !== undefined ? existingReward.taskUrl : task.taskUrl;
           } else {
               // If the task is not found in socialRewardDeets, add it with all fields from Task
               user.socialRewardDeets.push({
@@ -506,42 +506,45 @@ setInterval(() => {
 }, 5 * 60 * 1000); // Clear cache every 5 minutes
 
 const updateReferralRewards = async (userId) => {
-  const user = await User.findOne({ 'user.id': userId });
+  try {
+    const user = await User.findOne({ 'user.id': userId });
 
-  if (!user) {
-    throw new Error('User not found', userId);
+    if (!user) {
+      throw new Error('User not found', userId);
+    }
+  
+    // Step 1: Reduce referralRewardDeets array to length 7 if it's longer
+    if (user.referralRewardDeets.length > 7) {
+      user.referralRewardDeets = user.referralRewardDeets.slice(0, 7);
+    }
+  
+    // Step 2: Check if all rewardClaimed are true, set them to false if so
+    const allRewardsClaimed = user.referralRewardDeets.every(reward => reward.rewardClaimed === true);
+  
+    if (allRewardsClaimed) {
+      user.referralRewardDeets.forEach(reward => reward.rewardClaimed = false);
+    }
+  
+    // Step 3: Check if lastLogin was more than 24 hours ago
+    const lastLoginDate = new Date(user.lastLogin);
+    const currentDate = new Date();
+    const timeDifference = currentDate - lastLoginDate;
+    const oneDayInMilliseconds = 24 * 60 * 60 * 1000;
+  
+    if (timeDifference > oneDayInMilliseconds) {
+      user.referralRewardDeets.forEach(reward => reward.rewardClaimed = false);
+    }
+  
+    // Save the updated user data
+    await user.save(); 
+  } catch (error) {
+    console.log(error)
   }
-
-  // Step 1: Reduce referralRewardDeets array to length 7 if it's longer
-  if (user.referralRewardDeets.length > 7) {
-    user.referralRewardDeets = user.referralRewardDeets.slice(0, 7);
-  }
-
-  // Step 2: Check if all rewardClaimed are true, set them to false if so
-  const allRewardsClaimed = user.referralRewardDeets.every(reward => reward.rewardClaimed === true);
-
-  if (allRewardsClaimed) {
-    user.referralRewardDeets.forEach(reward => reward.rewardClaimed = false);
-  }
-
-  // Step 3: Check if lastLogin was more than 24 hours ago
-  const lastLoginDate = new Date(user.lastLogin);
-  const currentDate = new Date();
-  const timeDifference = currentDate - lastLoginDate;
-  const oneDayInMilliseconds = 24 * 60 * 60 * 1000;
-
-  if (timeDifference > oneDayInMilliseconds) {
-    user.referralRewardDeets.forEach(reward => reward.rewardClaimed = false);
-  }
-
-  // Save the updated user data
-  await user.save();
 };
 
 
 app.post('/get-user-data', async (req, res) => {
   const { user } = req.body;
-  console.log({user})
 
   try {
     // Find the user by id and username
