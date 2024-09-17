@@ -10,6 +10,7 @@ const { Telegraf } = require('telegraf');
 const crypto = require('crypto');
 const User = require('./models/User');
 const Leaderboard = require('./models/Leaderboard');
+const BoostLeaderboard = require('./models/BoostLeaderboard');
 const cron = require('node-cron');
 const ReferralLeaderboard = require('./models/ReferralLeaderboard');
 const Task = require('./models/Task');
@@ -508,7 +509,7 @@ const updateReferralRewards = async (userId) => {
   const user = await User.findOne({ 'user.id': userId });
 
   if (!user) {
-    throw new Error('User not found');
+    throw new Error('User not found', userId);
   }
 
   // Step 1: Reduce referralRewardDeets array to length 7 if it's longer
@@ -540,6 +541,7 @@ const updateReferralRewards = async (userId) => {
 
 app.post('/get-user-data', async (req, res) => {
   const { user } = req.body;
+  console.log({user})
 
   try {
     // Find the user by id and username
