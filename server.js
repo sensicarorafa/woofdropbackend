@@ -1072,7 +1072,7 @@ const addReferralPoints = async (referralCode) => {
 };
 
 // Telegram Bot Setup
-bot.start(async (ctx) => {
+/*bot.start(async (ctx) => {
   try {
     const telegramId = ctx.from.id;
     const referralCode = ctx.payload ? ctx.payload : ctx.startPayload;
@@ -1160,7 +1160,7 @@ bot.start(async (ctx) => {
   } catch (error) {
     console.log(error);
   }
-});
+});*/
 
 /*bot.start(async (ctx) => {
   try {
