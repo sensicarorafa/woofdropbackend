@@ -542,7 +542,7 @@ const updateReferralRewards = async (userId) => {
   }
 };
 
-app.post('/get-user-data', async (req, res) => {
+/*app.post('/get-user-data', async (req, res) => {
   const { user, referralCode } = req.body;
 
   try {
@@ -592,9 +592,9 @@ app.post('/get-user-data', async (req, res) => {
     console.error('Error updating points:', error);
     res.status(500).send({ message: 'Internal Server Error' });
   }
-})
+})*/
 
-/*app.post('/get-user-data', async (req, res) => {
+app.post('/get-user-data', async (req, res) => {
   const { user } = req.body;
 
   try {
@@ -628,7 +628,7 @@ app.post('/get-user-data', async (req, res) => {
     console.error('Error updating points:', error);
     res.status(500).send({ message: 'Internal Server Error' });
   }
-})*/
+})
 
 app.post('/update-early-adopter', async (req, res) => {
   const { pointsNo, user } = req.body;
@@ -1072,7 +1072,7 @@ const addReferralPoints = async (referralCode) => {
 };
 
 // Telegram Bot Setup
-/*bot.start(async (ctx) => {
+bot.start(async (ctx) => {
   try {
     const telegramId = ctx.from.id;
     const referralCode = ctx.payload ? ctx.payload : ctx.startPayload;
@@ -1160,7 +1160,7 @@ const addReferralPoints = async (referralCode) => {
   } catch (error) {
     console.log(error);
   }
-});*/
+});
 
 /*bot.start(async (ctx) => {
   try {
@@ -1241,9 +1241,9 @@ const addReferralPoints = async (referralCode) => {
   } catch (error) {
     console.log(error);
   }
-});
+});*/
 
-bot.launch();*/
+bot.launch();
 
 process.on('uncaughtException', (err) => {
   console.error('Uncaught Exception:', err);
