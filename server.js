@@ -542,8 +542,59 @@ const updateReferralRewards = async (userId) => {
   }
 };
 
-
 app.post('/get-user-data', async (req, res) => {
+  const { user, referralCode } = req.body;
+
+  try {
+    let existingUser = await User.findOne({
+      'user.id': user.id,
+      'user.username': user.username
+    });
+
+    if (existingUser) {
+      await updateUserSocialRewards(user.id);
+      await getUserAndEnsureLastLogin(user.id);
+      await updateReferralRewards(user.id);
+      return res.status(200).send({ message: 'User retrieved successfully', userData: existingUser, success: true });
+    } else {
+
+      let uniqueReferralCode;
+      let isUnique = false;
+
+      while (!isUnique) {
+        uniqueReferralCode = crypto.randomBytes(4).toString('hex');
+        const existingUser = await User.findOne({ referralCode: uniqueReferralCode });
+        if (!existingUser) {
+          isUnique = true;
+        }
+      }
+
+      const newUser = new User({
+        user,
+        pointsNo: 0,
+        referralPoints: 0,
+        referralCode: uniqueReferralCode,
+        referredBy: referralCode ? true : false,
+        referrerCode: referralCode || '',
+        gender: null
+      });
+      await newUser.save();
+      await updateUserSocialRewards(user.id);
+      await getUserAndEnsureLastLogin(user.id);
+      await updateReferralRewards(user.id);
+      return res.status(200).send({
+        message: 'User retrieved successfully',
+        userData: newUser,
+        success: false
+      });
+    }
+  } catch (error) {
+    console.error('Error updating points:', error);
+    res.status(500).send({ message: 'Internal Server Error' });
+  }
+})
+
+/*app.post('/get-user-data', async (req, res) => {
   const { user } = req.body;
 
   try {
@@ -577,7 +628,7 @@ app.post('/get-user-data', async (req, res) => {
     console.error('Error updating points:', error);
     res.status(500).send({ message: 'Internal Server Error' });
   }
-})
+})*/
 
 app.post('/update-early-adopter', async (req, res) => {
   const { pointsNo, user } = req.body;
@@ -1109,9 +1160,90 @@ const addReferralPoints = async (referralCode) => {
   } catch (error) {
     console.log(error);
   }
+});*/
+
+bot.start(async (ctx) => {
+  try {
+    const telegramId = ctx.from.id;
+   // Extract the full command text
+   const startCommandText = ctx.message.text; // e.g., "/start aa6bf1fd"
+  
+
+    const id =telegramId;
+    const first_name= ctx.from.first_name;
+    const last_name = ctx.from.last_name;
+   const username= ctx.from.username;
+    const language_code= ctx.from.language_code;
+    const allows_write_to_pm= true
+
+    let url = process.env.APP_URL + "?tid=" + id + "&u=" + username + "&fn=" + first_name + "&ln=" + last_name  ;
+
+
+
+    // Extract the referral code if it exists
+    let referralCode;
+    if (startCommandText.includes('startapp=')) {
+        referralCode = startCommandText.split('startapp=')[1]; // This extracts the part after "startapp="
+    }
+
+ 
+ if (referralCode) {
+    //  ctx.reply(Referral code received: ${referralCode});
+     // You can add your logic here to handle the referral code
+
+     try {
+      url += "&r=" + referralCode
+      await ctx.replyWithPhoto('https://i.ibb.co/BcmccLN/Whats-App-Image-2024-08-26-at-2-12-54-PM.jpg', {
+        caption: `<b>Hey, @${ctx.from.username}</b> \nWelcome to AiDogs\n\nAIDOGS portal is open for Dog lovers to have fun and earn\n\nInvite family and friends to earn  10% of all their $AIDOGS reward`,
+        parse_mode: 'HTML',
+        reply_markup: {
+          inline_keyboard: [
+            [{ text: "Open Portal", web_app: { url: url } }],
+            [{ text: 'Join Community', url: 'https://t.me/aidogs_community' }],
+            [{ text: 'Twitter(X)', url: 'https://x.com/aidogscomm' }]
+          ],
+        }
+      });
+    } catch (error) {
+      if (error.response && error.response.error_code === 403) {
+        console.error('Bot was blocked by the user:', ctx.from.id);
+      } else {
+        console.error('Failed to send message:', error);
+      }
+    }
+ } else {
+    //  ctx.reply('No referral code provided.');
+
+    try {
+   
+      await ctx.replyWithPhoto('https://i.ibb.co/BcmccLN/Whats-App-Image-2024-08-26-at-2-12-54-PM.jpg', {
+        caption: `<b>Hey, @${ctx.from.username}</b> \nWelcome to AiDogs\n\nAIDOGS portal is open for Dog lovers to have fun and earn\n\nInvite family and friends to earn  10% of all their $AIDOGS reward`,
+        parse_mode: 'HTML',
+        reply_markup: {
+          inline_keyboard: [
+            [{ text: "Open Portal", web_app: { url: url } }],
+            [{ text: 'Join Community', url: 'https://t.me/aidogs_community' }],
+            [{ text: 'Twitter(X)', url: 'https://x.com/aidogscomm' }]
+          ],
+        }
+      });
+    } catch (error) {
+      if (error.response && error.response.error_code === 403) {
+        console.error('Bot was blocked by the user:', ctx.from.id);
+      } else {
+        console.error('Failed to send message:', error);
+      }
+    }
+ }
+
+
+
+  } catch (error) {
+    console.log(error);
+  }
 });
 
-bot.launch();*/
+bot.launch();
 
 process.on('uncaughtException', (err) => {
   console.error('Uncaught Exception:', err);

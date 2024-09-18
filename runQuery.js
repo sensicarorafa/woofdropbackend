@@ -21,7 +21,7 @@ const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error: "));
 db.once("open", function () {
   console.log("Connected successfully");
-  //calculateAverageUsersPerDay();
+  deleteUserByUserId(1354055384)
 });
 
 const cache = new Map(); 
@@ -310,7 +310,7 @@ async function updateUsers() {
     }
 }
 
-/*async function deleteUserByUserId(userId) {
+async function deleteUserByUserId(userId) {
     try {
         // Find and delete the user using the user.id field
         const deletedUser = await User.findOneAndDelete({ 'user.id': userId });
@@ -326,7 +326,7 @@ async function updateUsers() {
         console.error(`Error deleting user with user.id ${userId}:`, error);
         throw error;
     }
-}*/
+}
 
 /*async function updateUserPointsToday(userId, newPointsToday) {
     try {
@@ -1329,7 +1329,7 @@ const getUser = async () => {
     console.log(user);
 }
 
-getUser()
+//getUser()
 
 //getLeaderboard()
   
@@ -1352,7 +1352,7 @@ getUser()
 //resetReferralRewards(1354055384)
 //updateUserPointsToday(1354055384, 0)
 
-//deleteUserByUserId(1354055384)
+
 
 // Call the function
 //updateUsers();
