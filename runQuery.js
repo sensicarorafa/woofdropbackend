@@ -21,7 +21,7 @@ const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error: "));
 db.once("open", function () {
   console.log("Connected successfully");
-  deleteUserByUserId(1354055384)
+  //deleteUserByUserId(1354055384)
 });
 
 const cache = new Map(); 
@@ -182,7 +182,7 @@ async function updateReferrerPoints () {
     })*/
 
     const userDocs = await User.countDocuments({
-        referrerCode: 'e5293b05'
+        referrerCode: 'c0093de0'
         //referralCode: '71605e28'
     })
 
@@ -194,7 +194,7 @@ async function updateReferrerPoints () {
         const userPoints = user.pointsNo / 10;
         if (userPoints !== Infinity) totalPoints += userPoints;
         console.log(user.pointsNo)
-    })*/
+    })
     
     const referrer = await User.findOne({
         referralCode: 'd736d7df'
@@ -204,7 +204,7 @@ async function updateReferrerPoints () {
 
     referrer.referralPoints = 42;
     await referrer.save();
-    console.log('Total users:', {referrer: referrer.referralPoints})
+    console.log('Total users:', {referrer: referrer.referralPoints})*/
 }
 
 
@@ -1264,16 +1264,26 @@ const allTasks = [
 ]
 
 const newTasks = [
-    
+    {
+        btnText: 'Start',
+        taskText: 'Join Baboon',
+        taskPoints: 2000,
+        taskCategory: 'Partners',
+        taskUrl: 'https://t.me/TheBaboon_Bot?start=r_6299629687',
+        taskStatus: 'active',
+        claimTreshold: 'the-baboon-bot',
+        rewardClaimed: false
+    }
 ] 
   
 
 const runTasksUpdate = async () => {
-    const insertMany = await Task.insertMany(newTasks);
-    const getTasks = await Task.find({
-        claimTreshold: 'tonnchi-bot'
-    })
-    console.log(getTasks)
+    try {
+        const insertMany = await Task.insertMany(newTasks);
+        console.log('New tasks added', newTasks)
+    } catch(error) {
+        console.log('Error', error)
+    }
 }
 
 const updateTaskByClaimTreshold = async (claimTreshold, updateData) => {
@@ -1361,7 +1371,7 @@ const getUser = async () => {
 // Call the function
 //updateReferralContestField();
 
-//updateReferrerPoints()
+updateReferrerPoints()
 //getUsers();
 //updateReferrerCode();
 //getTop100Users();
