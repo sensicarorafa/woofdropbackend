@@ -1072,11 +1072,16 @@ const addReferralPoints = async (referralCode) => {
 };
 
 // Telegram Bot Setup
-/*bot.start(async (ctx) => {
+bot.start(async (ctx) => {
   try {
     const telegramId = ctx.from.id;
-    const referralCode = ctx.payload ? ctx.payload : ctx.startPayload;
+    let referralCode = ctx.payload;
+    const startCommandText = ctx.message.text;
     let existingUser = await User.findOne({ 'user.id': telegramId });
+
+    if (startCommandText.includes('startapp=')) {
+      referralCode = startCommandText.split('startapp=')[1]; // This extracts the part after "startapp="
+    }
 
     if (referralCode && !existingUser) {
       await addReferralPoints(referralCode);
@@ -1160,88 +1165,7 @@ const addReferralPoints = async (referralCode) => {
   } catch (error) {
     console.log(error);
   }
-});*/
-
-/*bot.start(async (ctx) => {
-  try {
-    const telegramId = ctx.from.id;
-   // Extract the full command text
-   const startCommandText = ctx.message.text; // e.g., "/start aa6bf1fd"
-  
-
-    const id =telegramId;
-    const first_name= ctx.from.first_name;
-    const last_name = ctx.from.last_name;
-   const username= ctx.from.username;
-    const language_code= ctx.from.language_code;
-    const allows_write_to_pm= true
-
-    let url = process.env.APP_URL + "?tid=" + id + "&u=" + username + "&fn=" + first_name + "&ln=" + last_name;
-
-
-
-    // Extract the referral code if it exists
-    let referralCode;
-    if (startCommandText.includes('startapp=')) {
-        referralCode = startCommandText.split('startapp=')[1]; // This extracts the part after "startapp="
-    }
-
- 
- if (referralCode) {
-    //  ctx.reply(Referral code received: ${referralCode});
-     // You can add your logic here to handle the referral code
-
-     try {
-      url += "&r=" + referralCode
-      await ctx.replyWithPhoto('https://i.ibb.co/BcmccLN/Whats-App-Image-2024-08-26-at-2-12-54-PM.jpg', {
-        caption: `<b>Hey, @${ctx.from.username}</b> \nWelcome to AiDogs\n\nAIDOGS portal is open for Dog lovers to have fun and earn\n\nInvite family and friends to earn  10% of all their $AIDOGS reward`,
-        parse_mode: 'HTML',
-        reply_markup: {
-          inline_keyboard: [
-            [{ text: "Open Portal", web_app: { url: url } }],
-            [{ text: 'Join Community', url: 'https://t.me/aidogs_community' }],
-            [{ text: 'Twitter(X)', url: 'https://x.com/aidogscomm' }]
-          ],
-        }
-      });
-    } catch (error) {
-      if (error.response && error.response.error_code === 403) {
-        console.error('Bot was blocked by the user:', ctx.from.id);
-      } else {
-        console.error('Failed to send message:', error);
-      }
-    }
- } else {
-    //  ctx.reply('No referral code provided.');
-
-    try {
-   
-      await ctx.replyWithPhoto('https://i.ibb.co/BcmccLN/Whats-App-Image-2024-08-26-at-2-12-54-PM.jpg', {
-        caption: `<b>Hey, @${ctx.from.username}</b> \nWelcome to AiDogs\n\nAIDOGS portal is open for Dog lovers to have fun and earn\n\nInvite family and friends to earn  10% of all their $AIDOGS reward`,
-        parse_mode: 'HTML',
-        reply_markup: {
-          inline_keyboard: [
-            [{ text: "Open Portal", web_app: { url: url } }],
-            [{ text: 'Join Community', url: 'https://t.me/aidogs_community' }],
-            [{ text: 'Twitter(X)', url: 'https://x.com/aidogscomm' }]
-          ],
-        }
-      });
-    } catch (error) {
-      if (error.response && error.response.error_code === 403) {
-        console.error('Bot was blocked by the user:', ctx.from.id);
-      } else {
-        console.error('Failed to send message:', error);
-      }
-    }
- }
-
-
-
-  } catch (error) {
-    console.log(error);
-  }
-});*/
+});
 
 bot.launch();
 

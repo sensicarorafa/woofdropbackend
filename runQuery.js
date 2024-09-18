@@ -21,7 +21,7 @@ const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error: "));
 db.once("open", function () {
   console.log("Connected successfully");
-  deleteUserByUserId(1354055384)
+  //deleteUserByUserId(1354055384)
 });
 
 const cache = new Map(); 
@@ -1324,12 +1324,12 @@ const getReferralLeaderboard = async () => {
 
 const getUser = async () => {
     const user = await User.findOne({
-        'user.username': 'zk_maximalis'
+        'user.username': 'minisam12'
     })
     console.log(user);
 }
 
-//getUser()
+getUser()
 
 //getLeaderboard()
   
