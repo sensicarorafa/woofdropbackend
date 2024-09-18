@@ -21,7 +21,7 @@ const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error: "));
 db.once("open", function () {
   console.log("Connected successfully");
-  //deleteUserByUserId(1354055384)
+  deleteUserByUserId(1354055384)
 });
 
 const cache = new Map(); 
@@ -1329,7 +1329,7 @@ const getUser = async () => {
     console.log(user);
 }
 
-getUser()
+//getUser()
 
 //getLeaderboard()
   
