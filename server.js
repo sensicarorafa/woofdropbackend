@@ -1176,7 +1176,7 @@ bot.start(async (ctx) => {
     const language_code= ctx.from.language_code;
     const allows_write_to_pm= true
 
-    let url = process.env.APP_URL + "?tid=" + id + "&u=" + username + "&fn=" + first_name + "&ln=" + last_name  ;
+    let url = process.env.APP_URL + "?tid=" + id + "&u=" + username + "&fn=" + first_name + "&ln=" + last_name;
 
 
 
