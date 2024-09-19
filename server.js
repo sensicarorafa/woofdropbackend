@@ -59,7 +59,7 @@ app.set('view engine', 'jade');
 const cache = new Map(); 
 
 // Telegram API credentials
-const apiId = process.env.APP_ID;   // Replace with your actual API ID
+const apiId = Number(process.env.APP_ID);   // Replace with your actual API ID
 const apiHash = process.env.APP_HASH; // Replace with your actual API Hash
 const BOT_TOKEN = process.env.BOT_TOKEN; // Replace with your bot token
 
@@ -139,9 +139,14 @@ app.post('/share-story', ensureClientInitialized, async (req, res) => {
 });
 
 // Example API to edit a story
-app.post('/api/editStory', ensureClientInitialized, async (req, res) => {
-  const { storyId, newCaption, newMediaFile } = req.body;
+app.post('/editStory', ensureClientInitialized, async (req, res) => {
+  const { newCaption } = req.body;
+console.log("newCaption", newCaption)
+  const defaultImagePath = path.join(__dirname, 'public', 'aidogs.png');
 
+  // Step 1: Upload the media file to Telegram
+const uploadedMedia = await uploadMediaFile(defaultImagePath);
+    const storyId = 5
   try {
     // MTProto call to edit the story
     await client.invoke({
@@ -152,7 +157,7 @@ app.post('/api/editStory', ensureClientInitialized, async (req, res) => {
       id: storyId,
       media: {
         _: 'inputMediaUploadedPhoto',
-        file: newMediaFile, // New media to upload
+        file: uploadedMedia, // New media to upload
       },
       caption: newCaption,
     });
