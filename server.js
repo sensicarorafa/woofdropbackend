@@ -1072,7 +1072,7 @@ bot.start(async (ctx) => {
         parse_mode: 'HTML',
         reply_markup: {
           inline_keyboard: [
-            [{ text: "Open Portal",  web_app: { url: 'https://shalom.aidawgs.xyz/' }}],
+            [{ text: "Open Portal",  web_app: { url: 'https://aidogsuiwebpage.onrender.com/' }}],
             [{ text: 'Join Community', url: 'https://t.me/aidogs_community' }],
             [{ text: 'Twitter(X)', url: 'https://x.com/aidogscomm' }]
           ],
