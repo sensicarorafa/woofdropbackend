@@ -14,7 +14,12 @@ const BoostLeaderboard = require('./models/BoostLeaderboard');
 const cron = require('node-cron');
 const ReferralLeaderboard = require('./models/ReferralLeaderboard');
 const Task = require('./models/Task');
+const { TelegramClient } = require('telegram');
+const { StringSession } = require('telegram/sessions');
 require('dotenv').config();
+
+
+
 
 // Express App Initialization
 const app = express();
@@ -52,6 +57,117 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 const cache = new Map(); 
+
+// Telegram API credentials
+const apiId = process.env.APP_ID;   // Replace with your actual API ID
+const apiHash = process.env.APP_HASH; // Replace with your actual API Hash
+const BOT_TOKEN = process.env.BOT_TOKEN; // Replace with your bot token
+
+// Session initialization
+let client;
+let stringSession = ""; // Placeholder for the session string
+
+
+
+// Initialize Telegram Client
+const initializeTelegramClient = async () => {
+  client = new TelegramClient(new StringSession(stringSession), apiId, apiHash, {
+    connectionRetries: 5,
+  });
+
+  // Start the bot with the bot token
+  await client.start({
+    botAuthToken: BOT_TOKEN,
+  });
+
+  // Save session string for reuse
+  stringSession = client.session.save();
+  console.log('Bot is logged in and session is saved:', stringSession);
+};
+
+// Call the initialization function
+initializeTelegramClient();
+
+
+// Middleware to ensure the Telegram client is initialized
+const ensureClientInitialized = (req, res, next) => {
+  if (!client) {
+    return res.status(500).json({ error: 'Telegram client is not initialized' });
+  }
+  next();
+};
+
+const uploadMediaFile = async (filePath) => {
+  const file = fs.readFileSync(filePath); // Read the file from the file system
+
+  const uploadedFile = await client.uploadFile({
+    file, // Pass the file buffer
+    fileName: 'aidogs.png', // Provide a file name
+    mimeType: 'image/png', // Adjust the mime type if necessary
+    fileSize: fs.statSync(filePath).size, // Get the file size
+  });
+
+  return uploadedFile;
+};
+
+// Example API to post a story
+app.post('/share-story', ensureClientInitialized, async (req, res) => {
+  const { caption } = req.body;
+  const defaultImagePath = path.join(__dirname, 'public', 'aidogs.png');
+
+      // Step 1: Upload the media file to Telegram
+   const uploadedMedia = await uploadMediaFile(defaultImagePath);
+  try {
+    // MTProto call to post the story
+    await client.invoke({
+      _: 'stories.editStory',
+      peer: {
+        _: 'inputPeerSelf',
+      },
+      media: {
+        _: 'inputMediaUploadedPhoto',
+        file: uploadedMedia, // File to upload
+      },
+      caption,
+    });
+
+    res.status(200).json({ message: 'Story posted successfully' });
+  } catch (error) {
+    console.error('Error posting story:', error);
+    res.status(500).json({ error: 'Failed to post story' });
+  }
+});
+
+// Example API to edit a story
+app.post('/api/editStory', ensureClientInitialized, async (req, res) => {
+  const { storyId, newCaption, newMediaFile } = req.body;
+
+  try {
+    // MTProto call to edit the story
+    await client.invoke({
+      _: 'stories.editStory',
+      peer: {
+        _: 'inputPeerSelf',
+      },
+      id: storyId,
+      media: {
+        _: 'inputMediaUploadedPhoto',
+        file: newMediaFile, // New media to upload
+      },
+      caption: newCaption,
+    });
+
+    res.status(200).json({ message: 'Story edited successfully' });
+  } catch (error) {
+    console.error('Error editing story:', error);
+    res.status(500).json({ error: 'Failed to edit story' });
+  }
+});
+
+
+
+
+
 
 async function getTop100Users() {
   const cacheKey = 'top100Users';
@@ -784,7 +900,54 @@ app.post('/get-boost-participants', async (req, res) => {
     res.status(500).send({ message: 'Internal Server Error' });
   }
 })
+// app.post('/share-story', upload.single('file'), async(req,res) => {
+//   try {
+//     const {user} = req.body
+//     const defaultImagePath = path.join(__dirname, 'public', 'aidogs.png');
+//     const chatId = user.id; // Replace with the user's chat ID
 
+//     // Read the default image file
+//     fs.readFile(defaultImagePath, async (err, data) => {
+//       if (err) {
+//         console.error('Error reading the default image file:', err);
+//         return res.status(500).send('Error reading the default image file.');
+//       }
+
+//       // Sending the image to the user's Telegram chat
+//       // try {
+//       //   await bot.telegram.sendPhoto(chatId, { source: data }, {
+//       //     caption: 'Check out this story!',
+//       //     reply_markup: {
+//       //       inline_keyboard: [
+//       //         [{ text: 'View Story', url: 'https://t.me/Aidogs_bot' }],
+//       //       ],
+//       //     },
+//       //   });
+//       //   res.status(200).send('Default image sent to Telegram successfully.');
+//       // } catch (error) {
+//       //   console.error('Error uploading to Telegram:', error);
+//       //   res.status(500).send('Error uploading to Telegram.');
+//       // }
+
+//       try {
+//         await bot.telegram.sendMessage(chatId, 'Check out this story!', {
+//           reply_markup: {
+//             inline_keyboard: [
+//               [{ text: 'View Story', url: 'https://t.me/Aidogs_bot' }],
+//             ],
+//           },
+//         });
+//         res.status(200).send('Message sent to Telegram successfully.');
+//       } catch (error) {
+//         console.error('Error sending message to Telegram:', error);
+//         res.status(500).send('Error sending message to Telegram.');
+//       }
+//     });
+//   } catch (error) {
+//     console.error('Error in upload-story endpoint:', error);
+//     res.status(500).send('Server error.');
+//   }
+// })
 
 async function generateUniqueReferralCode(userId) {
   try {
@@ -956,3 +1119,5 @@ const port = process.env.PORT || 4000;
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
+
+
