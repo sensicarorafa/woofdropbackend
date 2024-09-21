@@ -34,7 +34,7 @@ mongoose.connect(mongooseUrl, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   connectTimeoutMS: 60000, // Increase this value
-  socketTimeoutMS: 60000, 
+  socketTimeoutMS: 60000,
   maxPoolSize: 50,
   minPoolSize: 30
 });
@@ -56,7 +56,7 @@ app.use(cors());
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-const cache = new Map(); 
+const cache = new Map();
 
 
 
@@ -72,57 +72,57 @@ async function getTop100Users() {
 
   // Check if the data is in cache
   if (cache.has(cacheKey)) {
-      return cache.get(cacheKey);
+    return cache.get(cacheKey);
   }
 
   try {
-      // Use aggregation to calculate the product of pointsNo and referralPoints, and sort by this product
-      const topUsers = await User.aggregate([
-          {
-              $addFields: {
-                  totalScore: { $multiply: ["$pointsNo", "$referralPoints"] }
-              }
-          },
-          {
-              $sort: { totalScore: -1 }
-          },
-          {
-              $limit: 100
-          },
-          {
-              $project: {
-                  _id: 1,
-                  user: 1,
-                  pointsNo: 1,
-                  referralPoints: 1,
-                  totalScore: 1
-              }
-          }
-      ]);
+    // Use aggregation to calculate the product of pointsNo and referralPoints, and sort by this product
+    const topUsers = await User.aggregate([
+      {
+        $addFields: {
+          totalScore: { $multiply: ["$pointsNo", "$referralPoints"] }
+        }
+      },
+      {
+        $sort: { totalScore: -1 }
+      },
+      {
+        $limit: 100
+      },
+      {
+        $project: {
+          _id: 1,
+          user: 1,
+          pointsNo: 1,
+          referralPoints: 1,
+          totalScore: 1
+        }
+      }
+    ]);
 
-      // Cache the result
-      cache.set(cacheKey, topUsers);
+    // Cache the result
+    cache.set(cacheKey, topUsers);
 
-      // Clear existing Leaderboard data
-      await Leaderboard.deleteMany({});
+    // Clear existing Leaderboard data
+    await Leaderboard.deleteMany({});
 
-      // Save new top users to Leaderboard
-      const leaderboardEntries = topUsers.map(user => ({
-          userId: user._id,
-          firstName: user.user.first_name,
-          lastName: user.user.last_name,
-          username: user.user.username,
-          pointsNo: user.pointsNo,
-          referralPoints: user.referralPoints,
-          totalScore: user.totalScore
-      }));
+    // Save new top users to Leaderboard
+    const leaderboardEntries = topUsers.map(user => ({
+      userId: user._id,
+      firstName: user.user.first_name,
+      lastName: user.user.last_name,
+      username: user.user.username,
+      pointsNo: user.pointsNo,
+      referralPoints: user.referralPoints,
+      totalScore: user.totalScore
+    }));
 
-      await Leaderboard.insertMany(leaderboardEntries);
-      console.log('Leaderboard updated successfully');
-      return topUsers;
+    await Leaderboard.insertMany(leaderboardEntries);
+    console.log('Leaderboard updated successfully');
+    return topUsers;
   } catch (err) {
-      console.error('Error fetching top users:', err);
-      throw err; // Handle or throw the error further
+    console.error('Error fetching top users:', err);
+    throw err; // Handle or throw the error further
   }
 }
 
@@ -132,41 +132,41 @@ async function getTop100UsersByReferrals() {
 
   // Check if the data is in cache
   if (cache.has(cacheKey)) {
-      return cache.get(cacheKey);
+    return cache.get(cacheKey);
   }
 
   try {
-      const topUsers = await User.find({}, { _id: 1, user: 1, pointsNo: 1, referralContest: 1 })
-          .sort({ referralContest: -1 })
-          .limit(100); // Limit to top 100 users
+    const topUsers = await User.find({}, { _id: 1, user: 1, pointsNo: 1, referralContest: 1 })
+      .sort({ referralContest: -1 })
+      .limit(100); // Limit to top 100 users
 
-      // Cache the result
-      cache.set(cacheKey, topUsers);
+    // Cache the result
+    cache.set(cacheKey, topUsers);
 
-      // Clear existing Leaderboard data
-      await ReferralLeaderboard.deleteMany({});
+    // Clear existing Leaderboard data
+    await ReferralLeaderboard.deleteMany({});
 
-      // Save new top users to Leaderboard
-      const leaderboardEntries = topUsers.map(user => ({
-          userId: user._id,
-          firstName: user.user.first_name,
-          lastName: user.user.last_name,
-          username: user.user.username,
-          pointsNo: user.pointsNo,
-          referralPoints: user.referralContest
-      }));
+    // Save new top users to Leaderboard
+    const leaderboardEntries = topUsers.map(user => ({
+      userId: user._id,
+      firstName: user.user.first_name,
+      lastName: user.user.last_name,
+      username: user.user.username,
+      pointsNo: user.pointsNo,
+      referralPoints: user.referralContest
+    }));
 
-      await ReferralLeaderboard.insertMany(leaderboardEntries);
-      return topUsers;
+    await ReferralLeaderboard.insertMany(leaderboardEntries);
+    return topUsers;
   } catch (err) {
-      console.error('Error fetching top users:', err);
-      throw err; // Handle or throw the error further
+    console.error('Error fetching top users:', err);
+    throw err; // Handle or throw the error further
   }
 }
 
 app.post('/leaderboard-data', async (req, res) => {
   const { user } = req.body;
-  
+
   let userRank = 0;
   //if (user && user.id) userRank = await getUserRankByUserId(user.id)
 
@@ -175,14 +175,14 @@ app.post('/leaderboard-data', async (req, res) => {
     return res.status(200).send({ message: 'Leaderboard retrieved successfully', leaderboardData: leaderboardOrder, userRank });
   } catch (error) {
     console.error('Error getting leaderboard data:', error);
-    res.status(500).send({ message: 'Internal Server Error' }); 
+    res.status(500).send({ message: 'Internal Server Error' });
   }
-  
+
 })
 
 app.post('/referral-leaderboard-data', async (req, res) => {
   const { user } = req.body;
-  
+
   let userRank = 0;
   //if (user && user.id) userRank = await getUserRankByUserId(user.id)
 
@@ -191,9 +191,9 @@ app.post('/referral-leaderboard-data', async (req, res) => {
     return res.status(200).send({ message: 'Leaderboard retrieved successfully', leaderboardData: leaderboardOrder, userRank });
   } catch (error) {
     console.error('Error getting leaderboard data:', error);
-    res.status(500).send({ message: 'Internal Server Error' }); 
+    res.status(500).send({ message: 'Internal Server Error' });
   }
-  
+
 })
 
 async function getUserAndEnsureLastLogin(userId) {
@@ -209,7 +209,7 @@ async function getUserAndEnsureLastLogin(userId) {
     if (user && !user.lastLogin) {
       // Set `lastLogin` to the current date
       user.lastLogin = '2024-09-09T14:39:52.043Z'
-      
+
       // Save the updated user document
       await user.save();
     }
@@ -224,58 +224,58 @@ async function getUserAndEnsureLastLogin(userId) {
 
 async function updateUserSocialRewards(userId) {
   try {
-      // Fetch all tasks from the Task collection
-      const tasks = await Task.find();
+    // Fetch all tasks from the Task collection
+    const tasks = await Task.find();
 
-      // Fetch the user based on user.id
-      const user = await User.findOne({ 'user.id': userId });
+    // Fetch the user based on user.id
+    const user = await User.findOne({ 'user.id': userId });
 
-      if (!user) {
-          console.log(`No user found with user.id ${userId}`);
-          return null;
+    if (!user) {
+      console.log(`No user found with user.id ${userId}`);
+      return null;
+    }
+
+    // Loop through the tasks and update user's socialRewardDeets
+    tasks.forEach(task => {
+      // Find existing reward for the task's claimTreshold
+      let existingReward = user.socialRewardDeets.find(reward => reward.claimTreshold === task.claimTreshold);
+
+      if (existingReward) {
+        // Update only missing fields in the existingReward
+        existingReward.btnText = task.btnText !== undefined ? task.btnText : existingReward.btnText;
+        existingReward.rewardClaimed = existingReward.rewardClaimed !== undefined ? existingReward.rewardClaimed : task.rewardClaimed;
+        existingReward.taskText = task.taskText !== undefined ? task.taskText : existingReward.taskText;
+        existingReward.taskPoints = task.taskPoints !== undefined ? task.taskPoints : existingReward.taskPoints;
+        existingReward.taskCategory = task.taskCategory !== undefined ? task.taskCategory : existingReward.taskCategory;
+        existingReward.taskStatus = task.taskStatus;
+        existingReward.taskUrl = existingReward.taskUrl !== undefined ? existingReward.taskUrl : task.taskUrl;
+      } else {
+        // If the task is not found in socialRewardDeets, add it with all fields from Task
+        user.socialRewardDeets.push({
+          claimTreshold: task.claimTreshold,
+          rewardClaimed: task.rewardClaimed,
+          btnText: task.btnText,
+          taskText: task.taskText,
+          taskPoints: task.taskPoints,
+          taskCategory: task.taskCategory,
+          taskStatus: task.taskStatus,
+          taskUrl: task.taskUrl
+        });
       }
+    });
 
-      // Loop through the tasks and update user's socialRewardDeets
-      tasks.forEach(task => {
-          // Find existing reward for the task's claimTreshold
-          let existingReward = user.socialRewardDeets.find(reward => reward.claimTreshold === task.claimTreshold);
+    // Mark the array as modified for Mongoose to detect the change
+    user.markModified('socialRewardDeets');
 
-          if (existingReward) {
-              // Update only missing fields in the existingReward
-              existingReward.btnText = task.btnText !== undefined ? task.btnText : existingReward.btnText;
-              existingReward.rewardClaimed = existingReward.rewardClaimed !== undefined ? existingReward.rewardClaimed : task.rewardClaimed;
-              existingReward.taskText = task.taskText !== undefined ?  task.taskText : existingReward.taskText;
-              existingReward.taskPoints = task.taskPoints !== undefined ? task.taskPoints : existingReward.taskPoints;
-              existingReward.taskCategory =  task.taskCategory !== undefined ? task.taskCategory : existingReward.taskCategory;
-              existingReward.taskStatus = task.taskStatus;
-              existingReward.taskUrl = existingReward.taskUrl !== undefined ? existingReward.taskUrl : task.taskUrl;
-          } else {
-              // If the task is not found in socialRewardDeets, add it with all fields from Task
-              user.socialRewardDeets.push({
-                  claimTreshold: task.claimTreshold,
-                  rewardClaimed: task.rewardClaimed,
-                  btnText: task.btnText,
-                  taskText: task.taskText,
-                  taskPoints: task.taskPoints,
-                  taskCategory: task.taskCategory,
-                  taskStatus : task.taskStatus,
-                  taskUrl : task.taskUrl
-              });
-          }
-      });
+    // Save the updated user document
+    await user.save();
 
-      // Mark the array as modified for Mongoose to detect the change
-      user.markModified('socialRewardDeets');
-
-      // Save the updated user document
-      await user.save();
-
-      console.log(`User with user.id ${userId} updated successfully`);
-      return user;
+    console.log(`User with user.id ${userId} updated successfully`);
+    return user;
 
   } catch (error) {
-      console.error('Error updating user social rewards:', error);
-      throw error;
+    console.error('Error updating user social rewards:', error);
+    throw error;
   }
 }
 
@@ -293,31 +293,31 @@ const updateReferralRewards = async (userId) => {
     if (!user) {
       throw new Error('User not found', userId);
     }
-  
+
     // Step 1: Reduce referralRewardDeets array to length 7 if it's longer
     if (user.referralRewardDeets.length > 7) {
       user.referralRewardDeets = user.referralRewardDeets.slice(0, 7);
     }
-  
+
     // Step 2: Check if all rewardClaimed are true, set them to false if so
     const allRewardsClaimed = user.referralRewardDeets.every(reward => reward.rewardClaimed === true);
-  
+
     if (allRewardsClaimed) {
       user.referralRewardDeets.forEach(reward => reward.rewardClaimed = false);
     }
-  
+
     // Step 3: Check if lastLogin was more than 24 hours ago
     const lastLoginDate = new Date(user.lastLogin);
     const currentDate = new Date();
     const timeDifference = currentDate - lastLoginDate;
     const oneDayInMilliseconds = 24 * 60 * 60 * 1000;
-  
+
     if (timeDifference > oneDayInMilliseconds) {
       user.referralRewardDeets.forEach(reward => reward.rewardClaimed = false);
     }
-  
+
     // Save the updated user data
-    await user.save(); 
+    await user.save();
   } catch (error) {
     console.log(error)
   }
@@ -493,24 +493,24 @@ app.post('/update-social-reward', async (req, res) => {
   const userId = user.id
 
   if (!userId || !claimTreshold) {
-      return res.status(400).send('userId and claimTreshold are required');
+    return res.status(400).send('userId and claimTreshold are required');
   }
 
   try {
-      // Use findOneAndUpdate to directly update the rewardClaimed field
-      const updateResult = await User.findOneAndUpdate(
-          { 'user.id': userId, "socialRewardDeets.claimTreshold": claimTreshold },
-          { $set: { "socialRewardDeets.$.rewardClaimed": true } },
-          { new: true }
-      );
+    // Use findOneAndUpdate to directly update the rewardClaimed field
+    const updateResult = await User.findOneAndUpdate(
+      { 'user.id': userId, "socialRewardDeets.claimTreshold": claimTreshold },
+      { $set: { "socialRewardDeets.$.rewardClaimed": true } },
+      { new: true }
+    );
 
-      if (!updateResult) {
-          return res.status(404).send('User or claimTreshold not found');
-      }
+    if (!updateResult) {
+      return res.status(404).send('User or claimTreshold not found');
+    }
 
-      // Return the updated user document
-      const updatedUser = await User.findOne({ 'user.id': user.id });
-      res.status(200).send({ message: 'Points updated successfully', userData: updatedUser, success: true });
+    // Return the updated user document
+    const updatedUser = await User.findOne({ 'user.id': user.id });
+    res.status(200).send({ message: 'Points updated successfully', userData: updatedUser, success: true });
   } catch (error) {
     console.error('Error updating social reward:', error);
     res.status(500).send({ message: 'Internal Server Error', success: false });
@@ -522,24 +522,24 @@ app.post('/update-social-timer', async (req, res) => {
   const userId = user.id
 
   if (!userId || !claimTreshold || !time) {
-      return res.status(400).send('userId, time and claimTreshold are required');
+    return res.status(400).send('userId, time and claimTreshold are required');
   }
 
   try {
-      // Use findOneAndUpdate to directly update the rewardClaimed field
-      const updateResult = await User.findOneAndUpdate(
-          { 'user.id': userId, "socialRewardDeets.claimTreshold": claimTreshold },
-          { $set: { "socialRewardDeets.$.rewardClaimed": true, "socialRewardDeets.$.taskPoints": time } },
-          { new: true }
-      );
+    // Use findOneAndUpdate to directly update the rewardClaimed field
+    const updateResult = await User.findOneAndUpdate(
+      { 'user.id': userId, "socialRewardDeets.claimTreshold": claimTreshold },
+      { $set: { "socialRewardDeets.$.rewardClaimed": true, "socialRewardDeets.$.taskPoints": time } },
+      { new: true }
+    );
 
-      if (!updateResult) {
-          return res.status(404).send('User or claimTreshold not found');
-      }
+    if (!updateResult) {
+      return res.status(404).send('User or claimTreshold not found');
+    }
 
-      // Return the updated user document
-      const updatedUser = await User.findOne({ 'user.id': user.id });
-      res.status(200).send({ message: 'Points updated successfully', userData: updatedUser, success: true });
+    // Return the updated user document
+    const updatedUser = await User.findOne({ 'user.id': user.id });
+    res.status(200).send({ message: 'Points updated successfully', userData: updatedUser, success: true });
   } catch (error) {
     console.error('Error updating social reward:', error);
     res.status(500).send({ message: 'Internal Server Error', success: false });
@@ -551,30 +551,30 @@ app.post('/update-daily-reward', async (req, res) => {
   const userId = user.id
 
   if (!userId || !claimTreshold) {
-      return res.status(400).send('userId and claimTreshold are required');
+    return res.status(400).send('userId and claimTreshold are required');
   }
 
   try {
-      // Use findOneAndUpdate to directly update the rewardClaimed field
-      const updateResult = await User.findOneAndUpdate(
-          { 'user.id': userId, "referralRewardDeets.claimTreshold": claimTreshold },
-          { 
-            $set: { 
-              "referralRewardDeets.$.rewardClaimed": true,
-              pointsToday: 1,
-              lastLogin: new Date()
-            } 
-          },
-          { new: true }
-      );
+    // Use findOneAndUpdate to directly update the rewardClaimed field
+    const updateResult = await User.findOneAndUpdate(
+      { 'user.id': userId, "referralRewardDeets.claimTreshold": claimTreshold },
+      {
+        $set: {
+          "referralRewardDeets.$.rewardClaimed": true,
+          pointsToday: 1,
+          lastLogin: new Date()
+        }
+      },
+      { new: true }
+    );
 
-      if (!updateResult) {
-          return res.status(404).send('User or claimTreshold not found');
-      }
+    if (!updateResult) {
+      return res.status(404).send('User or claimTreshold not found');
+    }
 
-      // Return the updated user document
-      const updatedUser = await User.findOne({ 'user.id': user.id });
-      res.status(200).send({ message: 'Points updated successfully', userData: updatedUser, success: true });
+    // Return the updated user document
+    const updatedUser = await User.findOne({ 'user.id': user.id });
+    res.status(200).send({ message: 'Points updated successfully', userData: updatedUser, success: true });
   } catch (error) {
     console.error('Error updating social reward:', error);
     res.status(500).send({ message: 'Internal Server Error', success: false });
@@ -600,11 +600,11 @@ app.post('/get-user-referrals', async (req, res) => {
 // POST /tasks - Create a new Task
 app.post('/tasks', async (req, res) => {
   try {
-      const newTask = new Task(req.body);
-      const savedTask = await newTask.save();
-      res.status(201).json(savedTask);
+    const newTask = new Task(req.body);
+    const savedTask = await newTask.save();
+    res.status(201).json(savedTask);
   } catch (error) {
-      res.status(400).json({ message: 'Error creating task', error });
+    res.status(400).json({ message: 'Error creating task', error });
   }
 });
 
@@ -612,26 +612,26 @@ app.post('/tasks', async (req, res) => {
 // PUT /tasks/:id - Edit a Task by its ID
 app.put('/tasks/:id', async (req, res) => {
   try {
-      const updatedTask = await Task.findByIdAndUpdate(req.params.id, req.body, { new: true });
-      if (!updatedTask) {
-          return res.status(404).json({ message: 'Task not found' });
-      }
-      res.json(updatedTask);
+    const updatedTask = await Task.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    if (!updatedTask) {
+      return res.status(404).json({ message: 'Task not found' });
+    }
+    res.json(updatedTask);
   } catch (error) {
-      res.status(400).json({ message: 'Error updating task', error });
+    res.status(400).json({ message: 'Error updating task', error });
   }
 });
 
 // DELETE /tasks/:id - Delete a Task by its ID
 app.delete('/tasks/:id', async (req, res) => {
   try {
-      const deletedTask = await Task.findByIdAndDelete(req.params.id);
-      if (!deletedTask) {
-          return res.status(404).json({ message: 'Task not found' });
-      }
-      res.json({ message: 'Task deleted successfully' });
+    const deletedTask = await Task.findByIdAndDelete(req.params.id);
+    if (!deletedTask) {
+      return res.status(404).json({ message: 'Task not found' });
+    }
+    res.json({ message: 'Task deleted successfully' });
   } catch (error) {
-      res.status(400).json({ message: 'Error deleting task', error });
+    res.status(400).json({ message: 'Error deleting task', error });
   }
 });
 
@@ -647,69 +647,78 @@ app.post('/activate-boost', async (req, res) => {
     let existingUser = await BoostLeaderboard.findOne({
       userId: user.id
     });
+    let existingBoostUser = await BoostLeaderboard.findOne({
+      boostCode: refBoostCode
+    });
 
-    if (existingUser) {
-    res.status(200).send({ message: 'Boost already activated', userData: existingUser, success: true });
+    if (existingBoostUser) {
+      if (existingUser) {
+        res.status(200).send({ message: 'Boost already activated', userData: existingUser, success: true });
 
-      return
-    } else {
+        return
+      } else {
+
+
  
-      const userReferrer = await BoostLeaderboard.findOne({ boostCode: refBoostCode });
-      if(userReferrer || !boostCode) {
-        existingUser = new BoostLeaderboard({
-          pointsNo: 7000,
-          userId: user.id,
-          boostCode: boostCode,
-          boostActivated: true,
-          referrerBoostCode:refBoostCode
-  
-        });
-  
-        await existingUser.save();
-      
+          existingUser = new BoostLeaderboard({
+            pointsNo: 7000,
+            userId: user.id,
+            boostCode: boostCode,
+            boostActivated: true,
+            referrerBoostCode: refBoostCode
 
-      const dbUser = await User.findOne({ "user.id": user.id });
-      if (dbUser) {
-        dbUser.pointsNo += 7000
-        dbUser.save()
-      }
-          userReferrer.pointsNo += 2800;
-          userReferrer.referralPoints += 1;
+          });
 
-          await userReferrer.save();
-          const refUser = await User.findOne({ "user.id": userReferrer.userId });
+          await existingUser.save();
+
+
+          const dbUser = await User.findOne({ "user.id": user.id });
+          if (dbUser) {
+            dbUser.pointsNo += 7000
+            dbUser.save()
+          }
+          existingBoostUser.pointsNo += 2800;
+          existingBoostUser.referralPoints += 1;
+
+          await existingBoostUser.save();
+          const refUser = await User.findOne({ "user.id": existingBoostUser.userId });
           if (refUser) {
             refUser.pointsNo += 2800
             refUser.save()
 
-          
-        
-      }
-         // If user doesn't exist, create a new user
-         const rankData = await BoostLeaderboard.aggregate([
-          // Sort documents by points in descending order
-          { $sort: { pointsNo: -1 } },
-    
-          // Add a rank field using $rank
-          {
-            $setWindowFields: {
-              sortBy: { pointsNo: -1 },
-              output: {
-                rank: { $rank: {} },
+
+
+          }
+          // If user doesn't exist, create a new user
+          const rankData = await BoostLeaderboard.aggregate([
+            // Sort documents by points in descending order
+            { $sort: { pointsNo: -1 } },
+
+            // Add a rank field using $rank
+            {
+              $setWindowFields: {
+                sortBy: { pointsNo: -1 },
+                output: {
+                  rank: { $rank: {} },
+                },
               },
             },
-          },
-    
-          // Match the document with the given userId
-          { $match: { userId: user.id } },
-        ]);
-        const rank= rankData.length > 0 ? rankData[0].rank : null;
 
-    res.status(200).send({ message: 'Points updated successfully', userData: existingUser, userRank:rank, success: true });
+            // Match the document with the given userId
+            { $match: { userId: user.id } },
+          ]);
+          const rank = rankData.length > 0 ? rankData[0].rank : null;
+
+          res.status(200).send({ message: 'Points updated successfully', userData: existingUser, userRank: rank, success: true });
+        
+      }
+
+
     } else {
-      res.status(200).send({ message: 'Boost key not active', userData: existingUser, success: true });
+      res.status(200).send({ message: 'Boost key not valid', userData: existingUser, success: true });
 
-    }}
+    }
+
   } catch (error) {
     console.error('Error updating points:', error);
     res.status(500).send({ message: 'Internal Server Error', success: false });
@@ -725,13 +734,13 @@ app.post('/get-user-data/boost-data', async (req, res) => {
     let existingUser = await BoostLeaderboard.findOne({
       userId: user.id,
     });
-    
+
 
     if (existingUser) {
       const rankData = await BoostLeaderboard.aggregate([
         // Sort documents by points in descending order
         { $sort: { pointsNo: -1 } },
-  
+
         // Add a rank field using $rank
         {
           $setWindowFields: {
@@ -741,25 +750,25 @@ app.post('/get-user-data/boost-data', async (req, res) => {
             },
           },
         },
-  
+
         // Match the document with the given userId
         { $match: { userId: user.id } },
       ]);
-  
-      const rank= rankData.length > 0 ? rankData[0].rank : null;
-      return res.status(200).send({ message: 'Boost data retrieved successfully', userData: existingUser, userRank:rank, success: true });
+
+      const rank = rankData.length > 0 ? rankData[0].rank : null;
+      return res.status(200).send({ message: 'Boost data retrieved successfully', userData: existingUser, userRank: rank, success: true });
     } else {
-         // Step 1: Sort users by points in descending order and get all users
-       
-      
+      // Step 1: Sort users by points in descending order and get all users
+
+
       return res.status(200).send({
         message: 'User retrieved successfully',
         userData: {
           pointsNo: 0,
           referralPoints: 0,
           boostCode: "",
-          boostActivated:false,
-          
+          boostActivated: false,
+
         },
         success: false
       });
@@ -781,15 +790,15 @@ app.post('/get-boost-participants', async (req, res) => {
 
     const count = await BoostLeaderboard.countDocuments();
 
- 
-      return res.status(200).send({
-        message: 'Total boost participants',
-        boostData: {
-     count:count
-        },
-        success: false
-      });
-    
+
+    return res.status(200).send({
+      message: 'Total boost participants',
+      boostData: {
+        count: count
+      },
+      success: false
+    });
+
 
 
 
@@ -849,43 +858,43 @@ app.post('/get-boost-participants', async (req, res) => {
 
 async function generateUniqueReferralCode(userId) {
   try {
-      // Find the user by their ID
-      const user = await User.findOne({ 'user.id': userId });
+    // Find the user by their ID
+    const user = await User.findOne({ 'user.id': userId });
 
-      if (!user) {
-          console.log('User not found');
-          return;
+    if (!user) {
+      console.log('User not found');
+      return;
+    }
+
+    // Check if referralCode is missing or null
+    if (!user.referralCode) {
+      // Generate a unique referral code
+      let uniqueReferralCode;
+      let isUnique = false;
+
+      while (!isUnique) {
+        // Generate a random referral code
+        uniqueReferralCode = crypto.randomBytes(4).toString('hex');
+
+        // Check if the generated code is unique
+        const existingUser = await User.findOne({ referralCode: uniqueReferralCode });
+        if (!existingUser) {
+          isUnique = true;
+        }
       }
 
-      // Check if referralCode is missing or null
-      if (!user.referralCode) {
-          // Generate a unique referral code
-          let uniqueReferralCode;
-          let isUnique = false;
+      // Assign the unique referral code to the user
+      user.referralCode = uniqueReferralCode;
 
-          while (!isUnique) {
-              // Generate a random referral code
-              uniqueReferralCode = crypto.randomBytes(4).toString('hex');
+      // Save the updated user back to the database
+      await user.save();
 
-              // Check if the generated code is unique
-              const existingUser = await User.findOne({ referralCode: uniqueReferralCode });
-              if (!existingUser) {
-                  isUnique = true;
-              }
-          }
-
-          // Assign the unique referral code to the user
-          user.referralCode = uniqueReferralCode;
-
-          // Save the updated user back to the database
-          await user.save();
-
-          console.log('Referral code generated and saved:', uniqueReferralCode);
-      } else {
-          console.log('User already has a referral code:', user.referralCode);
-      }
+      console.log('Referral code generated and saved:', uniqueReferralCode);
+    } else {
+      console.log('User already has a referral code:', user.referralCode);
+    }
   } catch (error) {
-      console.error('Error generating referral code:', error);
+    console.error('Error generating referral code:', error);
   }
 }
 
@@ -920,7 +929,7 @@ bot.start(async (ctx) => {
           console.error('Failed to send message:', error);
         }
       }
-      
+
     }
 
     if (!existingUser) {
@@ -965,17 +974,17 @@ bot.start(async (ctx) => {
     }
 
     try {
-      await ctx.replyWithPhoto('https://i.ibb.co/BcmccLN/Whats-App-Image-2024-08-26-at-2-12-54-PM.jpg', { 
+      await ctx.replyWithPhoto('https://i.ibb.co/BcmccLN/Whats-App-Image-2024-08-26-at-2-12-54-PM.jpg', {
         caption: `<b>Welcome to AIDogs, @${ctx.from.username}!</b> \nThe AIDogs portal is live for dog lovers to have fun and earn rewards.\n\n Telegram users can claim an exclusive early bonus of 2,500 $AIDOGS tokens.\n\nInvite friends and earn 20% of whatever they make!`,
         parse_mode: 'HTML',
         reply_markup: {
           inline_keyboard: [
-            [{ text: "Open Portal",  web_app: { url: 'https://aidogsuiwebpage.onrender.com/' }}],
+            [{ text: "Open Portal", web_app: { url: 'https://aidogsuiwebpage.onrender.com/' } }],
             [{ text: 'Join Community', url: 'https://t.me/aidogs_community' }],
             [{ text: 'Twitter(X)', url: 'https://x.com/aidogscomm' }]
           ],
         }
-      }); 
+      });
     } catch (error) {
       if (error.response && error.response.error_code === 403) {
         console.error('Bot was blocked by the user:', ctx.from.id);
@@ -984,7 +993,7 @@ bot.start(async (ctx) => {
       }
     }
 
-       
+
   } catch (error) {
     console.log(error);
   }
