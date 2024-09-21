@@ -698,12 +698,12 @@ app.post('/activate-boost', async (req, res) => {
           // If user doesn't exist, create a new user
           const rankData = await BoostLeaderboard.aggregate([
             // Sort documents by points in descending order
-            { $sort: { pointsNo: -1 } },
+            { $sort: { pointsNo: -1 , registrationTime: 1} },
 
             // Add a rank field using $rank
             {
               $setWindowFields: {
-                sortBy: { pointsNo: -1 },
+                sortBy: { pointsNo: -1, registrationTime: 1 },
                 output: {
                   rank: { $rank: {} },
                 },
@@ -745,12 +745,12 @@ app.post('/get-user-data/boost-data', async (req, res) => {
     if (existingUser) {
       const rankData = await BoostLeaderboard.aggregate([
         // Sort documents by points in descending order
-        { $sort: { pointsNo: -1 } },
+        { $sort: { pointsNo: -1,  registrationTime: 1 } },
 
         // Add a rank field using $rank
         {
           $setWindowFields: {
-            sortBy: { pointsNo: -1 },
+            sortBy: { pointsNo: -1, registrationTime: 1 },
             output: {
               rank: { $rank: {} },
             },

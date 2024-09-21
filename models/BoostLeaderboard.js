@@ -27,7 +27,11 @@ const BoostLeaderboardSchema = new mongoose.Schema({
     referrerBoostCode: {
         type: String,
         default: ''
-    }
+    },
+    registrationTime: {
+        type: Date,
+        default: Date.now, // Automatically set to the current date when the user is created
+      },
 });
 
 const BoostLeaderboard = mongoose.model("boostLeaderboard", BoostLeaderboardSchema);
