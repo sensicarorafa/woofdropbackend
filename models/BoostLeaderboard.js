@@ -30,5 +30,5 @@ const BoostLeaderboardSchema = new mongoose.Schema({
     }
 });
 
-const BoostLeaderboard = mongoose.model("BoostLeaderboard", BoostLeaderboardSchema);
+const BoostLeaderboard = mongoose.model("boostLeaderboard", BoostLeaderboardSchema);
 module.exports = BoostLeaderboard;

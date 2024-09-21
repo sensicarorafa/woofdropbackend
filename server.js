@@ -642,6 +642,8 @@ app.delete('/tasks/:id', async (req, res) => {
 app.post('/activate-boost', async (req, res) => {
   const { user, boostCode, refBoostCode } = req.body;
 
+  console.log("about user",user,  boostCode, refBoostCode )
+
   try {
     // Find the refuser by boostcode
     let existingUser = await BoostLeaderboard.findOne({
@@ -650,6 +652,10 @@ app.post('/activate-boost', async (req, res) => {
     let existingBoostUser = await BoostLeaderboard.findOne({
       boostCode: refBoostCode
     });
+
+    console.log("existingBoostUser", existingBoostUser, existingUser)
+
+ 
 
     if (existingBoostUser) {
       if (existingUser) {
