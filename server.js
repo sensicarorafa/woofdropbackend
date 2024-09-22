@@ -745,12 +745,12 @@ app.post('/get-user-data/boost-data', async (req, res) => {
     if (existingUser) {
       const rankData = await BoostLeaderboard.aggregate([
         // Sort documents by points in descending order
-        { $sort: { pointsNo: -1,  registrationTime: 1 } },
+        { $sort: { pointsNo: -1,  } },
 
         // Add a rank field using $rank
         {
           $setWindowFields: {
-            sortBy: { pointsNo: -1, registrationTime: 1 },
+            sortBy: { pointsNo: -1, },
             output: {
               rank: { $rank: {} },
             },
