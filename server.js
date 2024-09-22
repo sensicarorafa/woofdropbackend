@@ -703,7 +703,7 @@ app.post('/activate-boost', async (req, res) => {
             // Add a rank field using $rank
             {
               $setWindowFields: {
-                sortBy: { pointsNo: -1, registrationTime: 1 },
+                sortBy: { registrationTime: 1 },
                 output: {
                   rank: { $rank: {} },
                 },
@@ -750,7 +750,7 @@ app.post('/get-user-data/boost-data', async (req, res) => {
         // Add a rank field using $rank
         {
           $setWindowFields: {
-            sortBy: { pointsNo: -1},
+            sortBy: { registrationTime: 1},
             output: {
               rank: { $rank: {} },
             },
