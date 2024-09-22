@@ -695,25 +695,65 @@ app.post('/activate-boost', async (req, res) => {
 
 
           }
-          // If user doesn't exist, create a new user
           const rankData = await BoostLeaderboard.aggregate([
-            // Sort documents by points in descending order
-            { $sort: { pointsNo: -1 , registrationTime: 1} },
-
-            // Add a rank field using $rank
+            // Step 1: Sort documents by pointsNo and registrationTime
+            { $sort: { pointsNo: -1, registrationTime: 1 } },
+          
+            // Step 2: Create a rank based on the sorting order
             {
-              $setWindowFields: {
-                sortBy: { registrationTime: 1 },
-                output: {
-                  rank: { $rank: {} },
+              $group: {
+                _id: null,
+                docs: { $push: "$$ROOT" },  // Push the documents into an array
+              },
+            },
+            {
+              $set: {
+                rankedDocs: {
+                  $map: {
+                    input: { $range: [0, { $size: "$docs" }] },  // Create an array of indices
+                    as: "index",
+                    in: {
+                      rank: { $add: ["$$index", 1] },  // Assign ranks
+                      doc: { $arrayElemAt: ["$docs", "$$index"] },  // Get the document
+                    },
+                  },
                 },
               },
             },
-
-            // Match the document with the given userId
-            { $match: { userId: user.id } },
+            {
+              $unwind: "$rankedDocs",
+            },
+            {
+              $replaceRoot: { newRoot: { $mergeObjects: ["$rankedDocs.doc", { rank: "$rankedDocs.rank" }] } },
+            },
+            // Step 3: Match the document with the given userId
+            { $match: { "userId": user.id } },
           ]);
+          
           const rank = rankData.length > 0 ? rankData[0].rank : null;
+          
+
+
+
+          // // If user doesn't exist, create a new user
+          // const rankData = await BoostLeaderboard.aggregate([
+          //   // Sort documents by points in descending order
+          //   { $sort: { pointsNo: -1 , registrationTime: 1} },
+
+          //   // Add a rank field using $rank
+          //   {
+          //     $setWindowFields: {
+          //       sortBy: { registrationTime: 1 },
+          //       output: {
+          //         rank: { $rank: {} },
+          //       },
+          //     },
+          //   },
+
+          //   // Match the document with the given userId
+          //   { $match: { userId: user.id } },
+          // ]);
+          // const rank = rankData.length > 0 ? rankData[0].rank : null;
 
           res.status(200).send({ message: 'Points updated successfully', userData: existingUser, userRank: rank, success: true });
         
@@ -743,25 +783,65 @@ app.post('/get-user-data/boost-data', async (req, res) => {
 
 
     if (existingUser) {
-      const rankData = await BoostLeaderboard.aggregate([
-        // Sort documents by points in descending order
-        { $sort: { pointsNo: -1, registrationTime:1 } },
+      // const rankData = await BoostLeaderboard.aggregate([
+      //   // Sort documents by points in descending order
+      //   { $sort: { pointsNo: -1, registrationTime: 1 } },
 
-        // Add a rank field using $rank
+      //   // Add a rank field using $rank
+      //   {
+      //     $setWindowFields: {
+      //       sortBy: {pointsNo: -1, registrationTime: 1},
+      //       output: {
+      //         rank: { $rank: {} },
+      //       },
+      //     },
+      //   },
+
+      //   // Match the document with the given userId
+      //   // { $match: { userId: user.id } },
+      // ]);
+
+      const rankData = await BoostLeaderboard.aggregate([
+        // Step 1: Sort documents by pointsNo and registrationTime
+        { $sort: { pointsNo: -1, registrationTime: 1 } },
+      
+        // Step 2: Create a rank based on the sorting order
         {
-          $setWindowFields: {
-            sortBy: { registrationTime: 1},
-            output: {
-              rank: { $rank: {} },
+          $group: {
+            _id: null,
+            docs: { $push: "$$ROOT" },  // Push the documents into an array
+          },
+        },
+        {
+          $set: {
+            rankedDocs: {
+              $map: {
+                input: { $range: [0, { $size: "$docs" }] },  // Create an array of indices
+                as: "index",
+                in: {
+                  rank: { $add: ["$$index", 1] },  // Assign ranks
+                  doc: { $arrayElemAt: ["$docs", "$$index"] },  // Get the document
+                },
+              },
             },
           },
         },
-
-        // Match the document with the given userId
-        { $match: { userId: user.id } },
+        {
+          $unwind: "$rankedDocs",
+        },
+        {
+          $replaceRoot: { newRoot: { $mergeObjects: ["$rankedDocs.doc", { rank: "$rankedDocs.rank" }] } },
+        },
+        // Step 3: Match the document with the given userId
+        { $match: { "userId": user.id } },
       ]);
-
+      
       const rank = rankData.length > 0 ? rankData[0].rank : null;
+      
+
+      console.log("rankData", rankData)
+
+   
       console.log("user", user, rank)
       return res.status(200).send({ message: 'Boost data retrieved successfully', userData: existingUser, userRank: rank, success: true });
     } else {
