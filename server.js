@@ -600,6 +600,43 @@ app.post('/update-daily-reward', async (req, res) => {
     res.status(500).send({ message: 'Internal Server Error', success: false });
   }
 });
+app.post('/update-next-login', async (req, res) => {
+  const { user } = req.body;
+  const userId = user.id
+
+  if (!userId) {
+    return res.status(400).send('userId required');
+  }
+
+  try {
+
+      let now = new Date();
+
+      // Set the time to the next day at 00:00:00
+      let nextLogin = new Date(now);
+      nextLogin.setDate(now.getDate() + 1);  // Move to the next day
+      nextLogin.setHours(0, 0, 0, 0);
+      await User.updateOne(
+        { 'user.id': userId },
+        {
+          $set: {
+            "referralRewardDeets.$[].rewardClaimed": false,
+            nextLogin: nextLogin
+          }
+        },
+        { new: true }
+      );
+
+    
+
+    // Return the updated user document
+    const updatedUser = await User.findOne({ 'user.id': user.id });
+    res.status(200).send({ message: 'Next login updated successfully', userData: updatedUser, success: true });
+  } catch (error) {
+    console.error('Error updating social reward:', error);
+    res.status(500).send({ message: 'Internal Server Error', success: false });
+  }
+});
 
 app.post('/get-user-referrals', async (req, res) => {
   const { referralCode } = req.body;
