@@ -56,6 +56,7 @@ const UserSchema = new mongoose.Schema({
     referralCode: { type: String, unique: true },
     referredBy: { type: Boolean, default: false },
     lastLogin: { type: Date },
+    nextLogin: { type: Date },
     referralRewardDeets: {
         type: Array,
         default: [

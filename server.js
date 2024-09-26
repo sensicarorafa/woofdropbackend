@@ -568,6 +568,26 @@ app.post('/update-daily-reward', async (req, res) => {
       { new: true }
     );
 
+    if (claimTreshold == 35) {
+
+      let now = new Date();
+
+      // Set the time to the next day at 00:00:00
+      let nextLogin = new Date(now);
+      nextLogin.setDate(now.getDate() + 1);  // Move to the next day
+      nextLogin.setHours(0, 0, 0, 0);
+      await User.updateOne(
+        { 'user.id': userId },
+        {
+          $set: {
+            "referralRewardDeets.$[].rewardClaimed": false,
+            nextLogin: nextLogin
+          }
+        },
+        { new: true }
+      );
+
+    }
     if (!updateResult) {
       return res.status(404).send('User or claimTreshold not found');
     }
@@ -642,7 +662,7 @@ app.delete('/tasks/:id', async (req, res) => {
 app.post('/activate-boost', async (req, res) => {
   const { user, boostCode, refBoostCode } = req.body;
 
-  console.log("about user",user,  boostCode, refBoostCode )
+  console.log("about user", user, boostCode, refBoostCode)
 
   try {
     // Find the refuser by boostcode
@@ -655,7 +675,7 @@ app.post('/activate-boost', async (req, res) => {
 
     console.log("existingBoostUser", existingBoostUser, existingUser)
 
- 
+
 
     if (existingBoostUser) {
       if (existingUser) {
@@ -665,98 +685,98 @@ app.post('/activate-boost', async (req, res) => {
       } else {
 
 
- 
-          existingUser = new BoostLeaderboard({
-            pointsNo: 7000,
-            userId: user.id,
-            boostCode: boostCode,
-            boostActivated: true,
-            referrerBoostCode: refBoostCode
 
-          });
+        existingUser = new BoostLeaderboard({
+          pointsNo: 7000,
+          userId: user.id,
+          boostCode: boostCode,
+          boostActivated: true,
+          referrerBoostCode: refBoostCode
 
-          await existingUser.save();
+        });
 
-
-          const dbUser = await User.findOne({ "user.id": user.id });
-          if (dbUser) {
-            dbUser.pointsNo += 7000
-            dbUser.save()
-          }
-          existingBoostUser.pointsNo += 2800;
-          existingBoostUser.referralPoints += 1;
-
-          await existingBoostUser.save();
-          const refUser = await User.findOne({ "user.id": existingBoostUser.userId });
-          if (refUser) {
-            refUser.pointsNo += 2800
-            refUser.save()
+        await existingUser.save();
 
 
+        const dbUser = await User.findOne({ "user.id": user.id });
+        if (dbUser) {
+          dbUser.pointsNo += 7000
+          dbUser.save()
+        }
+        existingBoostUser.pointsNo += 2800;
+        existingBoostUser.referralPoints += 1;
 
-          }
-          const rankData = await BoostLeaderboard.aggregate([
-            // Step 1: Sort documents by pointsNo and registrationTime
-            { $sort: { pointsNo: -1, registrationTime: 1 } },
-          
-            // Step 2: Create a rank based on the sorting order
-            {
-              $group: {
-                _id: null,
-                docs: { $push: "$$ROOT" },  // Push the documents into an array
-              },
+        await existingBoostUser.save();
+        const refUser = await User.findOne({ "user.id": existingBoostUser.userId });
+        if (refUser) {
+          refUser.pointsNo += 2800
+          refUser.save()
+
+
+
+        }
+        const rankData = await BoostLeaderboard.aggregate([
+          // Step 1: Sort documents by pointsNo and registrationTime
+          { $sort: { pointsNo: -1, registrationTime: 1 } },
+
+          // Step 2: Create a rank based on the sorting order
+          {
+            $group: {
+              _id: null,
+              docs: { $push: "$$ROOT" },  // Push the documents into an array
             },
-            {
-              $set: {
-                rankedDocs: {
-                  $map: {
-                    input: { $range: [0, { $size: "$docs" }] },  // Create an array of indices
-                    as: "index",
-                    in: {
-                      rank: { $add: ["$$index", 1] },  // Assign ranks
-                      doc: { $arrayElemAt: ["$docs", "$$index"] },  // Get the document
-                    },
+          },
+          {
+            $set: {
+              rankedDocs: {
+                $map: {
+                  input: { $range: [0, { $size: "$docs" }] },  // Create an array of indices
+                  as: "index",
+                  in: {
+                    rank: { $add: ["$$index", 1] },  // Assign ranks
+                    doc: { $arrayElemAt: ["$docs", "$$index"] },  // Get the document
                   },
                 },
               },
             },
-            {
-              $unwind: "$rankedDocs",
-            },
-            {
-              $replaceRoot: { newRoot: { $mergeObjects: ["$rankedDocs.doc", { rank: "$rankedDocs.rank" }] } },
-            },
-            // Step 3: Match the document with the given userId
-            { $match: { "userId": user.id } },
-          ]);
-          
-          const rank = rankData.length > 0 ? rankData[0].rank : null;
-          
+          },
+          {
+            $unwind: "$rankedDocs",
+          },
+          {
+            $replaceRoot: { newRoot: { $mergeObjects: ["$rankedDocs.doc", { rank: "$rankedDocs.rank" }] } },
+          },
+          // Step 3: Match the document with the given userId
+          { $match: { "userId": user.id } },
+        ]);
+
+        const rank = rankData.length > 0 ? rankData[0].rank : null;
 
 
 
-          // // If user doesn't exist, create a new user
-          // const rankData = await BoostLeaderboard.aggregate([
-          //   // Sort documents by points in descending order
-          //   { $sort: { pointsNo: -1 , registrationTime: 1} },
 
-          //   // Add a rank field using $rank
-          //   {
-          //     $setWindowFields: {
-          //       sortBy: { registrationTime: 1 },
-          //       output: {
-          //         rank: { $rank: {} },
-          //       },
-          //     },
-          //   },
+        // // If user doesn't exist, create a new user
+        // const rankData = await BoostLeaderboard.aggregate([
+        //   // Sort documents by points in descending order
+        //   { $sort: { pointsNo: -1 , registrationTime: 1} },
 
-          //   // Match the document with the given userId
-          //   { $match: { userId: user.id } },
-          // ]);
-          // const rank = rankData.length > 0 ? rankData[0].rank : null;
+        //   // Add a rank field using $rank
+        //   {
+        //     $setWindowFields: {
+        //       sortBy: { registrationTime: 1 },
+        //       output: {
+        //         rank: { $rank: {} },
+        //       },
+        //     },
+        //   },
 
-          res.status(200).send({ message: 'Points updated successfully', userData: existingUser, userRank: rank, success: true });
-        
+        //   // Match the document with the given userId
+        //   { $match: { userId: user.id } },
+        // ]);
+        // const rank = rankData.length > 0 ? rankData[0].rank : null;
+
+        res.status(200).send({ message: 'Points updated successfully', userData: existingUser, userRank: rank, success: true });
+
       }
 
 
@@ -804,7 +824,7 @@ app.post('/get-user-data/boost-data', async (req, res) => {
       const rankData = await BoostLeaderboard.aggregate([
         // Step 1: Sort documents by pointsNo and registrationTime
         { $sort: { pointsNo: -1, registrationTime: 1 } },
-      
+
         // Step 2: Create a rank based on the sorting order
         {
           $group: {
@@ -835,13 +855,13 @@ app.post('/get-user-data/boost-data', async (req, res) => {
         // Step 3: Match the document with the given userId
         { $match: { "userId": user.id } },
       ]);
-      
+
       const rank = rankData.length > 0 ? rankData[0].rank : null;
-      
+
 
       console.log("rankData", rankData)
 
-   
+
       console.log("user", user, rank)
       return res.status(200).send({ message: 'Boost data retrieved successfully', userData: existingUser, userRank: rank, success: true });
     } else {
@@ -996,97 +1016,97 @@ const addReferralPoints = async (referralCode) => {
 };
 
 // Telegram Bot Setup
-bot.start(async (ctx) => {
-  try {
-    const telegramId = ctx.from.id;
-    let referralCode = ctx.payload;
-    let existingUser = await User.findOne({ 'user.id': telegramId });
+// bot.start(async (ctx) => {
+//   try {
+//     const telegramId = ctx.from.id;
+//     let referralCode = ctx.payload;
+//     let existingUser = await User.findOne({ 'user.id': telegramId });
 
-    if (referralCode && !existingUser) {
-      await addReferralPoints(referralCode);
-    }
+//     if (referralCode && !existingUser) {
+//       await addReferralPoints(referralCode);
+//     }
 
-    if (referralCode && existingUser) {
-      try {
-        await ctx.reply(`You have already been referred previously`);
-      } catch (error) {
-        if (error.response && error.response.error_code === 403) {
-          console.error('Bot was blocked by the user:', ctx.from.id);
-        } else {
-          console.error('Failed to send message:', error);
-        }
-      }
+//     if (referralCode && existingUser) {
+//       try {
+//         await ctx.reply(`You have already been referred previously`);
+//       } catch (error) {
+//         if (error.response && error.response.error_code === 403) {
+//           console.error('Bot was blocked by the user:', ctx.from.id);
+//         } else {
+//           console.error('Failed to send message:', error);
+//         }
+//       }
 
-    }
+//     }
 
-    if (!existingUser) {
-      let uniqueReferralCode;
-      let isUnique = false;
+//     if (!existingUser) {
+//       let uniqueReferralCode;
+//       let isUnique = false;
 
-      while (!isUnique) {
-        uniqueReferralCode = crypto.randomBytes(4).toString('hex');
-        const existingUser = await User.findOne({ referralCode: uniqueReferralCode });
-        if (!existingUser) {
-          isUnique = true;
-        }
-      }
+//       while (!isUnique) {
+//         uniqueReferralCode = crypto.randomBytes(4).toString('hex');
+//         const existingUser = await User.findOne({ referralCode: uniqueReferralCode });
+//         if (!existingUser) {
+//           isUnique = true;
+//         }
+//       }
 
-      const newUser = new User({
-        pointsNo: 0,
-        referralPoints: 0,
-        user: {
-          id: telegramId,
-          first_name: ctx.from.first_name,
-          last_name: ctx.from.last_name,
-          username: ctx.from.username,
-          language_code: ctx.from.language_code,
-          allows_write_to_pm: true
-        },
-        referralCode: uniqueReferralCode,
-        referredBy: referralCode ? true : false,
-        referrerCode: referralCode || ''
-      });
-      await newUser.save();
-    } else {
-      await generateUniqueReferralCode(telegramId);
-      try {
-        await ctx.reply(`Welcome back!`);
-      } catch (error) {
-        if (error.response && error.response.error_code === 403) {
-          console.error('Bot was blocked by the user:', ctx.from.id);
-        } else {
-          console.error('Failed to send message:', error);
-        }
-      }
-    }
+//       const newUser = new User({
+//         pointsNo: 0,
+//         referralPoints: 0,
+//         user: {
+//           id: telegramId,
+//           first_name: ctx.from.first_name,
+//           last_name: ctx.from.last_name,
+//           username: ctx.from.username,
+//           language_code: ctx.from.language_code,
+//           allows_write_to_pm: true
+//         },
+//         referralCode: uniqueReferralCode,
+//         referredBy: referralCode ? true : false,
+//         referrerCode: referralCode || ''
+//       });
+//       await newUser.save();
+//     } else {
+//       await generateUniqueReferralCode(telegramId);
+//       try {
+//         await ctx.reply(`Welcome back!`);
+//       } catch (error) {
+//         if (error.response && error.response.error_code === 403) {
+//           console.error('Bot was blocked by the user:', ctx.from.id);
+//         } else {
+//           console.error('Failed to send message:', error);
+//         }
+//       }
+//     }
 
-    try {
-      await ctx.replyWithPhoto('https://i.ibb.co/BcmccLN/Whats-App-Image-2024-08-26-at-2-12-54-PM.jpg', {
-        caption: `<b>Welcome to AIDogs, @${ctx.from.username}!</b> \nThe AIDogs portal is live for dog lovers to have fun and earn rewards.\n\n Telegram users can claim an exclusive early bonus of 2,500 $AIDOGS tokens.\n\nInvite friends and earn 20% of whatever they make!`,
-        parse_mode: 'HTML',
-        reply_markup: {
-          inline_keyboard: [
-            [{ text: "Open Portal", web_app: { url: 'https://aidogsuiwebpage.onrender.com/' } }],
-            [{ text: 'Join Community', url: 'https://t.me/aidogs_community' }],
-            [{ text: 'Twitter(X)', url: 'https://x.com/aidogscomm' }]
-          ],
-        }
-      });
-    } catch (error) {
-      if (error.response && error.response.error_code === 403) {
-        console.error('Bot was blocked by the user:', ctx.from.id);
-      } else {
-        console.error('Failed to send message:', error);
-      }
-    }
+//     try {
+//       await ctx.replyWithPhoto('https://i.ibb.co/BcmccLN/Whats-App-Image-2024-08-26-at-2-12-54-PM.jpg', {
+//         caption: `<b>Welcome to AIDogs, @${ctx.from.username}!</b> \nThe AIDogs portal is live for dog lovers to have fun and earn rewards.\n\n Telegram users can claim an exclusive early bonus of 2,500 $AIDOGS tokens.\n\nInvite friends and earn 20% of whatever they make!`,
+//         parse_mode: 'HTML',
+//         reply_markup: {
+//           inline_keyboard: [
+//             [{ text: "Open Portal", web_app: { url: 'https://aidogsuiwebpage.onrender.com/' } }],
+//             [{ text: 'Join Community', url: 'https://t.me/aidogs_community' }],
+//             [{ text: 'Twitter(X)', url: 'https://x.com/aidogscomm' }]
+//           ],
+//         }
+//       });
+//     } catch (error) {
+//       if (error.response && error.response.error_code === 403) {
+//         console.error('Bot was blocked by the user:', ctx.from.id);
+//       } else {
+//         console.error('Failed to send message:', error);
+//       }
+//     }
 
 
-  } catch (error) {
-    console.log(error);
-  }
-});
+//   } catch (error) {
+//     console.log(error);
+//   }
+// });
 
-bot.launch();
+// bot.launch();
 
 process.on('uncaughtException', (err) => {
   console.error('Uncaught Exception:', err);
