@@ -35,10 +35,13 @@ mongoose.connect(mongooseUrl, {
   useUnifiedTopology: true,
   connectTimeoutMS: 60000, // Increase this value
   socketTimeoutMS: 60000,
+
   maxPoolSize: 50,
   minPoolSize: 30
 });
 const db = mongoose.connection;
+mongoose.set('bufferTimeoutMS', 30000);
+
 db.on("error", (error) => console.error("MongoDB connection error:", error));
 db.once("open", () => {
   console.log("MongoDB connected successfully");
@@ -555,6 +558,11 @@ app.post('/update-daily-reward', async (req, res) => {
   }
 
   try {
+
+    let now = new Date();
+    let lastLogin = new Date(now);
+    lastLogin.setDate(now.getDate() + 1);  // Move to the next day
+    lastLogin.setHours(0, 0, 0, 0);
     // Use findOneAndUpdate to directly update the rewardClaimed field
     const updateResult = await User.findOneAndUpdate(
       { 'user.id': userId, "referralRewardDeets.claimTreshold": claimTreshold },
@@ -562,7 +570,7 @@ app.post('/update-daily-reward', async (req, res) => {
         $set: {
           "referralRewardDeets.$.rewardClaimed": true,
           pointsToday: 1,
-          lastLogin: new Date()
+          lastLogin: lastLogin
         }
       },
       { new: true }
@@ -632,6 +640,44 @@ app.post('/update-next-login', async (req, res) => {
     // Return the updated user document
     const updatedUser = await User.findOne({ 'user.id': user.id });
     res.status(200).send({ message: 'Next login updated successfully', userData: updatedUser, success: true });
+  } catch (error) {
+    console.error('Error updating social reward:', error);
+    res.status(500).send({ message: 'Internal Server Error', success: false });
+  }
+});
+app.post('/reset-daily-claim', async (req, res) => {
+  const { user } = req.body;
+  const userId = user.id
+
+  if (!userId) {
+    return res.status(400).send('userId required');
+  }
+
+  try {
+
+      await User.updateOne(
+        { 'user.id': userId,
+        $expr: {
+          $gt: [
+            { $subtract: ["$lastLogin", new Date()] },
+            1000 * 60 * 60 * 2 // 24 hours in milliseconds
+          ]
+        }
+      
+      },
+        {
+          $set: {
+            "referralRewardDeets.$[].rewardClaimed": false,
+          }
+        },
+        { new: true }
+      );
+
+    
+
+    // Return the updated user document
+    const updatedUser = await User.findOne({ 'user.id': user.id });
+    res.status(200).send({ message: 'reset claim updated successfully', userData: updatedUser, success: true });
   } catch (error) {
     console.error('Error updating social reward:', error);
     res.status(500).send({ message: 'Internal Server Error', success: false });
@@ -1052,6 +1098,8 @@ const addReferralPoints = async (referralCode) => {
   }
 };
 
+
+
 // Telegram Bot Setup
 // bot.start(async (ctx) => {
 //   try {
@@ -1165,10 +1213,18 @@ app.use((err, req, res, next) => {
   res.status(500).send('Internal Server Error');
 });
 
+const getUserReferrals = async () => {
+  const referralCodeSearch = 'bf6f09b7'
+  // await User.createIndex({ referrerCode: 1 });
+  const count = await User.countDocuments({ referrerCode: referralCodeSearch }).maxTimeMS(60000);
+  console.log('count', count)
+  };
+
 // Start the Server
 const port = process.env.PORT || 4000;
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
+  getUserReferrals()
 });
 
 
