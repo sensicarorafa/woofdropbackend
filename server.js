@@ -16,6 +16,7 @@ const ReferralLeaderboard = require('./models/ReferralLeaderboard');
 const Task = require('./models/Task');
 const { TelegramClient } = require('telegram');
 const { StringSession } = require('telegram/sessions');
+const Rewards = require('./models/Rewards');
 require('dotenv').config();
 
 
@@ -618,24 +619,24 @@ app.post('/update-next-login', async (req, res) => {
 
   try {
 
-      let now = new Date();
+    let now = new Date();
 
-      // Set the time to the next day at 00:00:00
-      let nextLogin = new Date(now);
-      nextLogin.setDate(now.getDate() + 1);  // Move to the next day
-      nextLogin.setHours(0, 0, 0, 0);
-      await User.updateOne(
-        { 'user.id': userId },
-        {
-          $set: {
-            "referralRewardDeets.$[].rewardClaimed": false,
-            nextLogin: nextLogin
-          }
-        },
-        { new: true }
-      );
+    // Set the time to the next day at 00:00:00
+    let nextLogin = new Date(now);
+    nextLogin.setDate(now.getDate() + 1);  // Move to the next day
+    nextLogin.setHours(0, 0, 0, 0);
+    await User.updateOne(
+      { 'user.id': userId },
+      {
+        $set: {
+          "referralRewardDeets.$[].rewardClaimed": false,
+          nextLogin: nextLogin
+        }
+      },
+      { new: true }
+    );
 
-    
+
 
     // Return the updated user document
     const updatedUser = await User.findOne({ 'user.id': user.id });
@@ -655,25 +656,26 @@ app.post('/reset-daily-claim', async (req, res) => {
 
   try {
 
-      await User.updateOne(
-        { 'user.id': userId,
+    await User.updateOne(
+      {
+        'user.id': userId,
         $expr: {
           $gt: [
             { $subtract: ["$lastLogin", new Date()] },
             1000 * 60 * 60 * 2 // 24 hours in milliseconds
           ]
         }
-      
-      },
-        {
-          $set: {
-            "referralRewardDeets.$[].rewardClaimed": false,
-          }
-        },
-        { new: true }
-      );
 
-    
+      },
+      {
+        $set: {
+          "referralRewardDeets.$[].rewardClaimed": false,
+        }
+      },
+      { new: true }
+    );
+
+
 
     // Return the updated user document
     const updatedUser = await User.findOne({ 'user.id': user.id });
@@ -997,6 +999,134 @@ app.post('/get-boost-participants', async (req, res) => {
     res.status(500).send({ message: 'Internal Server Error' });
   }
 })
+
+
+//rewards endpoint starts here
+
+
+app.post('/daily-reward-claim', async (req, res) => {
+  // Assuming you are using authentication middleware that sets req.user
+  const { user } = req.body;
+  const userId = user.id;
+  try {
+    let rewards = await Rewards.findOne({ userId });
+
+    if (!rewards) {
+      rewards = new Rewards({ userId });
+    }
+
+    // Check if points are already claimed today
+    if (rewards.isClaimedToday()) {
+      return res.status(400).json({ message: 'Points already claimed for today' });
+    }
+
+    // Check if 7-day cycle is complete, reset if necessary
+    const today = new Date();
+    const cycleEndDate = new Date(rewards.cycleStartDate);
+    cycleEndDate.setDate(cycleEndDate.getDate() + 7);
+
+    if (today >= cycleEndDate) {
+      rewards.cycleStartDate = today;
+      rewards.dailyClaims = [];
+    }
+
+
+    // Determine the current day within the cycle (0 - 6)
+    const daysSinceCycleStart = Math.floor(
+      (today - new Date(rewards.cycleStartDate)) / (1000 * 60 * 60 * 24)
+    );
+
+    // Define different points for each day of the 7-day cycle
+    const pointsForDay = [10, 15, 20, 25, 30, 35, 40];
+
+    // Get the points for today's claim based on the cycle day
+    const pointsToday = pointsForDay[daysSinceCycleStart % 7]; // Use modulo to handle day wrapping
+
+
+
+    // Add today's claim
+    rewards.dailyClaims.push({ date: today });
+    rewards.lastDayClaimed = daysSinceCycleStart;
+    rewards.totalPoints += pointsToday; // Assuming each day gives 10 points
+
+    await rewards.save();
+
+    res.status(200).json({ message: 'Points claimed successfully', totalPoints: rewards.totalPoints, reward:rewards });
+  } catch (error) {
+    res.status(500).json({ message: 'Server error', error });
+  }
+});
+
+
+app.post('/daily-reward-status', async (req, res) => {
+  const { user } = req.body;
+  const userId = user.id;
+
+  try {
+    const rewards = await Rewards.findOne({ userId });
+
+    if (!rewards) {
+      return res.status(404).json({ message: 'Rewards data not found' });
+    }
+
+    res.json({reward:rewards});
+
+  } catch (error) {
+    res.status(500).json({ message: 'Server error', error });
+  }
+});
+// app.get('/daily-reward-status', async (req, res) => {
+//   const { user } = req.body;
+//   const userId = user.id;
+
+//   try {
+//     const rewards = await Rewards.findOne({ userId });
+
+//     if (!rewards) {
+//       return res.status(404).json({ message: 'Rewards data not found' });
+//     }
+
+//     const today = new Date();
+
+//     // Set the next day at 00:00 hours (cycleStartDate + 1 day at 00:00)
+//     const nextDayReset = new Date(rewards.cycleStartDate);
+//     nextDayReset.setDate(nextDayReset.getDate() + 1);
+//     nextDayReset.setHours(0, 0, 0, 0); // Set time to 00:00 hours
+
+//     // If today is greater than the nextDayReset, reset dailyClaims
+//     if (today >= nextDayReset) {
+//       rewards.dailyClaims = [];
+//       res.status(200).json({
+//         totalPoints: rewards.totalPoints,
+//         dailyClaims: [],
+//         cycleStartDate: rewards.cycleStartDate,
+//         lastDayClaimed:rewards.lastDayClaimed,
+//       });
+
+//     }
+//     else {
+
+//       res.status(200).json({
+//         totalPoints: rewards.totalPoints,
+//         dailyClaims: rewards.dailyClaims,
+//         cycleStartDate: rewards.cycleStartDate,
+//         lastDayClaimed:rewards.lastDayClaimed
+//       });
+//     }
+
+//   } catch (error) {
+//     res.status(500).json({ message: 'Server error', error });
+//   }
+// });
+
+
+
+//rewards endpoint ends here
+
+
+
+
+
 // app.post('/share-story', upload.single('file'), async(req,res) => {
 //   try {
 //     const {user} = req.body
@@ -1213,18 +1343,18 @@ app.use((err, req, res, next) => {
   res.status(500).send('Internal Server Error');
 });
 
-const getUserReferrals = async () => {
-  const referralCodeSearch = 'bf6f09b7'
-  // await User.createIndex({ referrerCode: 1 });
-  const count = await User.countDocuments({ referrerCode: referralCodeSearch }).maxTimeMS(60000);
-  console.log('count', count)
-  };
+// const getUserReferrals = async () => {
+//   const referralCodeSearch = 'bf6f09b7'
+//   // await User.createIndex({ referrerCode: 1 });
+//   const count = await User.countDocuments({ referrerCode: referralCodeSearch }).maxTimeMS(60000);
+//   console.log('count', count)
+// };
 
 // Start the Server
 const port = process.env.PORT || 4000;
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
-  getUserReferrals()
+  // getUserReferrals()
 });
 
 
