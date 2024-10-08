@@ -26,9 +26,7 @@ const rewardsSchema = new mongoose.Schema({
     type: Number,
     default: 0,
   },
-  lastDayClaimed :{
-    type:Number
-  }
+
 });
 
 rewardsSchema.methods.isClaimedToday = function () {
