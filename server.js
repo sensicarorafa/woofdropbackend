@@ -1037,7 +1037,7 @@ app.post('/daily-reward-claim', async (req, res) => {
     );
 
     // Define different points for each day of the 7-day cycle
-    const pointsForDay = [10, 15, 20, 25, 30, 35, 40];
+    const pointsForDay = [250, 500, 1000, 1500, 2000, 2500, 3000];
 
     // Get the points for today's claim based on the cycle day
     const pointsToday = pointsForDay[daysSinceCycleStart % 7]; // Use modulo to handle day wrapping
