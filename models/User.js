@@ -17,22 +17,7 @@ const UserSchema = new mongoose.Schema({
         type: String,
         default: ''
     },
-    userLevel: {
-        type: Number,
-        default: 1
-    },
-    totalSteps: {
-        type: Number,
-        default: 0
-    },
-    pointsToday: {
-        type: Number,
-        default: 0
-    },
-    totalStepsToday: {
-        type: Number,
-        default: 0
-    },
+
     gender: {
         type: String,
         default: null
@@ -41,10 +26,7 @@ const UserSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
-    isTracking: {
-        type: Boolean,
-        default: false
-    },
+
     user: {
         id: Number,
         first_name: String,
@@ -53,10 +35,16 @@ const UserSchema = new mongoose.Schema({
         language_code: String,
         allows_write_to_pm: Boolean
     },
+    taskCompleted: {
+        type: Boolean,
+        default: false
+    },
+    tgStatus: {
+        type: Boolean,
+        default: false
+    },
     referralCode: { type: String, unique: true },
     referredBy: { type: Boolean, default: false },
-    lastLogin: { type: Date },
-    nextLogin: { type: Date },
     referralRewardDeets: {
         type: Array,
         default: [
@@ -102,83 +90,7 @@ const UserSchema = new mongoose.Schema({
             }
         ]
     },
-    socialRewardDeets: {
-        type: Array,
-        default: [
-            {
-                claimTreshold: 'follow',
-                rewardClaimed: false,
-                btnText: String,
-                taskText: String,
-                taskPoints: Number,
-                taskCategory: String,
-                taskUrl: String
-            },
-            {
-                claimTreshold: 'repost',
-                rewardClaimed: false,
-                btnText: String,
-                taskText: String,
-                taskPoints: Number,
-                taskCategory: String,
-                taskUrl: String
-            },
-            {
-                claimTreshold: 'telegram',
-                rewardClaimed: false,
-                btnText: String,
-                taskText: String,
-                taskPoints: Number,
-                taskCategory: String,
-                taskUrl: String
-            },
-            {
-                claimTreshold: 'two-frens',
-                rewardClaimed: false,
-                btnText: String,
-                taskText: String,
-                taskPoints: Number,
-                taskCategory: String,
-                taskUrl: String
-            },
-            {
-                claimTreshold: 'youtube',
-                rewardClaimed: false,
-                btnText: String,
-                taskText: String,
-                taskPoints: Number,
-                taskCategory: String,
-                taskUrl: String
-            },
-            {
-                claimTreshold: 'instagram',
-                rewardClaimed: false,
-                btnText: String,
-                taskText: String,
-                taskPoints: Number,
-                taskCategory: String,
-                taskUrl: String
-            },
-            {
-                claimTreshold: 'five-frens',
-                rewardClaimed: false,
-                btnText: String,
-                taskText: String,
-                taskPoints: Number,
-                taskCategory: String,
-                taskUrl: String
-            },
-            {
-                claimTreshold: 'ten-frens',
-                rewardClaimed: false,
-                btnText: String,
-                taskText: String,
-                taskPoints: Number,
-                taskCategory: String,
-                taskUrl: String
-            }
-        ]
-    }
+
 })
 
 const User = mongoose.model("User", UserSchema);
