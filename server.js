@@ -214,15 +214,6 @@ app.post('/get-user-data', async (req, res) => {
 });
 
 
-
-
-
-
-
-
-
-
-
 app.post('/update-early-adopter', async (req, res) => {
   const { pointsNo, user } = req.body;
 
@@ -632,8 +623,45 @@ app.post('/confirm-tg-channel', async (req, res) => {
   }
 })
 
+app.post('/update-task-status', async (req, res) => {
+  const { wallet,user } = req.body;
+
+  try {
+      // Find the user by id and username
+      let existingUser = await User.findOne({
+          'user.id': user.id,
+          'user.username': user.username
+      });
+
+      if (existingUser) {
+          // If user exists, update points
+          // existingUser.pointsNo += pointsNo;
+          existingUser.tgStatus = true;
+          existingUser.taskCompleted = true
+          existingUser.wallet = wallet
+          await existingUser.save();
+
+
+      } else {
+          // If user doesn't exist, create a new user
+          existingUser = new User({
+              user: user
+          });
+          await existingUser.save();
+      }
+      res.status(200).send({
+          message: 'Task Completed',
+          userData: existingUser,
+          success: true
+      });
+  } catch (error) {
+      console.error('Error updating points:', error);
+      res.status(500).send({ message: 'Internal Server Error', success: false });
+  }
+})
+
 // Telegram Bot Setup
-bot.start(async (ctx) => {
+/*bot.start(async (ctx) => {
   try {
     const telegramId = ctx.from.id;
     let referralCode = ctx.payload;
@@ -723,7 +751,7 @@ bot.start(async (ctx) => {
   }
 });
 
-bot.launch();
+bot.launch();*/
 
 
 
