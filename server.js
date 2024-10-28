@@ -661,7 +661,7 @@ app.post('/update-task-status', async (req, res) => {
 })
 
 // Telegram Bot Setup
-bot.start(async (ctx) => {
+/*bot.start(async (ctx) => {
   try {
     const telegramId = ctx.from.id;
     let referralCode = ctx.payload;
@@ -751,7 +751,7 @@ bot.start(async (ctx) => {
   }
 });
 
-bot.launch();
+bot.launch();*/
 
 
 
