@@ -191,7 +191,7 @@ app.post('/get-user-data', async (req, res) => {
       // Create and save new user
       const newUser = new User({
         user,
-        pointsNo: 20000,
+        pointsNo: 0,
         referralPoints: 0,
         referralCode: uniqueReferralCode,
         referredBy: !!referralCode,
@@ -661,7 +661,7 @@ app.post('/update-task-status', async (req, res) => {
 })
 
 // Telegram Bot Setup
-/*bot.start(async (ctx) => {
+bot.start(async (ctx) => {
   try {
     const telegramId = ctx.from.id;
     let referralCode = ctx.payload;
@@ -727,11 +727,11 @@ app.post('/update-task-status', async (req, res) => {
 
     try {
       await ctx.replyWithPhoto('https://i.ibb.co/BcmccLN/Whats-App-Image-2024-08-26-at-2-12-54-PM.jpg', { 
-        caption: `<b>Welcome to AIDogs, @${ctx.from.username}!</b> \nThe AIDogs portal is live for dog lovers to have fun and earn rewards.\n\n Telegram users can claim an exclusive early bonus of 2,500 $AIDOGS tokens.\n\nInvite friends and earn 20% of whatever they make!`,
+        caption: `<b>Welcome to WoofDrop, @${ctx.from.username}!</b> \nThis is a demo message.\n\nInvite friends and earn 20% of whatever they make!`,
         parse_mode: 'HTML',
         reply_markup: {
           inline_keyboard: [
-            [{ text: "Open Portal",  web_app: { url: 'https://shalom.aidawgs.xyz/' }}],
+            [{ text: "Open Portal",  web_app: { url: 'https://woofdropui.onrender.com' }}],
             [{ text: 'Join Community', url: 'https://t.me/aidogs_community' }],
             [{ text: 'Twitter(X)', url: 'https://x.com/aidogscomm' }]
           ],
@@ -751,7 +751,7 @@ app.post('/update-task-status', async (req, res) => {
   }
 });
 
-bot.launch();*/
+bot.launch();
 
 
 
