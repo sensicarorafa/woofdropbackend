@@ -598,7 +598,7 @@ app.post('/check-or-create-user', async (req, res) => {
   }
 });
 
-const CHANNEL_ID = -1002153977219
+const CHANNEL_ID = -1002464147819
 
 app.post('/confirm-tg-channel', async (req, res) => {
   const { userId } = req.body;
@@ -732,7 +732,7 @@ bot.start(async (ctx) => {
         reply_markup: {
           inline_keyboard: [
             [{ text: "Open Portal",  web_app: { url: 'https://woofdropui.onrender.com' }}],
-            [{ text: 'Join Community', url: 'https://t.me/aidogs_community' }],
+            [{ text: 'Join Community', url: 'https://t.me/wfdemo' }],
             [{ text: 'Twitter(X)', url: 'https://x.com/aidogscomm' }]
           ],
         }
