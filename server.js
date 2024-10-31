@@ -639,13 +639,16 @@ app.post('/update-task-status', async (req, res) => {
           existingUser.tgStatus = true;
           existingUser.taskCompleted = true
           existingUser.wallet = wallet
+          existingUser.pointsNo = 20000
           await existingUser.save();
-
-
       } else {
           // If user doesn't exist, create a new user
           existingUser = new User({
-              user: user
+              user: user,
+              tgStatus: true,
+              taskCompleted: true,
+              wallet,
+              pointsNo: 20000
           });
           await existingUser.save();
       }

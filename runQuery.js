@@ -19,8 +19,10 @@ mongoose.connect(mongooseUrl, {
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error: "));
-db.once("open", function () {
+db.once("open", async function () {
   console.log("Connected successfully");
+  const deleteUsers = await User.deleteMany({});
+  console.log({deleteUsers})
   //deleteUserByUserId(1354055384)
 });
 
@@ -1371,7 +1373,7 @@ const getUser = async () => {
 // Call the function
 //updateReferralContestField();
 
-updateReferrerPoints()
+//updateReferrerPoints()
 //getUsers();
 //updateReferrerCode();
 //getTop100Users();
