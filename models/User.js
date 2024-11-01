@@ -44,52 +44,9 @@ const UserSchema = new mongoose.Schema({
         default: false
     },
     referralCode: { type: String, unique: true },
+    wallet: { type: String, unique: true },
     referredBy: { type: Boolean, default: false },
-    referralRewardDeets: {
-        type: Array,
-        default: [
-            {
-                claimTreshold: 5,
-                rewardClaimed: false
-            },
-            {
-                claimTreshold: 10,
-                rewardClaimed: false
-            },
-            {
-                claimTreshold: 15,
-                rewardClaimed: false
-            },
-            {
-                claimTreshold: 20,
-                rewardClaimed: false
-            },
-            {
-                claimTreshold: 25,
-                rewardClaimed: false
-            },
-            {
-                claimTreshold: 30,
-                rewardClaimed: false
-            },
-            {
-                claimTreshold: 35,
-                rewardClaimed: false
-            },
-            {
-                claimTreshold: 40,
-                rewardClaimed: false
-            },
-            {
-                claimTreshold: 45,
-                rewardClaimed: false
-            },
-            {
-                claimTreshold: 50,
-                rewardClaimed: false
-            }
-        ]
-    },
+
 
 })
 
