@@ -44,7 +44,7 @@ const UserSchema = new mongoose.Schema({
         default: false
     },
     referralCode: { type: String, unique: true },
-    wallet: { type: String, unique: true },
+    wallet: { type: String },
     referredBy: { type: Boolean, default: false },
 
 
